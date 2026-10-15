@@ -1,5 +1,12 @@
 import Link from "next/link";
+import { cacheLife } from "next/cache";
 import { PenguLogo } from "./PenguLogo";
+
+async function CopyrightYear() {
+  "use cache";
+  cacheLife("days");
+  return new Date().getFullYear();
+}
 
 const links = [
   {
@@ -96,7 +103,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-14 pt-6 border-t border-charcoal/8 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-charcoal-lighter">
-            © {new Date().getFullYear()} Pengu. All rights reserved.
+            © <CopyrightYear /> Pengu. All rights reserved.
           </p>
           <p className="text-xs text-charcoal-lighter">
             Built with ❤️ for families everywhere.
