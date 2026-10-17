@@ -1,21 +1,6 @@
 import { WaveDivider } from "./WaveDivider";
-import { HomeScreenMockup, Phone } from "./PhoneMockup";
+import { DemoScreenVideo, Phone } from "./PhoneMockup";
 
-function StarRating() {
-  return (
-    <div className="flex items-center gap-1.5">
-      <div className="flex gap-0.5">
-        {Array.from({ length: 5 }).map((_, i) => (
-          <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="#C8893A" aria-hidden="true">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-          </svg>
-        ))}
-      </div>
-      <span className="text-sm font-semibold text-charcoal">4.9</span>
-      <span className="text-sm text-charcoal-lighter">· 2,400+ families</span>
-    </div>
-  );
-}
 
 function AppStoreBadge({ store }: { store: "ios" | "android" }) {
   const isIos = store === "ios";
@@ -174,13 +159,10 @@ export function Hero() {
           </p>
 
           {/* Store buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
             <AppStoreBadge store="ios" />
             <AppStoreBadge store="android" />
           </div>
-
-          {/* Social proof */}
-          <StarRating />
         </div>
 
         {/* Right: Phone mockup */}
@@ -191,7 +173,7 @@ export function Hero() {
             style={{ background: "radial-gradient(ellipse, #7B9E87 0%, #C8893A 50%, transparent 80%)" }}
           />
           <Phone>
-            <HomeScreenMockup />
+            <DemoScreenVideo />
           </Phone>
         </div>
       </div>

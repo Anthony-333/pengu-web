@@ -7,7 +7,6 @@ const reviews = [
     role: "Mother of two",
     initials: "AB",
     color: "bg-sage",
-    rating: 5,
   },
   {
     text: "The custody calendar alone is worth it. My ex and I finally agree on the schedule because we're both looking at exactly the same thing.",
@@ -15,7 +14,6 @@ const reviews = [
     role: "Co-parent, dad of one",
     initials: "MT",
     color: "bg-amber",
-    rating: 5,
   },
   {
     text: "The expense tracker removed so many arguments from our lives. Everything is transparent, fair, and automatically split. I can't imagine going back.",
@@ -23,21 +21,8 @@ const reviews = [
     role: "Parent of three",
     initials: "JK",
     color: "bg-sage-dark",
-    rating: 5,
   },
 ];
-
-function Stars({ count }: { count: number }) {
-  return (
-    <div className="flex gap-0.5">
-      {Array.from({ length: count }).map((_, i) => (
-        <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="#C8893A" aria-hidden="true">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-        </svg>
-      ))}
-    </div>
-  );
-}
 
 export function Testimonials() {
   return (
@@ -71,8 +56,7 @@ export function Testimonials() {
                 key={r.name}
                 className="bg-white rounded-3xl p-7 shadow-sm border border-amber/10 flex flex-col gap-5"
               >
-                <Stars count={r.rating} />
-                <p className="text-charcoal leading-relaxed flex-1">"{r.text}"</p>
+                <p className="text-charcoal leading-relaxed flex-1">&ldquo;{r.text}&rdquo;</p>
                 <div className="flex items-center gap-3 pt-2 border-t border-charcoal/5">
                   <div className={`w-10 h-10 rounded-full ${r.color} flex items-center justify-center text-cream text-sm font-bold shrink-0`}>
                     {r.initials}
@@ -84,38 +68,6 @@ export function Testimonials() {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* App Store aggregate */}
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-8 text-center">
-            <div>
-              <p className="text-3xl font-black text-charcoal">4.9</p>
-              <div className="flex gap-0.5 justify-center my-1">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="#C8893A" aria-hidden="true">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="text-xs text-charcoal-lighter">App Store</p>
-            </div>
-            <div className="w-px h-12 bg-charcoal/10" />
-            <div>
-              <p className="text-3xl font-black text-charcoal">4.8</p>
-              <div className="flex gap-0.5 justify-center my-1">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="#C8893A" aria-hidden="true">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="text-xs text-charcoal-lighter">Google Play</p>
-            </div>
-            <div className="w-px h-12 bg-charcoal/10" />
-            <div>
-              <p className="text-3xl font-black text-charcoal">2,400+</p>
-              <p className="text-xs text-charcoal-lighter mt-2">Families using Pengu</p>
-            </div>
           </div>
         </div>
       </section>

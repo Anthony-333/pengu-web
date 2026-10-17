@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# hyperframes (video/ source is committed; caches and local renders are not)
+/video/.hyperframes/
+/video/renders/

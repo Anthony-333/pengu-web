@@ -66,7 +66,7 @@ export function HomeScreenMockup() {
           <div>
             <div className="flex items-center gap-1.5 mb-0.5">
               <div className="w-2 h-2 rounded-full bg-sage" />
-              <span className="text-[10px] text-cream/60 font-medium">Emma's week</span>
+              <span className="text-[10px] text-cream/60 font-medium">Emma&apos;s week</span>
             </div>
             <p className="text-cream text-xs font-semibold">With you · 3 days left</p>
           </div>
@@ -174,7 +174,7 @@ export function CalendarScreenMockup() {
       <div className="px-4 pt-2 pb-3 flex items-center justify-between">
         <div>
           <p className="text-[10px] text-charcoal/50 font-medium">October 2026</p>
-          <p className="text-sm font-bold text-charcoal">Emma's Schedule</p>
+          <p className="text-sm font-bold text-charcoal">Emma&apos;s Schedule</p>
         </div>
         <div className="w-7 h-7 rounded-full bg-white shadow-sm flex items-center justify-center text-xs">
           ＋
@@ -332,6 +332,31 @@ export function ExpenseScreenMockup() {
         ))}
       </div>
     </div>
+  );
+}
+
+/* Animated app tour, rendered from video/index.html with HyperFrames.
+   Falls back to the static home screen for reduced-motion users. */
+export function DemoScreenVideo() {
+  return (
+    <>
+      <video
+        className="block motion-reduce:hidden rounded-[2.6rem] bg-[#F7F3ED]"
+        width={260}
+        height={580}
+        src="/videos/pengu-demo.mp4"
+        poster="/videos/pengu-demo-poster.webp"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        aria-label="Pengu app tour: a co-parent's expense notification, the shared custody calendar, and a 50/50 expense split"
+      />
+      <div className="hidden motion-reduce:block">
+        <HomeScreenMockup />
+      </div>
+    </>
   );
 }
 

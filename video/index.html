@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=780, height=1740" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..900&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      /* No global reset here: unlayered rules would beat Tailwind's utilities (preflight resets already) */
+      html,
+      body {
+        width: 780px;
+        height: 1740px;
+        overflow: hidden;
+        background: #f7f3ed;
+      }
+      /* Authored at the site's phone-screen size (260x580 CSS px), rendered at 3x. */
+      #screen {
+        zoom: 3;
+        position: relative;
+        width: 260px;
+        height: 580px;
+        overflow: hidden;
+        background: #f7f3ed;
+        font-family: Geist, ui-sans-serif, system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+        padding-top: 30px;
+        background: #f7f3ed;
+      }
+      .odo {
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        overflow: hidden;
+        clip-path: inset(0);
+      }
+      .odo > span {
+        display: flex;
+        flex-direction: column;
+      }
+      .odo > span > span {
+        display: block;
+        height: 28px;
+        line-height: 28px;
+      }
+    </style>
+    <script>
+      window.__tailwindReady=new Promise(function(resolve){
+      var loaded=document.readyState==="complete";
+      var resolved=false;
+      var observer;
+      function readTailwindCss(){var styles=document.querySelectorAll("style");for(var i=styles.length-1;i>=0;i--){var text=styles[i].textContent||"";if(text.indexOf("tailwindcss v")!==-1)return text;}return "";}
+      function finish(){if(resolved||!loaded||!readTailwindCss())return;resolved=true;if(observer)observer.disconnect();resolve(true);}
+      observer=new MutationObserver(finish);
+      observer.observe(document.documentElement,{childList:true,subtree:true,characterData:true});
+      if(loaded){finish();}else{window.addEventListener("load",function(){loaded=true;finish();},{once:true});}
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.2.4/dist/index.global.js" integrity="sha384-v5YF9xS+gLRWdvrQ0u/WRbCkjSIH0NjHIPe8tBL1ZRrmI7PiSH6LLdzs0aAIMCuh" crossorigin="anonymous"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-cream: #fafaf4;
+        --color-cream-dark: #eee8dc;
+        --color-sage: #7b9e87;
+        --color-sage-light: #a8c4af;
+        --color-sage-dark: #5a7a66;
+        --color-amber: #c8893a;
+        --color-amber-light: #f2e0c4;
+        --color-amber-dark: #9e6b28;
+        --color-charcoal: #2d2d2d;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="12"
+      data-width="780"
+      data-height="1740"
+    >
+      <div id="screen" class="clip" data-layout-allow-occlusion data-layout-allow-overlapdata-start="0" data-duration="12" data-track-index="0">
+        <!-- ============ HOME ============ -->
+        <div id="s-home" class="scene">
+          <div class="flex items-center justify-between px-5 pt-3 pb-2">
+            <div>
+              <p class="text-[10px] text-charcoal/50 font-medium">Good morning</p>
+              <p class="text-sm font-bold text-charcoal">Sarah 🐧</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <div id="bell" class="relative w-7 h-7 rounded-full bg-amber-light flex items-center justify-center">
+                <span class="text-xs">🔔</span>
+                <div id="bell-dot" class="absolute top-0.5 right-0.5 w-2 h-2 rounded-full bg-amber border border-white"></div>
+              </div>
+              <div class="w-7 h-7 rounded-full bg-sage-light flex items-center justify-center text-white text-[11px] font-bold">S</div>
+            </div>
+          </div>
+
+          <div class="mx-4 mb-3 rounded-2xl bg-charcoal p-3.5 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-24 h-24 rounded-full bg-sage/20 -translate-y-1/2 translate-x-1/2"></div>
+            <div class="flex items-start justify-between mb-2">
+              <div>
+                <div class="flex items-center gap-1.5 mb-0.5">
+                  <div class="w-2 h-2 rounded-full bg-sage"></div>
+                  <span class="text-[10px] text-cream/60 font-medium">Emma's week</span>
+                </div>
+                <p class="text-cream text-xs font-semibold">With you · 3 days left</p>
+              </div>
+              <div class="text-base">👧</div>
+            </div>
+            <div class="flex gap-1 mt-2">
+              <div class="flex-1 flex flex-col items-center gap-0.5"><span class="text-[8px] text-cream/40 font-medium">M</span><div class="w-5 h-5 rounded-full bg-sage"></div></div>
+              <div class="flex-1 flex flex-col items-center gap-0.5"><span class="text-[8px] text-cream/40 font-medium">T</span><div class="w-5 h-5 rounded-full bg-sage"></div></div>
+              <div class="flex-1 flex flex-col items-center gap-0.5"><span class="text-[8px] text-cream/40 font-medium">W</span><div id="today-dot" class="w-5 h-5 rounded-full flex items-center justify-center ring-1 ring-amber ring-offset-1 ring-offset-charcoal bg-cream/15"><div class="w-1.5 h-1.5 rounded-full bg-amber"></div></div></div>
+              <div class="flex-1 flex flex-col items-center gap-0.5"><span class="text-[8px] text-cream/40 font-medium">T</span><div class="w-5 h-5 rounded-full bg-cream/15"></div></div>
+              <div class="flex-1 flex flex-col items-center gap-0.5"><span class="text-[8px] text-cream/40 font-medium">F</span><div class="w-5 h-5 rounded-full bg-sage"></div></div>
+              <div class="flex-1 flex flex-col items-center gap-0.5"><span class="text-[8px] text-cream/40 font-medium">S</span><div class="w-5 h-5 rounded-full bg-cream/15"></div></div>
+              <div class="flex-1 flex flex-col items-center gap-0.5"><span class="text-[8px] text-cream/40 font-medium">S</span><div class="w-5 h-5 rounded-full bg-cream/15"></div></div>
+            </div>
+          </div>
+
+          <div class="flex gap-2 px-4 mb-4">
+            <div class="flex-1 bg-white rounded-xl py-2 flex flex-col items-center gap-0.5 shadow-sm"><span class="text-sm">💰</span><span class="text-[8px] text-charcoal/60 font-medium">Expense</span></div>
+            <div class="flex-1 bg-white rounded-xl py-2 flex flex-col items-center gap-0.5 shadow-sm"><span class="text-sm">📸</span><span class="text-[8px] text-charcoal/60 font-medium">Memory</span></div>
+            <div class="flex-1 bg-white rounded-xl py-2 flex flex-col items-center gap-0.5 shadow-sm"><span class="text-sm">💬</span><span class="text-[8px] text-charcoal/60 font-medium">Chat</span></div>
+            <div class="flex-1 bg-white rounded-xl py-2 flex flex-col items-center gap-0.5 shadow-sm"><span class="text-sm">📋</span><span class="text-[8px] text-charcoal/60 font-medium">Log</span></div>
+          </div>
+
+          <div class="px-4">
+            <p class="text-[10px] font-semibold text-charcoal/50 uppercase tracking-wider mb-2">Upcoming</p>
+            <div class="space-y-1.5">
+              <div class="up-row flex items-center gap-2.5 bg-white rounded-xl px-3 py-2 shadow-sm">
+                <div class="w-7 h-7 rounded-lg bg-sage-light/30 flex items-center justify-center text-xs shrink-0">🦷</div>
+                <div><p class="text-[10px] font-semibold text-charcoal">Dentist appt</p><p class="text-[9px] text-charcoal/50">Tue · 10:00 am</p></div>
+              </div>
+              <div class="up-row flex items-center gap-2.5 bg-white rounded-xl px-3 py-2 shadow-sm">
+                <div class="w-7 h-7 rounded-lg bg-sage-light/30 flex items-center justify-center text-xs shrink-0">💃</div>
+                <div><p class="text-[10px] font-semibold text-charcoal">Dance class</p><p class="text-[9px] text-charcoal/50">Wed · 4:00 pm</p></div>
+              </div>
+              <div class="up-row flex items-center gap-2.5 bg-white rounded-xl px-3 py-2 shadow-sm">
+                <div class="w-7 h-7 rounded-lg bg-sage-light/30 flex items-center justify-center text-xs shrink-0">🎂</div>
+                <div><p class="text-[10px] font-semibold text-charcoal">Emma's birthday</p><p class="text-[9px] text-charcoal/50">Fri · All day</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ CALENDAR ============ -->
+        <div id="s-cal" class="scene">
+          <div class="px-4 pt-2 pb-3 flex items-center justify-between">
+            <div>
+              <p class="text-[10px] text-charcoal/50 font-medium">October 2026</p>
+              <p class="text-sm font-bold text-charcoal">Emma's Schedule</p>
+            </div>
+            <div class="w-7 h-7 rounded-full bg-white shadow-sm flex items-center justify-center text-xs">＋</div>
+          </div>
+          <div class="flex gap-3 px-4 mb-3">
+            <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded-full bg-sage"></div><span class="text-[9px] text-charcoal/60">Sarah</span></div>
+            <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded-full bg-amber-light"></div><span class="text-[9px] text-charcoal/60">James</span></div>
+          </div>
+          <div class="grid grid-cols-7 gap-px px-4 mb-1">
+            <div class="text-center text-[9px] font-semibold text-charcoal/40">M</div>
+            <div class="text-center text-[9px] font-semibold text-charcoal/40">T</div>
+            <div class="text-center text-[9px] font-semibold text-charcoal/40">W</div>
+            <div class="text-center text-[9px] font-semibold text-charcoal/40">T</div>
+            <div class="text-center text-[9px] font-semibold text-charcoal/40">F</div>
+            <div class="text-center text-[9px] font-semibold text-charcoal/40">S</div>
+            <div class="text-center text-[9px] font-semibold text-charcoal/40">S</div>
+          </div>
+          <div id="cal-grid" class="grid grid-cols-7 gap-1 px-4"></div>
+          <div id="cal-event" class="mx-4 mt-4 bg-white rounded-2xl p-3 shadow-sm">
+            <p class="text-[9px] text-charcoal/50 font-medium mb-1.5">This week</p>
+            <div class="flex items-center gap-2">
+              <div class="w-6 h-6 rounded-lg bg-sage-light/30 flex items-center justify-center text-xs">📅</div>
+              <div>
+                <p class="text-[10px] font-semibold text-charcoal">Custody switch</p>
+                <p class="text-[9px] text-charcoal/50">Wed 7 Oct · 6:00 pm</p>
+              </div>
+              <div class="ml-auto text-[8px] font-semibold px-1.5 py-0.5 rounded-full bg-sage/20 text-sage-dark">Synced</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ EXPENSES ============ -->
+        <div id="s-exp" class="scene">
+          <div class="px-4 pt-2 pb-3">
+            <p class="text-[10px] text-charcoal/50 font-medium">This month</p>
+            <p class="text-sm font-bold text-charcoal">Shared Expenses</p>
+          </div>
+          <div class="mx-4 mb-4 rounded-2xl bg-charcoal p-4">
+            <p class="text-[9px] text-cream/50 mb-0.5">Total shared</p>
+            <p class="text-xl font-black text-cream mb-3 flex overflow-hidden" style="height: 28px; line-height: 28px">
+              <span>$</span>
+              <span class="odo"><span data-digit="3"></span></span>
+              <span class="odo"><span data-digit="5"></span></span>
+              <span class="odo"><span data-digit="3"></span></span>
+              <span>.</span>
+              <span class="odo"><span data-digit="5"></span></span>
+              <span class="odo"><span data-digit="0"></span></span>
+            </p>
+            <div class="flex gap-1 mb-2">
+              <div id="bar-a" class="h-2 rounded-full bg-sage flex-1 origin-left"></div>
+              <div id="bar-b" class="h-2 rounded-full bg-amber origin-right" style="width: 50%"></div>
+            </div>
+            <div class="flex justify-between">
+              <div><p class="text-[8px] text-cream/40">Sarah (you)</p><p class="text-[11px] font-bold text-sage-light">$176.75</p></div>
+              <div class="text-right"><p class="text-[8px] text-cream/40">James</p><p class="text-[11px] font-bold text-amber-light">$176.75</p></div>
+            </div>
+          </div>
+          <div class="px-4 space-y-2">
+            <p class="text-[9px] font-semibold text-charcoal/50 uppercase tracking-wider">Recent</p>
+            <div class="ex-row flex items-center gap-2.5 bg-white rounded-xl px-3 py-2.5 shadow-sm">
+              <div class="w-8 h-8 rounded-xl bg-cream flex items-center justify-center text-sm shrink-0">🏥</div>
+              <div class="flex-1 min-w-0"><p class="text-[10px] font-semibold text-charcoal">Dentist visit</p><p class="text-[9px] text-charcoal/50">Oct 3 · Your share: $120.00</p></div>
+              <div class="text-right shrink-0">
+                <p class="text-[10px] font-bold text-charcoal">$240.00</p>
+                <span class="relative inline-block">
+                  <span id="st-pending" class="inline-block text-[8px] font-medium px-1.5 py-0.5 rounded-full bg-amber-light text-amber-dark">pending</span>
+                  <span id="st-settled" class="absolute right-0 top-0 inline-block text-[8px] font-medium px-1.5 py-0.5 rounded-full bg-sage/20 text-sage-dark">settled</span>
+                </span>
+              </div>
+            </div>
+            <div class="ex-row flex items-center gap-2.5 bg-white rounded-xl px-3 py-2.5 shadow-sm">
+              <div class="w-8 h-8 rounded-xl bg-cream flex items-center justify-center text-sm shrink-0">👟</div>
+              <div class="flex-1 min-w-0"><p class="text-[10px] font-semibold text-charcoal">New sneakers</p><p class="text-[9px] text-charcoal/50">Oct 1 · Your share: $32.50</p></div>
+              <div class="text-right shrink-0"><p class="text-[10px] font-bold text-charcoal">$65.00</p><span class="text-[8px] font-medium px-1.5 py-0.5 rounded-full bg-sage/20 text-sage-dark">settled</span></div>
+            </div>
+            <div class="ex-row flex items-center gap-2.5 bg-white rounded-xl px-3 py-2.5 shadow-sm">
+              <div class="w-8 h-8 rounded-xl bg-cream flex items-center justify-center text-sm shrink-0">📚</div>
+              <div class="flex-1 min-w-0"><p class="text-[10px] font-semibold text-charcoal">School supplies</p><p class="text-[9px] text-charcoal/50">Sep 28 · Your share: $24.25</p></div>
+              <div class="text-right shrink-0"><p class="text-[10px] font-bold text-charcoal">$48.50</p><span class="text-[8px] font-medium px-1.5 py-0.5 rounded-full bg-sage/20 text-sage-dark">settled</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ SHARED CHROME ============ -->
+        <div class="absolute top-0 left-0 right-0 h-7.5 bg-[#F7F3ED] z-10">
+          <div class="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-charcoal rounded-full"></div>
+          <div class="flex items-center justify-between px-5 pt-3 pb-1">
+            <span class="text-[9px] font-semibold text-charcoal/80">9:41</span>
+            <div class="flex items-center gap-1">
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><rect x="0" y="4" width="2" height="4" rx="0.5" fill="#2D2D2D" opacity="0.4" /><rect x="3" y="2.5" width="2" height="5.5" rx="0.5" fill="#2D2D2D" opacity="0.6" /><rect x="6" y="1" width="2" height="7" rx="0.5" fill="#2D2D2D" /><rect x="9" y="0" width="2" height="8" rx="0.5" fill="#2D2D2D" /></svg>
+              <div class="w-4 h-2 border border-charcoal/70 rounded-sm relative"><div class="absolute inset-0.5 right-1.5 bg-charcoal rounded-sm"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notification toast -->
+        <div id="toast" class="absolute left-3 right-3 top-9 z-20 bg-white rounded-2xl px-3 py-2.5 flex items-center gap-2.5" style="box-shadow: 0 8px 24px rgba(45,45,45,0.14)">
+          <div class="w-7 h-7 rounded-lg bg-amber-light flex items-center justify-center text-xs shrink-0">💰</div>
+          <div class="min-w-0">
+            <p class="text-[10px] font-semibold text-charcoal">James added an expense</p>
+            <p class="text-[9px] text-charcoal/50">Dentist visit · $240 split 50/50</p>
+          </div>
+          <span class="ml-auto text-[8px] text-charcoal/40 self-start">now</span>
+        </div>
+
+        <!-- Tab bar -->
+        <div class="absolute bottom-0 left-0 right-0 z-10 bg-white/95 border-t border-charcoal/5 px-4 py-2">
+          <div class="relative flex items-center">
+            <div id="tab-pill" class="absolute top-0 left-0 h-full rounded-xl bg-sage/15" style="width: 57px"></div>
+            <div class="tab flex-1 relative flex flex-col items-center gap-0.5 py-1"><span class="text-sm">🏠</span><span class="text-[8px] font-medium text-charcoal/40">Home</span></div>
+            <div class="tab flex-1 relative flex flex-col items-center gap-0.5 py-1"><span class="text-sm">📅</span><span class="text-[8px] font-medium text-charcoal/40">Schedule</span></div>
+            <div class="tab flex-1 relative flex flex-col items-center gap-0.5 py-1"><span class="text-sm">📁</span><span class="text-[8px] font-medium text-charcoal/40">Records</span></div>
+            <div class="tab flex-1 relative flex flex-col items-center gap-0.5 py-1"><span class="text-sm">👤</span><span class="text-[8px] font-medium text-charcoal/40">Account</span></div>
+          </div>
+        </div>
+
+        <!-- Tap ripple -->
+        <div id="tap" class="absolute z-30 w-9 h-9 rounded-full bg-charcoal/25" style="left: 0; top: 0"></div>
+      </div>
+    </div>
+
+    <script>
+      // ---- Static markup built once (deterministic) ----
+      const sageDays = new Set([1, 2, 5, 6, 7, 12, 13, 16, 17, 18, 23, 24, 27, 28, 29]);
+      const grid = document.getElementById("cal-grid");
+      for (let i = 0; i < 3; i++) grid.appendChild(document.createElement("div"));
+      for (let d = 1; d <= 31; d++) {
+        const c = document.createElement("div");
+        c.className =
+          "cal-cell aspect-square rounded-lg flex items-center justify-center text-[10px] font-medium " +
+          (d === 7 ? "bg-charcoal text-cream" : sageDays.has(d) ? "bg-sage text-white" : "bg-amber-light text-charcoal/70");
+        c.textContent = d;
+        grid.appendChild(c);
+      }
+      document.querySelectorAll("[data-digit]").forEach((col) => {
+        // Two full 0-9 cycles so each digit rolls past at least one full turn
+        for (let n = 0; n < 20; n++) {
+          const s = document.createElement("span");
+          s.textContent = n % 10;
+          col.appendChild(s);
+        }
+      });
+
+      // ---- Timeline (12s seamless loop) ----
+      const W = 260;
+      const TAB = 57; // (260 - 2*16 padding) / 4
+      const tabs = [...document.querySelectorAll(".tab span:last-child")];
+      const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
+
+      // Initial state, applied outside the timeline so frame 0 renders it.
+      // It also equals the final state, so the clip loops seamlessly.
+      gsap.set(["#s-cal", "#s-exp"], { x: W });
+      gsap.set(tabs[0], { color: "#5A7A66" });
+      gsap.set("#toast", { y: -70, opacity: 0 });
+      gsap.set("#tap", { opacity: 0, scale: 0.4 });
+      gsap.set(".cal-cell", { opacity: 0, scale: 0.5 });
+      gsap.set("#cal-event", { opacity: 0, y: 16 });
+      gsap.set(".ex-row", { opacity: 0, x: 24 });
+      gsap.set(["#bar-a", "#bar-b"], { scaleX: 0 });
+      gsap.set("#st-settled", { opacity: 0, scale: 0.6 });
+
+      // Ambient pulse on today's dot
+      tl.to("#today-dot", { scale: 1.25, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 3 }, 0.2);
+
+      // Home: notification arrives
+      tl.to("#toast", { y: 0, opacity: 1, duration: 0.6, ease: "back.out(1.6)" }, 0.6)
+        .to("#bell", { rotation: 16, duration: 0.08, ease: "none", yoyo: true, repeat: 5 }, 0.7)
+        .to("#toast", { y: -70, opacity: 0, duration: 0.45, ease: "power2.in" }, 2.4);
+
+      function tap(tabIndex, at) {
+        const x = 16 + TAB * tabIndex + TAB / 2 - 18;
+        tl.set("#tap", { left: x, top: 580 - 44 }, at)
+          .fromTo("#tap", { opacity: 0.5, scale: 0.4 }, { opacity: 0, scale: 1.4, duration: 0.5, ease: "power2.out", immediateRender: false }, at);
+      }
+      function switchTab(from, to, at) {
+        tl.to("#tab-pill", { x: TAB * to, duration: 0.5, ease: "power3.inOut" }, at)
+          .to(tabs[from], { color: "rgba(45,45,45,0.4)", duration: 0.3 }, at)
+          .to(tabs[to], { color: "#5A7A66", duration: 0.3 }, at + 0.15);
+      }
+      function slide(outEl, inEl, at, dir = 1) {
+        tl.set(outEl, { zIndex: 1 }, at).set(inEl, { zIndex: 2 }, at);
+        tl.fromTo(inEl, { x: W * dir }, { x: 0, duration: 0.6, ease: "power3.inOut", immediateRender: false }, at)
+          .to(outEl, { x: -W * dir * 0.35, opacity: 0, duration: 0.6, ease: "power3.inOut" }, at)
+          .set(outEl, { opacity: 1, x: W }, at + 0.61);
+      }
+
+      // Home -> Schedule
+      tap(1, 2.9);
+      switchTab(0, 1, 3.0);
+      slide("#s-home", "#s-cal", 3.0);
+      tl.to(".cal-cell", { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)", stagger: { each: 0.022, grid: [5, 7], from: "start" } }, 3.45)
+        .to("#cal-event", { opacity: 1, y: 0, duration: 0.5 }, 4.6);
+
+      // Schedule -> Records
+      tap(2, 6.6);
+      switchTab(1, 2, 6.7);
+      slide("#s-cal", "#s-exp", 6.7);
+      document.querySelectorAll("[data-digit]").forEach((col, i) => {
+        const target = 10 + Number(col.dataset.digit);
+        tl.to(col, { y: -28 * target, duration: 1.1 + i * 0.12, ease: "power3.out" }, 7.2);
+      });
+      tl.to(["#bar-a", "#bar-b"], { scaleX: 1, duration: 0.8, ease: "power2.out" }, 7.4)
+        .to(".ex-row", { opacity: 1, x: 0, duration: 0.45, stagger: 0.1 }, 7.5)
+        .to("#st-pending", { opacity: 0, scale: 0.6, duration: 0.25, ease: "power2.in" }, 9.4)
+        .to("#st-settled", { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2.4)" }, 9.55);
+
+      // Records -> Home (loops back to frame 0)
+      tap(0, 10.9);
+      switchTab(2, 0, 11.0);
+      slide("#s-exp", "#s-home", 11.0, -1);
+      tl.set("#s-home", { x: 0 }, 12);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
