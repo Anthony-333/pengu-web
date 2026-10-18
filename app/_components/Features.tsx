@@ -9,6 +9,10 @@ type Feature = {
   title: string;
   body: string;
   points: string[];
+  /** The old way, in the co-parent's words. The clip opens on it. */
+  problem: string;
+  /** `public/video/feature-<video>.*`, rendered from `video/features/<video>.tpl`. */
+  video: string;
   dot: string;
   screen: ReactNode;
 };
@@ -19,6 +23,8 @@ const features: Feature[] = [
     title: "Always know who has the kids.",
     body: "Set the pattern once (2-2-3, week on/week off, or your own) and every handover lands on both calendars. When plans change, one parent proposes and the other approves.",
     points: ["Built-in rotation patterns", "Handover reminders", "Syncs to your phone's calendar"],
+    problem: "“Wait, is this weekend yours or mine?”",
+    video: "calendar",
     dot: "bg-maria",
     screen: <ScheduleScreen />,
   },
@@ -27,6 +33,8 @@ const features: Feature[] = [
     title: "Money, without the arguments.",
     body: "Log any shared cost, snap the receipt, and Pengu works out each parent's share. Settle or dispute in one tap, with a running ledger you both see.",
     points: ["Receipt photos attached", "Settle or dispute in one tap", "A balance that's always up to date"],
+    problem: "“Who paid for the dentist again?”",
+    video: "expenses",
     dot: "bg-lily",
     screen: <ExpensesScreen />,
   },
@@ -35,6 +43,8 @@ const features: Feature[] = [
     title: "Nothing gets lost at the handover.",
     body: "Leave a note at every handover, like medication, homework or what they ate, and see when your co-parent has acknowledged it. Chat and voice messages live right beside it.",
     points: ["Urgent, important or FYI", "Acknowledged when read", "Health, school and activity filters"],
+    problem: "“What medicine??”",
+    video: "notes",
     dot: "bg-james",
     screen: <NotesScreen />,
   },
@@ -43,10 +53,34 @@ const features: Feature[] = [
     title: "Every milestone, in both homes.",
     body: "A private photo wall only your nest can see. First steps, school plays, Sunday at the park, kept together no matter whose weekend it was.",
     points: ["Photos and videos", "Tags and reactions", "Private to your nest"],
+    problem: "“The shared album link expired.”",
+    video: "memories",
     dot: "bg-accent",
     screen: <MemoriesScreen />,
   },
 ];
+
+/**
+ * The problem -> Pengu clip for one feature. It ends on the same frame as the
+ * static screen underneath, so the handoff is invisible, and reduced-motion
+ * visitors just see that screen. `FeatureTour` plays it when its step is active.
+ */
+function FeatureVideo({ f, i }: { f: Feature; i: number }) {
+  return (
+    <video
+      data-tour-video={i}
+      className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
+      muted
+      playsInline
+      preload="none"
+      poster={`/video/feature-${f.video}-poster.jpg`}
+      aria-label={`${f.eyebrow}: ${f.problem} then the same moment in Pengu`}
+    >
+      <source src={`/video/feature-${f.video}.webm`} type="video/webm" />
+      <source src={`/video/feature-${f.video}.mp4`} type="video/mp4" />
+    </video>
+  );
+}
 
 export function Features() {
   return (
@@ -65,14 +99,14 @@ export function Features() {
         </div>
       </div>
 
-      <FeatureTour className="mx-auto mt-10 grid max-w-6xl gap-x-16 px-5 sm:px-8 lg:mt-0 lg:grid-cols-2">
-        {/* Steps */}
+      <FeatureTour className="relative mx-auto mt-10 max-w-6xl px-5 sm:px-8 lg:mt-0">
+        {/* Steps alternate sides; the sticky phone crosses over to the other half */}
         <div>
           {features.map((f, i) => (
             <div
               key={f.eyebrow}
               data-step={i}
-              className="tour-step flex flex-col justify-center py-14 lg:min-h-[80vh] lg:py-0"
+              className={`tour-step flex flex-col justify-center py-14 lg:min-h-[90vh] lg:w-1/2 lg:py-0 ${i % 2 ? "lg:ml-auto lg:pl-16" : "lg:pr-16"}`}
             >
               <div className="mb-5 flex items-center gap-3">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-paper text-xs font-bold text-ink shadow-sm">
@@ -81,6 +115,10 @@ export function Features() {
                 <span className={`h-2 w-2 rounded-full ${f.dot}`} />
                 <span className="text-sm font-semibold text-ink-2">{f.eyebrow}</span>
               </div>
+              {/* The old way, struck out: the clip opens on this problem */}
+              <p className="tour-problem mb-3 text-lg text-ink-3">
+                <s className="decoration-accent/70 decoration-2">{f.problem}</s>
+              </p>
               <h3 className="text-3xl font-bold leading-tight tracking-[-0.025em] text-ink sm:text-[44px]">
                 {f.title}
               </h3>
@@ -99,23 +137,34 @@ export function Features() {
               {/* Small screens: each step carries its own phone */}
               <div className="reveal-scale relative mt-12 flex justify-center lg:hidden">
                 <div className={`absolute top-1/4 h-64 w-64 rounded-full opacity-25 blur-3xl ${f.dot}`} />
-                <Phone className="[--s:0.68]">{f.screen}</Phone>
+                <Phone className="[--s:0.68]" overlay={<FeatureVideo f={f} i={i} />}>
+                  {f.screen}
+                </Phone>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Large screens: one sticky phone that swaps screens */}
-        <div className="hidden lg:block">
-          <div className="sticky top-0 flex h-screen items-center justify-center">
-            <div className="tour-glow absolute h-[420px] w-[420px] rounded-full opacity-25 blur-[100px]" />
-            <Phone className="[--s:0.78]">
-              {features.map((f, i) => (
-                <div key={f.eyebrow} data-screen={i} className="tour-screen absolute inset-0">
-                  {f.screen}
-                </div>
-              ))}
-            </Phone>
+        {/* Large screens: one sticky phone that swaps screens and sides */}
+        <div className="pointer-events-none absolute inset-y-0 inset-x-5 hidden sm:inset-x-8 lg:block">
+          <div className="sticky top-0 h-screen">
+            <div className="tour-phone absolute inset-y-0 left-0 flex w-1/2 items-center justify-center">
+              <div className="tour-glow absolute h-[420px] w-[420px] rounded-full opacity-25 blur-[100px]" />
+              <Phone
+                className="[--s:0.74] xl:[--s:0.78]"
+                overlay={features.map((f, i) => (
+                  <div key={f.eyebrow} data-screen={i} className="tour-screen absolute inset-0">
+                    <FeatureVideo f={f} i={i} />
+                  </div>
+                ))}
+              >
+                {features.map((f, i) => (
+                  <div key={f.eyebrow} data-screen={i} className="tour-screen absolute inset-0">
+                    {f.screen}
+                  </div>
+                ))}
+              </Phone>
+            </div>
           </div>
         </div>
       </FeatureTour>

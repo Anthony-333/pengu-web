@@ -37,7 +37,7 @@ const HEIGHT = { tall: 180, sq: 150, short: 120 };
 
 function MemoryCard({ m }: { m: Memory }) {
   return (
-    <div className="rounded-[22px] bg-paper p-1.5 shadow-[0_8px_20px_rgb(14_14_18/0.06)]">
+    <div className="memory rounded-[22px] bg-paper p-1.5 shadow-[0_8px_20px_rgb(14_14_18/0.06)]">
       <div className="relative overflow-hidden rounded-[17px]" style={{ height: HEIGHT[m.shape] }}>
         <Image src={m.src} alt="" fill sizes="180px" className="object-cover" />
         {m.video ? (
@@ -59,7 +59,7 @@ function MemoryCard({ m }: { m: Memory }) {
         {m.react ? (
           <div className="mt-1.5 flex gap-1">
             {m.react.map(([e, n]) => (
-              <span key={e} className="rounded-full bg-frost px-[7px] py-[3px] text-[11px]">
+              <span key={e} className="react rounded-full bg-frost px-[7px] py-[3px] text-[11px]">
                 {e} {n}
               </span>
             ))}

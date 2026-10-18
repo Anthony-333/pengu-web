@@ -25,15 +25,18 @@ const rowB: Tile[] = [
 
 function Row({ tiles, direction }: { tiles: Tile[]; direction: "left" | "right" }) {
   return (
-    <div className={`flex gap-4 ${direction === "left" ? "drift-left" : "drift-right"}`}>
+    // Tiles twice over, so the infinite slide by half the row loops seamlessly.
+    <div className={`flex w-max ${direction === "left" ? "marquee-left" : "marquee-right"}`}>
       {[...tiles, ...tiles].map((t, i) => (
-        <div key={i} className={`relative h-56 shrink-0 overflow-hidden rounded-3xl sm:h-72 ${t.w}`}>
-          <Image src={t.src} alt={i < tiles.length ? t.alt : ""} fill sizes="420px" className="object-cover" />
-          {t.tag && (
-            <span className="glass absolute bottom-3 left-3 rounded-full px-3 py-1 text-xs font-semibold text-white">
-              {t.tag}
-            </span>
-          )}
+        <div key={i} className="shrink-0 pr-4" aria-hidden={i >= tiles.length || undefined}>
+          <div className={`relative h-56 overflow-hidden rounded-3xl sm:h-72 ${t.w}`}>
+            <Image src={t.src} alt={i < tiles.length ? t.alt : ""} fill sizes="420px" className="object-cover" />
+            {t.tag && (
+              <span className="glass absolute bottom-3 left-3 rounded-full px-3 py-1 text-xs font-semibold text-white">
+                {t.tag}
+              </span>
+            )}
+          </div>
         </div>
       ))}
     </div>

@@ -1,28 +1,28 @@
 import Image from "next/image";
 import reading from "@/public/images/vitaly-gariev-kNzJZSAMaxc-unsplash.jpg";
 import drawing from "@/public/images/vitaly-gariev-inrYL3ffAsQ-unsplash.jpg";
-import coralWall from "@/public/images/humphrey-m-Cc-CQTUkbH0-unsplash.jpg";
+import planner from "@/public/images/estee-janssens-zni0zgb3bkQ-unsplash.jpg";
 
 const steps = [
   {
     title: "Create your nest",
     body: "Sign up, pick your color and add your child. Your nest is a private space only the people you invite can see into.",
-    photo: reading,
-    alt: "A father reading a book with his son",
+    photo: drawing,
+    alt: "A mother drawing with her son at home",
     chip: { icon: "🪺", label: "Emma's nest created", bg: "bg-lily-soft" },
   },
   {
     title: "Invite your co-parent",
     body: "Send an invite by email or read out a join code. You choose their role and what they can see.",
-    photo: drawing,
-    alt: "A mother drawing with her son at home",
+    photo: reading,
+    alt: "A father reading a book with his son",
     chip: { icon: "✉️", label: "James joined your nest", bg: "bg-james-soft" },
   },
   {
     title: "Share the load",
     body: "Set the custody pattern, then start logging expenses, notes and memories. Both of you see the same thing, as it happens.",
-    photo: coralWall,
-    alt: "A father lifting his laughing baby against a coral wall",
+    photo: planner,
+    alt: "A hand-drawn monthly calendar in a planner, with a yellow marker",
     chip: { icon: "📅", label: "Schedule approved", bg: "bg-maria-soft" },
   },
 ];

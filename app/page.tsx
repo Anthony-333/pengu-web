@@ -4,12 +4,15 @@ import { Features } from "./_components/Features";
 import { Moments } from "./_components/Moments";
 import { HowItWorks } from "./_components/HowItWorks";
 import { Testimonials } from "./_components/Testimonials";
+import { FAQ } from "./_components/FAQ";
 import { Download } from "./_components/Download";
 import { Footer } from "./_components/Footer";
+import { StructuredData } from "./_components/StructuredData";
 
 export default function Home() {
   return (
     <>
+      <StructuredData />
       <Nav />
       <main>
         <Hero />
@@ -17,6 +20,7 @@ export default function Home() {
         <Moments />
         <HowItWorks />
         <Testimonials />
+        <FAQ />
         <Download />
       </main>
       <Footer />

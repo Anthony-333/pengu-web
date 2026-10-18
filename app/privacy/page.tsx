@@ -3,9 +3,11 @@ import Link from "next/link";
 import { LEGAL, LegalPage, LegalSection } from "../_components/LegalPage";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Pengu",
+  title: "Privacy Policy",
   description:
     "How Pengu collects, uses, shares and protects the information co-parents and their families keep in the app.",
+  alternates: { canonical: "/privacy" },
+  openGraph: { title: "Privacy Policy — Pengu", url: "/privacy" },
 };
 
 const toc = [

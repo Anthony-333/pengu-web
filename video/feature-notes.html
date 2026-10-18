@@ -1,0 +1,253 @@
+<!doctype html>
+<!--
+  GENERATED SOURCE: edit video/features/shell.tpl or video/features/notes.tpl,
+  then run `npm run screens`. Screen markup comes from app/_components/phone.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=780, height=1688" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:wght@400..800&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      /* No global reset here: unlayered rules would beat Tailwind's utilities (preflight resets already) */
+      html,
+      body {
+        width: 780px;
+        height: 1688px;
+        overflow: hidden;
+        background: #f2f2f5;
+      }
+      /* Authored in iPhone points (390x844), rendered at 2x. */
+      #screen {
+        zoom: 2;
+        position: relative;
+        width: 390px;
+        height: 844px;
+        overflow: hidden;
+        background: #f2f2f5;
+        font-family: "Elms Sans", ui-sans-serif, system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+      }
+    </style>
+    <script>
+      window.__tailwindReady=new Promise(function(resolve){
+      var loaded=document.readyState==="complete";
+      var resolved=false;
+      var observer;
+      function readTailwindCss(){var styles=document.querySelectorAll("style");for(var i=styles.length-1;i>=0;i--){var text=styles[i].textContent||"";if(text.indexOf("tailwindcss v")!==-1)return text;}return "";}
+      function finish(){if(resolved||!loaded||!readTailwindCss())return;resolved=true;if(observer)observer.disconnect();resolve(true);}
+      observer=new MutationObserver(finish);
+      observer.observe(document.documentElement,{childList:true,subtree:true,characterData:true});
+      if(loaded){finish();}else{window.addEventListener("load",function(){loaded=true;finish();},{once:true});}
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.2.4/dist/index.global.js" integrity="sha384-v5YF9xS+gLRWdvrQ0u/WRbCkjSIH0NjHIPe8tBL1ZRrmI7PiSH6LLdzs0aAIMCuh" crossorigin="anonymous"></script>
+    <style type="text/tailwindcss">
+      /* Copied from app/globals.css by render-screens.tsx */
+      @theme {
+        /* Pengu color system — mirrors pengu/src/constants/colors.ts */
+  --color-ink: #0E0E12;
+  --color-ink-2: #2A2A31;
+  --color-ink-3: #6B6B76;
+  --color-muted: #A0A0AA;
+  --color-hairline: #E8E8ED;
+  --color-canvas: #F2F2F5;
+  --color-snow: #FAFAFB;
+  --color-iceberg: #F4F4F7;
+  --color-frost: #EDEDF1;
+  --color-paper: #FFFFFF;
+
+  /* Brand coral. `accent-ink` is the coral for small text on light
+     surfaces — plain `accent` fails WCAG AA there. */
+  --color-accent: #FF5A3C;
+  --color-accent-soft: #FFECE7;
+  --color-accent-deep: #D63E20;
+  --color-accent-ink: #C2391C;
+
+  /* Parent "m" — emerald */
+  --color-maria: #1FAA77;
+  --color-maria-soft: #E3F5EE;
+  --color-maria-deep: #0D7A52;
+  /* Parent "j" — violet */
+  --color-james: #7B61FF;
+  --color-james-soft: #EEEAFF;
+  --color-james-deep: #5236D9;
+  /* Amber */
+  --color-lily: #F5A623;
+  --color-lily-soft: #FEF3DF;
+  --color-lily-deep: #A15C07;
+  /* Blue */
+  --color-sky: #2F80FF;
+  --color-sky-soft: #E5EFFF;
+  --color-sky-deep: #1A5BCC;
+  /* Semantic */
+  --color-danger: #F04438;
+  --color-danger-soft: #FDECEA;
+  --color-warn: #F59E0B;
+  --color-warn-soft: #FEF3E2;
+  --color-warn-deep: #A15C07;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="feature-notes"
+      data-start="0"
+      data-duration="9.44"
+      data-width="780"
+      data-height="1688"
+    >
+      <div id="screen" class="clip font-semibold text-ink" data-layout-allow-occlusion data-layout-allow-overlap data-start="0" data-duration="9.44" data-track-index="0">
+        <!-- The old way: the problem, built up to a breaking point -->
+        <div id="prob" class="scene bg-paper" data-layout-allow-overflow data-layout-allow-occlusion><!-- The old way: the one message that mattered, buried by the chatter -->
+<div class="absolute inset-x-0 top-0 z-10 flex flex-col items-center border-b-[0.5px] border-hairline bg-paper pb-2.5 pt-[58px]">
+  <span class="absolute left-4 top-[70px] text-[17px] text-sky-deep">‹ 27</span>
+  <span class="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-james-soft text-[17px] text-james-deep">J</span>
+  <p class="mt-1 text-[12px] text-ink-2">James</p>
+</div>
+
+<!-- Fixed row heights (first 72, the rest 44) so the scroll is plain arithmetic. -->
+<div id="thread" class="absolute inset-x-0 bottom-[84px] px-3.5">
+  <div class="row flex h-[72px] items-start"><p id="meds" class="h-16 max-w-[80%] rounded-[20px] bg-frost px-3.5 py-2 text-[15px] leading-[24px] text-ink">Antibiotics 2x a day until Sunday. Bottle’s in her backpack 💊</p></div>
+  <div class="row flex h-[44px] items-start justify-end"><p class="h-9 whitespace-nowrap rounded-[20px] bg-sky-deep px-3.5 py-2 text-[15px] leading-5 text-white">ok 👍</p></div>
+  <div class="row flex h-[44px] items-start"><p class="h-9 whitespace-nowrap rounded-[20px] bg-frost px-3.5 py-2 text-[15px] leading-5 text-ink">Soccer moved to 5 btw</p></div>
+  <div class="row flex h-[44px] items-start justify-end"><p class="h-9 whitespace-nowrap rounded-[20px] bg-sky-deep px-3.5 py-2 text-[15px] leading-5 text-white">Can you grab her jacket?</p></div>
+  <div class="row flex h-[44px] items-start"><p class="h-9 whitespace-nowrap rounded-[20px] bg-frost px-3.5 py-2 text-[15px] leading-5 text-ink">Which one</p></div>
+  <div class="row flex h-[44px] items-start justify-end"><p class="h-9 whitespace-nowrap rounded-[20px] bg-sky-deep px-3.5 py-2 text-[15px] leading-5 text-white">The blue one</p></div>
+  <div class="row flex h-[44px] items-start"><p class="h-9 whitespace-nowrap rounded-[20px] bg-frost px-3.5 py-2 text-[15px] leading-5 text-ink">📷 Photo</p></div>
+  <div class="row flex h-[44px] items-start justify-end"><p class="h-9 whitespace-nowrap rounded-[20px] bg-sky-deep px-3.5 py-2 text-[15px] leading-5 text-white">Cute!!</p></div>
+  <div class="row flex h-[44px] items-start"><p class="h-9 whitespace-nowrap rounded-[20px] bg-frost px-3.5 py-2 text-[15px] leading-5 text-ink">Dentist is next Tuesday</p></div>
+  <div class="row flex h-[44px] items-start justify-end"><p class="h-9 whitespace-nowrap rounded-[20px] bg-sky-deep px-3.5 py-2 text-[15px] leading-5 text-white">Sure</p></div>
+  <div class="row flex h-[44px] items-start"><p class="h-9 whitespace-nowrap rounded-[20px] bg-frost px-3.5 py-2 text-[15px] leading-5 text-ink">Grandma wants to visit</p></div>
+  <div class="row flex h-[44px] items-start justify-end"><p class="h-9 whitespace-nowrap rounded-[20px] bg-sky-deep px-3.5 py-2 text-[15px] leading-5 text-white">Which weekend?</p></div>
+  <div class="row flex h-[44px] items-start"><p class="h-9 whitespace-nowrap rounded-[20px] bg-frost px-3.5 py-2 text-[15px] leading-5 text-ink">Not sure yet</p></div>
+  <div class="row flex h-[44px] items-start justify-end"><p class="h-9 whitespace-nowrap rounded-[20px] bg-sky-deep px-3.5 py-2 text-[15px] leading-5 text-white">👍</p></div>
+  <div class="row flex h-[44px] items-start"><p class="h-9 whitespace-nowrap rounded-[20px] bg-frost px-3.5 py-2 text-[15px] leading-5 text-ink">She has a cough again</p></div>
+  <div class="row flex h-[44px] items-start"><p class="h-9 whitespace-nowrap rounded-[20px] bg-frost px-3.5 py-2 text-[15px] leading-5 text-ink">Did you give her the medicine?</p></div>
+  <div class="row flex h-[44px] items-start justify-end"><p class="h-9 whitespace-nowrap rounded-[20px] bg-sky-deep px-3.5 py-2 text-[15px] leading-5 text-white">What medicine??</p></div>
+</div>
+
+<div class="absolute inset-x-0 bottom-0 z-10 flex items-center gap-2 border-t-[0.5px] border-hairline bg-paper px-3 pb-[30px] pt-2">
+  <span class="flex h-[34px] w-[34px] items-center justify-center rounded-full bg-frost text-[18px] text-ink-3">+</span>
+  <span class="flex h-[36px] flex-1 items-center rounded-full border-[0.5px] border-hairline px-3.5 text-[15px] text-ink-3">Message</span>
+</div></div>
+
+        <!-- Pengu: revealed through a circle opening behind the badge -->
+        <div id="sol" class="scene" data-layout-allow-overflow data-layout-allow-occlusion>
+          <div class="absolute inset-0 bg-canvas"><div class="px-5 pb-3.5 pt-[62px]"><div class="flex min-h-[42px] items-center justify-between"><div class="relative flex shrink-0 items-center justify-center rounded-full border-[0.5px] border-hairline bg-paper" style="width:42px;height:42px"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="solar solar-alt-arrow-left-line-duotone" style="color:#0E0E12;width:18px;height:18px" stroke-width="var(--solar-stroke-width, 1.5)" aria-hidden="true"><path d="M15 5L9 12L15 19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="color:var(--solar-secondary-color, currentColor);opacity:var(--solar-secondary-opacity, 0.5)"></path><path d="M12 8.5L9 12L15 19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="relative flex shrink-0 items-center justify-center rounded-full border-[0.5px] border-hairline bg-accent" style="width:42px;height:42px"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="solar solar-add-line-duotone" style="color:#FFFFFF;width:18px;height:18px" stroke-width="var(--solar-stroke-width, 1.5)" aria-hidden="true"><path d="M12.0204 4L12.0205 20.0003" stroke="currentColor" stroke-linecap="round" style="color:var(--solar-secondary-color, currentColor);opacity:var(--solar-secondary-opacity, 0.5)"></path><path d="M4 12L20 12" stroke="currentColor" stroke-linecap="round"></path></svg></div></div><p class="mt-3.5 text-[30px] leading-[38px] tracking-[-0.9px] text-ink">Transfer Notes</p><p class="mt-0.5 text-[13px] text-ink-3">Pass-the-iceberg log · 4 notes</p></div><div class="flex gap-2 overflow-hidden px-4 pb-3.5"><span class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-full px-3.5 text-[13px] bg-ink text-white">All notes<span class="rounded-full px-[7px] py-px text-[10px] bg-white/15 text-white">4</span></span><span class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-full px-3.5 text-[13px] border-[0.5px] border-hairline bg-paper text-ink-2">Health<span class="rounded-full px-[7px] py-px text-[10px] bg-frost text-ink-2">1</span></span><span class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-full px-3.5 text-[13px] border-[0.5px] border-hairline bg-paper text-ink-2">School<span class="rounded-full px-[7px] py-px text-[10px] bg-frost text-ink-2">1</span></span><span class="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-full px-3.5 text-[13px] border-[0.5px] border-hairline bg-paper text-ink-2">Activity<span class="rounded-full px-[7px] py-px text-[10px] bg-frost text-ink-2">1</span></span></div><div class="rounded-[24px] bg-paper shadow-[0_8px_20px_rgb(14_14_18/0.06)] mx-4 mb-3" style="padding:18px"><div class="mb-3 flex items-center gap-2.5"><div class="flex shrink-0 items-center justify-center" style="width:34px;height:34px;border-radius:17px;background:#FDECEA"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="solar solar-heart-line-duotone" style="color:#F04438;width:14px;height:14px" stroke-width="var(--solar-stroke-width, 1.5)" aria-hidden="true"><path d="M12 5.50063C16.4998 0.825464 22 4.27416 22 9.1371C22 14 17.9806 16.5914 15.0383 18.9109C14 19.7294 13 20.5 12 20.5" stroke="currentColor" stroke-linecap="round" style="color:var(--solar-secondary-color, currentColor);opacity:var(--solar-secondary-opacity, 0.5)"></path><path d="M12 5.50063C7.50016 0.825464 2 4.27416 2 9.1371C2 14 6.01943 16.5914 8.96173 18.9109C10 19.7294 11 20.5 12 20.5" stroke="currentColor" stroke-linecap="round"></path></svg></div><div class="flex-1"><p class="text-[11px] uppercase tracking-[1.4px] text-muted">Health</p></div><span class="inline-flex items-center gap-[5px] self-start rounded-full px-2.5 py-[5px] text-[11px] tracking-[-0.1px] bg-danger-soft text-danger">urgent</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="solar solar-menu-dots-circle-line-duotone" style="color:#6B6B76;width:18px;height:18px" stroke-width="var(--solar-stroke-width, 1.5)" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-linecap="round" style="color:var(--solar-secondary-color, currentColor);opacity:var(--solar-secondary-opacity, 0.5)"></circle><path d="M8 12H8.009M11.991 12H12M15.991 12H16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><p class="mb-1.5 text-[17px] leading-[23px] tracking-[-0.3px] text-ink">Antibiotics until Sunday</p><p class="text-[14px] leading-5 text-ink-3">One spoonful with breakfast and dinner. The bottle is in the front pocket of her backpack.</p><div class="mt-3.5 flex items-center justify-between gap-2 border-t-[0.5px] border-hairline pt-3"><div class="flex min-w-0 items-center gap-2"><div class="flex shrink-0 items-center justify-center rounded-full bg-james-soft text-james-deep" style="width:24px;height:24px;font-size:9px">J</div><span class="truncate text-[12px] text-ink-3">James · 2h ago</span></div><span class="flex h-[30px] items-center gap-1 rounded-full bg-ink px-3 text-[12px] text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="solar solar-check-line-duotone" style="color:#FFFFFF;width:12px;height:12px" stroke-width="var(--solar-stroke-width, 1.5)" aria-hidden="true"><path d="M9 17L19 7" stroke="currentColor" stroke-linecap="round" style="color:var(--solar-secondary-color, currentColor);opacity:var(--solar-secondary-opacity, 0.5)"></path><path d="M5 13L9 17" stroke="currentColor" stroke-linecap="round"></path></svg>Acknowledge</span></div></div><div class="rounded-[24px] bg-paper shadow-[0_8px_20px_rgb(14_14_18/0.06)] mx-4 mb-3" style="padding:18px"><div class="mb-3 flex items-center gap-2.5"><div class="flex shrink-0 items-center justify-center" style="width:34px;height:34px;border-radius:17px;background:#FEF3E2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="solar solar-square-academic-cap-line-duotone" style="color:#A15C07;width:14px;height:14px" stroke-width="var(--solar-stroke-width, 1.5)" aria-hidden="true"><path d="M2 8.5V14" stroke="currentColor" stroke-linecap="round" style="color:var(--solar-secondary-color, currentColor);opacity:var(--solar-secondary-opacity, 0.5)"></path><path d="M19 11.5V16.6254C19 17.6334 18.4965 18.5772 17.6147 19.0656C16.1463 19.8787 13.796 21 12 21C10.204 21 7.8537 19.8787 6.38533 19.0656C5.5035 18.5772 5 17.6334 5 16.6254V11.5" stroke="currentColor" stroke-linecap="round" style="color:var(--solar-secondary-color, currentColor);opacity:var(--solar-secondary-opacity, 0.5)"></path><path d="M9.78272 3.49965C11.2037 2.83345 12.7962 2.83345 14.2172 3.49965L20.9084 6.63664C22.3639 7.31899 22.3639 9.68105 20.9084 10.3634L14.2173 13.5004C12.7963 14.1665 11.2038 14.1665 9.78281 13.5004L3.0916 10.3634C1.63613 9.68101 1.63614 7.31895 3.0916 6.63659L9.78272 3.49965Z" stroke="currentColor" stroke-linecap="round"></path></svg></div><div class="flex-1"><p class="text-[11px] uppercase tracking-[1.4px] text-muted">School</p></div><span class="inline-flex items-center gap-[5px] self-start rounded-full px-2.5 py-[5px] text-[11px] tracking-[-0.1px] bg-warn-soft text-warn-deep">important</span></div><p class="mb-1.5 text-[17px] leading-[23px] tracking-[-0.3px] text-ink">Reading log due Friday</p><p class="text-[14px] leading-5 text-ink-3">Two pages a night. She&#x27;s on chapter 4. The log is in the blue folder.</p><div class="mt-3.5 flex items-center justify-between gap-2 border-t-[0.5px] border-hairline pt-3"><div class="flex min-w-0 items-center gap-2"><div class="flex shrink-0 items-center justify-center rounded-full bg-maria-soft text-maria-deep" style="width:24px;height:24px;font-size:9px">S</div><span class="truncate text-[12px] text-ink-3">Sarah · Yesterday</span></div><span class="flex h-[30px] items-center gap-1 rounded-full bg-maria-soft px-3 text-[12px] text-maria-deep"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="solar solar-check-circle-line-duotone" style="color:#0D7A52;width:12px;height:12px" stroke-width="var(--solar-stroke-width, 1.5)" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-linecap="round" style="color:var(--solar-secondary-color, currentColor);opacity:var(--solar-secondary-opacity, 0.5)"></circle><path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg>Acknowledged</span></div></div><div class="rounded-[24px] bg-paper shadow-[0_8px_20px_rgb(14_14_18/0.06)] mx-4 mb-3" style="padding:18px"><div class="mb-3 flex items-center gap-2.5"><div class="flex shrink-0 items-center justify-center" style="width:34px;height:34px;border-radius:17px;background:#E5EFFF"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="solar solar-football-line-duotone" style="color:#1A5BCC;width:14px;height:14px" stroke-width="var(--solar-stroke-width, 1.5)" aria-hidden="true"><path d="M20.1848 17H18.5697C17.1799 17 16.4849 17 15.9618 17.3775M15.9618 17.3775C15.4386 17.755 15.2188 18.415 14.7793 19.7351L14.1917 21.5M15.9618 17.3775L13.7212 14.786M9.99081 21.5L9.40319 19.7351C8.96368 18.4151 8.74393 17.755 8.22076 17.3775C7.69759 17 7.00267 17 5.61283 17H3.99774M8.22076 17.3775L10.2558 14.786M4.83154 5.65332L5.24956 7.21519C5.60928 8.55922 5.78913 9.23123 5.56031 9.83487M5.56031 9.83487C5.33148 10.4385 4.75157 10.8218 3.59173 11.5885L2.04102 12.6136M5.56031 9.83487L9.19767 11.3678M19.2095 5.65341L18.7915 7.21528C18.4318 8.55931 18.2519 9.23133 18.4808 9.83496M18.4808 9.83496C18.7096 10.4386 19.2895 10.8219 20.4493 11.5886L22 12.6137M18.4808 9.83496L14.7793 11.3678M15.658 3.22334L14.3377 4.15456C13.2015 4.95591 12.6334 5.35658 11.9885 5.34961M11.9885 5.34961C11.3436 5.34263 10.7843 4.92976 9.66567 4.10403L8.17002 3M11.9885 5.34961V9.25841" stroke="currentColor" stroke-linecap="round" style="color:var(--solar-secondary-color, currentColor);opacity:var(--solar-secondary-opacity, 0.5)"></path><path d="M11.3821 9.46413C11.5611 9.32724 11.7748 9.25879 11.9885 9.25879C12.2022 9.25879 12.4159 9.32724 12.5949 9.46413L14.4314 10.8687C14.6004 10.998 14.7194 11.1739 14.7793 11.3681C14.8374 11.5563 14.8401 11.7616 14.7793 11.9586L14.058 14.2956C13.9965 14.4947 13.8769 14.6638 13.7212 14.7863C13.5493 14.9217 13.3335 15.0004 13.1037 15.0004H10.8733C10.6434 15.0004 10.4276 14.9217 10.2558 14.7863C10.1001 14.6638 9.98046 14.4947 9.919 14.2956L9.19766 11.9586C9.13686 11.7616 9.13959 11.5563 9.19766 11.3681C9.25763 11.1739 9.37662 10.998 9.54562 10.8687L11.3821 9.46413Z" stroke="currentColor" stroke-linecap="round"></path><path d="M11.9885 22C17.5049 22 21.9769 17.5228 21.9769 12C21.9769 6.47715 17.5049 2 11.9885 2C6.47198 2 2 6.47715 2 12C2 17.5228 6.47198 22 11.9885 22Z" stroke="currentColor" stroke-linecap="round"></path></svg></div><div class="flex-1"><p class="text-[11px] uppercase tracking-[1.4px] text-muted">Activity</p></div><span class="inline-flex items-center gap-[5px] self-start rounded-full px-2.5 py-[5px] text-[11px] tracking-[-0.1px] bg-sky-soft text-sky-deep">fyi</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="solar solar-menu-dots-circle-line-duotone" style="color:#6B6B76;width:18px;height:18px" stroke-width="var(--solar-stroke-width, 1.5)" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-linecap="round" style="color:var(--solar-secondary-color, currentColor);opacity:var(--solar-secondary-opacity, 0.5)"></circle><path d="M8 12H8.009M11.991 12H12M15.991 12H16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><p class="mb-1.5 text-[17px] leading-[23px] tracking-[-0.3px] text-ink">New swim goggles</p><p class="text-[14px] leading-5 text-ink-3">The old pair snapped. New ones are in the swim bag.</p><div class="mt-3.5 flex items-center justify-between gap-2 border-t-[0.5px] border-hairline pt-3"><div class="flex min-w-0 items-center gap-2"><div class="flex shrink-0 items-center justify-center rounded-full bg-james-soft text-james-deep" style="width:24px;height:24px;font-size:9px">J</div><span class="truncate text-[12px] text-ink-3">James · Mon</span></div><span class="flex h-[30px] items-center gap-1 rounded-full bg-maria-soft px-3 text-[12px] text-maria-deep"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="solar solar-check-circle-line-duotone" style="color:#0D7A52;width:12px;height:12px" stroke-width="var(--solar-stroke-width, 1.5)" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-linecap="round" style="color:var(--solar-secondary-color, currentColor);opacity:var(--solar-secondary-opacity, 0.5)"></circle><path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg>Acknowledged</span></div></div></div>
+          <div id="toast" class="absolute inset-x-4 bottom-[100px] z-10 flex items-center gap-3 rounded-[22px] bg-ink px-4 py-3 shadow-[0_14px_34px_rgb(14_14_18/0.28)]">
+  <span class="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-maria-deep text-[14px] text-white">✓</span>
+  <div class="min-w-0 flex-1">
+    <p class="text-[14px] text-white">Antibiotics acknowledged</p>
+    <p class="text-[12px] text-white/60">James can see you’ve got it</p>
+  </div>
+</div>
+        </div>
+        <div id="tabbar" class="scene" style="z-index: 20; pointer-events: none"><div data-layout-allow-occlusion="true" class="tabbar absolute inset-x-[20px] bottom-[22px] z-20 flex h-[62px] items-center rounded-full border-[0.5px] border-white/70 bg-white/75 px-1 shadow-[0_10px_30px_rgb(14_14_18/0.12)] backdrop-blur-xl"><div data-tab="0" class="tab flex h-[54px] flex-1 flex-col items-center justify-center gap-[3px] rounded-full "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="solar solar-home-line-duotone" style="color:#8E8E99;width:26px;height:26px" stroke-width="var(--solar-stroke-width, 1.5)" aria-hidden="true"><path d="M2 12.2039C2 9.91549 2 8.77128 2.5192 7.82274C3.0384 6.87421 3.98695 6.28551 5.88403 5.10813L7.88403 3.86687C9.88939 2.62229 10.8921 2 12 2C13.1079 2 14.1106 2.62229 16.116 3.86687L18.116 5.10812C20.0131 6.28551 20.9616 6.87421 21.4808 7.82274C22 8.77128 22 9.91549 22 12.2039V13.725C22 17.6258 22 19.5763 20.8284 20.7881C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.7881C2 19.5763 2 17.6258 2 13.725V12.2039Z" stroke="currentColor" stroke-linecap="round" style="color:var(--solar-secondary-color, currentColor);opacity:var(--solar-secondary-opacity, 0.5)"></path><path d="M15 18H9" stroke="currentColor" stroke-linecap="round"></path></svg><span class="text-[10px] tracking-[0.1px] text-[#8E8E99]">Home</span></div><div data-tab="1" class="tab flex h-[54px] flex-1 flex-col items-center justify-center gap-[3px] rounded-full "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="solar solar-calendar-line-duotone" style="color:#8E8E99;width:26px;height:26px" stroke-width="var(--solar-stroke-width, 1.5)" aria-hidden="true"><path d="M7 4V2.5" stroke="currentColor" stroke-linecap="round" style="color:var(--solar-secondary-color, currentColor);opacity:var(--solar-secondary-opacity, 0.5)"></path><path d="M17 4V2.5" stroke="currentColor" stroke-linecap="round" style="color:var(--solar-secondary-color, currentColor);opacity:var(--solar-secondary-opacity, 0.5)"></path><path d="M2.5 9H21.5" stroke="currentColor" stroke-linecap="round" style="color:var(--solar-secondary-color, currentColor);opacity:var(--solar-secondary-opacity, 0.5)"></path><path d="M2 12C2 8.22876 2 6.34315 3.17157 5.17157C4.34315 4 6.22876 4 10 4H14C17.7712 4 19.6569 4 20.8284 5.17157C22 6.34315 22 8.22876 22 12V14C22 17.7712 22 19.6569 20.8284 20.8284C19.6569 22 17.7712 22 14 22H10C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14V12Z" stroke="currentColor" stroke-linecap="round"></path><path d="M17 13H17.0001" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 13H12.0001" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 13H7.0001" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M17 17.0234H17.0001" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 17.0234H12.0001" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 17.0234H7.0001" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="text-[10px] tracking-[0.1px] text-[#8E8E99]">Schedule</span></div><div data-tab="2" class="tab flex h-[54px] flex-1 flex-col items-center justify-center gap-[3px] rounded-full bg-ink/[0.06]"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="solar solar-folder-bold-duotone" style="color:#FF5A3C;width:26px;height:26px" stroke-width="var(--solar-stroke-width, 1.5)" aria-hidden="true"><path d="M22 14V11.7979C22 9.16554 22 7.84935 21.2305 6.99383C21.1598 6.91514 21.0849 6.84024 21.0062 6.76946C20.1506 6 18.8345 6 16.2021 6H15.8284C14.6747 6 14.0979 6 13.5604 5.84678C13.2651 5.7626 12.9804 5.64471 12.7121 5.49543C12.2237 5.22367 11.8158 4.81578 11 4L10.4497 3.44975C10.1763 3.17633 10.0396 3.03961 9.89594 2.92051C9.27652 2.40704 8.51665 2.09229 7.71557 2.01738C7.52976 2 7.33642 2 6.94975 2C6.06722 2 5.62595 2 5.25839 2.06935C3.64031 2.37464 2.37464 3.64031 2.06935 5.25839C2 5.62595 2 6.06722 2 6.94975V14C2 17.7712 2 19.6569 3.17157 20.8284C4.34315 22 6.22876 22 10 22H14C17.7712 22 19.6569 22 20.8284 20.8284C22 19.6569 22 17.7712 22 14Z" fill="currentColor" style="color:var(--solar-secondary-color, currentColor);opacity:var(--solar-secondary-opacity, 0.5)"></path><path d="M12.25 10C12.25 9.58579 12.5858 9.25 13 9.25H18C18.4142 9.25 18.75 9.58579 18.75 10C18.75 10.4142 18.4142 10.75 18 10.75H13C12.5858 10.75 12.25 10.4142 12.25 10Z" fill="currentColor"></path></svg><span class="text-[10px] tracking-[0.1px] text-accent">Records</span></div><div data-tab="3" class="tab flex h-[54px] flex-1 flex-col items-center justify-center gap-[3px] rounded-full "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="solar solar-user-circle-line-duotone" style="color:#8E8E99;width:26px;height:26px" stroke-width="var(--solar-stroke-width, 1.5)" aria-hidden="true"><circle cx="12" cy="9" r="3" stroke="currentColor" stroke-linecap="round" style="color:var(--solar-secondary-color, currentColor);opacity:var(--solar-secondary-opacity, 0.5)"></circle><path d="M17.9691 20C17.81 17.1085 16.9247 15 11.9999 15C7.07521 15 6.18991 17.1085 6.03076 20" stroke="currentColor" stroke-linecap="round" style="color:var(--solar-secondary-color, currentColor);opacity:var(--solar-secondary-opacity, 0.5)"></path><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-linecap="round"></circle></svg><span class="text-[10px] tracking-[0.1px] text-[#8E8E99]">Account</span></div></div></div>
+
+        <div class="pointer-events-none absolute inset-x-0 top-0 z-30 h-[54px]"><div class="absolute left-1/2 top-[11px] h-[37px] w-[125px] -translate-x-1/2 rounded-full bg-black"></div><span class="absolute left-[52px] top-[18px] text-[17px] tracking-[-0.4px] text-ink">9:41</span><div class="absolute right-[34px] top-[22px] flex items-center gap-[6px] text-ink"><svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor" aria-hidden="true"><rect x="0" y="8" width="3" height="4" rx="1"></rect><rect x="5" y="5.5" width="3" height="6.5" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="0" width="3" height="12" rx="1"></rect></svg><svg width="16" height="12" viewBox="0 0 16 12" fill="currentColor" aria-hidden="true"><path d="M8 2.6c2.2 0 4.2.85 5.7 2.25l1.1-1.13A9.6 9.6 0 0 0 8 1C5.4 1 3 2 1.2 3.72l1.1 1.13A8 8 0 0 1 8 2.6Zm0 3.2c1.3 0 2.5.5 3.4 1.33l1.1-1.13A6.4 6.4 0 0 0 8 4.2c-1.75 0-3.33.68-4.5 1.8l1.1 1.13A4.8 4.8 0 0 1 8 5.8Zm0 3.2c.45 0 .87.17 1.18.45L8 10.66 6.82 9.45C7.13 9.17 7.55 9 8 9Z"></path></svg><div class="relative flex h-[13px] w-[27px] items-center rounded-[4px] border border-ink/40 p-[1.5px]"><div class="h-full w-[78%] rounded-[2px] bg-ink"></div><div class="absolute -right-[3px] top-1/2 h-[4px] w-[1.5px] -translate-y-1/2 rounded-r bg-ink/40"></div></div></div></div>
+        <div class="pointer-events-none absolute bottom-2 left-1/2 z-30 h-[5px] w-[134px] -translate-x-1/2 rounded-full bg-ink"></div>
+
+        <!-- Resolution beat: the Pengu mark lands, then opens into the app -->
+        <div class="absolute inset-0 z-40 flex items-center justify-center" style="pointer-events: none">
+          <div id="badge" class="flex h-[92px] w-[92px] items-center justify-center rounded-[28px] bg-paper shadow-[0_18px_50px_rgb(14_14_18/0.28),inset_0_0_0_0.5px_rgb(14_14_18/0.08)]"><svg width="58" height="58" viewBox="0 0 40 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><ellipse cx="20" cy="23" rx="12" ry="14" fill="#0E0E12"></ellipse><ellipse cx="20" cy="26" rx="7.5" ry="10" fill="#F2F2F5"></ellipse><ellipse cx="8" cy="26" rx="3.5" ry="8" fill="#0E0E12" transform="rotate(-12 8 26)"></ellipse><ellipse cx="32" cy="26" rx="3.5" ry="8" fill="#0E0E12" transform="rotate(12 32 26)"></ellipse><circle cx="15.5" cy="18" r="3" fill="white"></circle><circle cx="24.5" cy="18" r="3" fill="white"></circle><circle cx="16" cy="17.5" r="1.6" fill="#0E0E12"></circle><circle cx="25" cy="17.5" r="1.6" fill="#0E0E12"></circle><circle cx="16.6" cy="16.9" r="0.55" fill="white"></circle><circle cx="25.6" cy="16.9" r="0.55" fill="white"></circle><path d="M18.5 21.5 L20 24.5 L21.5 21.5 Q20 20.5 18.5 21.5Z" fill="#FF5A3C"></path><ellipse cx="14.5" cy="37" rx="5" ry="2.2" fill="#FF5A3C" transform="rotate(-18 14.5 37)"></ellipse><ellipse cx="25.5" cy="37" rx="5" ry="2.2" fill="#FF5A3C" transform="rotate(18 25.5 37)"></ellipse></svg></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // The Pengu badge passes over the solution screen during the reveal.
+      document.querySelectorAll(".scene p, .scene span, #sol div").forEach((el) => el.setAttribute("data-layout-allow-occlusion", ""));
+    </script>
+    <script>
+  // "Acknowledged" stacked over the urgent note's "Acknowledge" button.
+  const ackBtn = document.querySelector("#sol .mx-4.mb-3 .bg-ink.rounded-full");
+  ackBtn.style.position = "relative";
+  const acked = document.createElement("span");
+  acked.id = "acked";
+  acked.className = "absolute right-0 top-0 flex h-full items-center gap-1 whitespace-nowrap rounded-full bg-maria-soft px-3 text-[12px] text-maria-deep";
+  acked.textContent = "✓ Acknowledged";
+  ackBtn.appendChild(acked);
+
+  window.FEATURE = {
+    at: 3.4,
+    problem(tl, h) {
+      const rows = gsap.utils.toArray("#prob .row");
+      const n = rows.length - 1;
+      const ROW = 44;
+      gsap.set(rows.slice(1), { opacity: 0 });
+      gsap.set("#thread", { y: n * ROW });
+      // The meds message is readable for a beat, then the chatter speeds up
+      // and scrolls it away under the header. The last two land slower.
+      let t = 0.9;
+      let dt = 0.2;
+      for (let k = 1; k <= n; k++) {
+        const d = Math.min(0.24, dt);
+        tl.fromTo("#thread", { y: (n - k + 1) * ROW }, { y: (n - k) * ROW, duration: d, ease: "power2.out", immediateRender: false }, t)
+          .fromTo(rows[k], { opacity: 0, scale: 0.94 }, { opacity: 1, scale: 1, duration: 0.2, immediateRender: false }, t);
+        if (k === n - 2) dt = 0.3;
+        t += dt;
+        dt = Math.max(0.09, dt * 0.88);
+      }
+      h.buzz("#prob", 3.0);
+    },
+    solution(tl, at) {
+      const cards = gsap.utils.toArray("#sol .mx-4.mb-3");
+      gsap.set(cards, { opacity: 0, y: 18 });
+      gsap.set("#acked", { opacity: 0, scale: 0.6 });
+      gsap.set("#toast", { opacity: 0, y: 24, scale: 0.96 });
+      tl.to(cards, { opacity: 1, y: 0, duration: 0.55, stagger: 0.14 }, at + 0.05)
+        .to(cards[0], { keyframes: { scale: [1, 1.025, 1] }, duration: 0.6, ease: "sine.inOut" }, at + 0.85)
+        .to("#acked", { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.4)" }, at + 1.15)
+        .to("#toast", { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: "back.out(1.3)" }, at + 1.4);
+    },
+  };
+</script>
+    <script>
+      // ---- Shared problem -> Pengu timeline ----
+      // The feature script above sets window.FEATURE = { at, problem(tl, h), solution(tl, at, h) }.
+      // `at` is when the problem gives way, in the problem's own (unslowed) time.
+      // The problem plays SLOW times slower, so it has room to land; the
+      // reveal and the Pengu screen keep their pace. render-screens.tsx sizes
+      // the root duration from the same numbers.
+      const SLOW = 1.6;
+      const F = window.FEATURE;
+      const T = F.at * SLOW;
+      const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
+      const problem = gsap.timeline({ defaults: { ease: "power3.out" } });
+      const h = {
+        // A short phone buzz: the moment the chaos tips over.
+        buzz(target, at) {
+          problem.to(target, { keyframes: { x: [0, -4, 4, -3, 3, -1, 0] }, duration: 0.42, ease: "none" }, at);
+        },
+      };
+
+      gsap.set("#sol", { clipPath: "circle(0% at 50% 50%)" });
+      gsap.set("#tabbar", { opacity: 0, y: 26 });
+      gsap.set("#badge", { opacity: 0, scale: 0.55 });
+
+      F.problem(problem, h);
+      problem.timeScale(1 / SLOW);
+      tl.add(problem, 0);
+
+      tl.to("#prob", { filter: "blur(9px) saturate(0.5)", scale: 0.93, opacity: 0.5, duration: 0.65, ease: "power2.in" }, T)
+        .to("#badge", { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.7)" }, T + 0.2)
+        .to("#sol", { clipPath: "circle(80% at 50% 50%)", duration: 1.0, ease: "power3.inOut" }, T + 0.7)
+        .to("#badge", { opacity: 0, scale: 1.3, duration: 0.55, ease: "power2.in" }, T + 0.95)
+        .to("#tabbar", { opacity: 1, y: 0, duration: 0.7 }, T + 1.25);
+
+      F.solution(tl, T + 1.1, h);
+
+      window.__timelines["feature-notes"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
