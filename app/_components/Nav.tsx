@@ -28,19 +28,19 @@ export function Nav() {
 
         <div className="hidden md:flex items-center gap-7">
           <Link
-            href="#features"
+            href="/#features"
             className="text-sm font-medium text-charcoal-lighter hover:text-charcoal transition-colors"
           >
             Features
           </Link>
           <Link
-            href="#how-it-works"
+            href="/#how-it-works"
             className="text-sm font-medium text-charcoal-lighter hover:text-charcoal transition-colors"
           >
             How it works
           </Link>
           <Link
-            href="#reviews"
+            href="/#reviews"
             className="text-sm font-medium text-charcoal-lighter hover:text-charcoal transition-colors"
           >
             Reviews
@@ -48,20 +48,20 @@ export function Nav() {
         </div>
 
         <div className="flex items-center gap-2.5">
-          <a
-            href="#download"
+          <Link
+            href="/#download"
             className="hidden sm:flex items-center gap-1.5 px-4 py-2 rounded-full bg-charcoal text-cream text-sm font-medium hover:bg-charcoal-light transition-all duration-200"
           >
             <AppleIcon />
             App Store
-          </a>
-          <a
-            href="#download"
+          </Link>
+          <Link
+            href="/#download"
             className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-charcoal/20 text-charcoal text-sm font-medium hover:bg-charcoal/5 transition-all duration-200"
           >
             <PlayIcon />
             <span className="hidden sm:inline">Google </span>Play
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

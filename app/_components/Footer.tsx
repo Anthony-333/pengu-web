@@ -12,10 +12,10 @@ const links = [
   {
     group: "Product",
     items: [
-      { label: "Features", href: "#features" },
-      { label: "How it works", href: "#how-it-works" },
-      { label: "Reviews", href: "#reviews" },
-      { label: "Download", href: "#download" },
+      { label: "Features", href: "/#features" },
+      { label: "How it works", href: "/#how-it-works" },
+      { label: "Reviews", href: "/#reviews" },
+      { label: "Download", href: "/#download" },
     ],
   },
   {
@@ -29,9 +29,9 @@ const links = [
   {
     group: "Legal",
     items: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms of Service", href: "#" },
-      { label: "Cookie Policy", href: "#" },
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Terms of Service", href: "/terms" },
+      { label: "Cookie Policy", href: "/privacy#website" },
     ],
   },
 ];
