@@ -31,9 +31,9 @@ function AppTourVideo() {
 
 export function Hero() {
   return (
-    <section className="relative px-2 pt-2 sm:px-3 sm:pt-3">
+    <section className="relative px-2 pt-2 sm:px-3 sm:pt-3 lg:pb-3">
       {/* Photo stage */}
-      <div className="absolute inset-x-2 top-2 bottom-[150px] overflow-hidden rounded-[28px] sm:inset-x-3 sm:top-3 sm:bottom-[190px] sm:rounded-[36px] lg:bottom-[230px]">
+      <div className="absolute inset-x-2 top-2 bottom-[150px] overflow-hidden rounded-[28px] sm:inset-x-3 sm:top-3 sm:bottom-[190px] sm:rounded-[36px] lg:bottom-3">
         <Image
           src={heroPhoto}
           alt="A father laughing with his two young children outdoors"
@@ -47,15 +47,15 @@ export function Hero() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgb(255_90_60/0.28),transparent_60%)]" />
       </div>
 
-      <div className="relative mx-auto flex max-w-6xl flex-col items-center px-4 pt-28 text-center sm:pt-32">
-        <div className="hero-exit flex flex-col items-center">
+      <div className="relative mx-auto flex max-w-6xl flex-col items-center px-4 pt-28 text-center sm:pt-32 lg:grid lg:grid-cols-[1fr_auto] lg:items-center lg:gap-16 lg:px-8 lg:pt-24 lg:pb-12 lg:text-left xl:gap-24">
+        <div className="hero-exit flex flex-col items-center lg:items-start">
           <span className="rise glass mb-7 inline-flex items-center gap-2 rounded-full py-1.5 pl-1.5 pr-4 text-xs font-medium text-white sm:text-sm">
             <span className="rounded-full bg-accent px-2.5 py-0.5 text-[11px] font-semibold">New</span>
             Custody schedules both parents approve
           </span>
 
           <h1
-            className="rise max-w-4xl text-[44px] font-bold leading-[1.02] tracking-[-0.035em] text-white sm:text-7xl lg:text-[80px]"
+            className="rise max-w-4xl text-[44px] font-bold leading-[1.02] tracking-[-0.035em] text-white sm:text-7xl lg:text-[64px] xl:text-[76px]"
             style={delay(120)}
           >
             Two homes.
@@ -77,16 +77,16 @@ export function Hero() {
         </div>
 
         {/* Phone + floating chips */}
-        <div className="relative mt-12 sm:mt-14">
+        <div className="relative mt-12 sm:mt-14 lg:mt-0 lg:mr-20">
           <div className="phone-in" style={delay(450)}>
             <div className="absolute -inset-10 -z-10 rounded-full bg-accent/30 blur-3xl" />
-            <Phone className="[--s:0.68] sm:[--s:0.76] lg:[--s:0.8]" overlay={<AppTourVideo />}>
+            <Phone className="[--s:0.68] sm:[--s:0.76] lg:[--s:0.7] xl:[--s:0.74]" overlay={<AppTourVideo />}>
               <HomeScreen />
             </Phone>
           </div>
 
           <FloatingChip
-            className="-left-56 top-24 lg:-left-72"
+            className="-left-56 top-24 lg:-left-28"
             delayMs={900}
             icon="🚗"
             iconBg="bg-james-soft"
@@ -94,7 +94,7 @@ export function Hero() {
             sub="Both calendars updated"
           />
           <FloatingChip
-            className="-right-56 top-56 lg:-right-72"
+            className="-right-56 top-56 lg:-right-24"
             delayMs={1100}
             icon="✓"
             iconBg="bg-maria-soft text-maria-deep font-bold"
@@ -102,7 +102,7 @@ export function Hero() {
             sub="$240 · split 50/50"
           />
           <FloatingChip
-            className="-left-48 top-[400px] lg:-left-60"
+            className="-left-48 top-[400px] lg:-left-36 lg:top-110"
             delayMs={1300}
             icon="📝"
             iconBg="bg-accent-soft"
