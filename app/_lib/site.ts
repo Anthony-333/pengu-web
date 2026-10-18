@@ -6,7 +6,7 @@
  */
 
 /** Production origin. Set NEXT_PUBLIC_SITE_URL to override (no trailing slash). */
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://penguapp.com";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://pengu.family";
 
 export const SITE = {
   name: "Pengu",
@@ -14,7 +14,7 @@ export const SITE = {
   tagline: "Two homes. One calm nest.",
   description:
     "Pengu is the co-parenting app for two homes: a shared custody calendar, split expenses with receipts, handover notes and private family memories. For iOS and Android.",
-  email: "hello@penguapp.com",
+  email: "hello@pengu.family",
   logo: "/pengu-icon.png",
   screenshot: "/video/app-tour-poster.jpg",
   keywords: [

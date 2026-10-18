@@ -12,7 +12,7 @@ export const LEGAL = {
   company: "[Company legal name]",
   address: "[Registered business address]",
   jurisdiction: "[State / country]",
-  contactEmail: "hello@penguapp.com",
+  contactEmail: "hello@pengu.family",
 } as const;
 
 type TocItem = { id: string; label: string };

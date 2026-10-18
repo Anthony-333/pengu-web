@@ -49,7 +49,7 @@ export default function PrivacyPage() {
         <p>
           Pengu is provided by {LEGAL.company}, {LEGAL.address} (&ldquo;Pengu&rdquo;,
           &ldquo;we&rdquo;, &ldquo;us&rdquo;). This policy covers the Pengu mobile apps for iOS
-          and Android and the website at penguapp.com (together, the &ldquo;Service&rdquo;).
+          and Android and the website at pengu.family (together, the &ldquo;Service&rdquo;).
           We are the controller of the personal information described here.
         </p>
       </LegalSection>
@@ -325,7 +325,7 @@ export default function PrivacyPage() {
 
       <LegalSection id="website" title="13. This website and cookies">
         <p>
-          penguapp.com is an informational site. It doesn&apos;t require an account and
+          pengu.family is an informational site. It doesn&apos;t require an account and
           doesn&apos;t use advertising or analytics cookies. Our hosting provider may keep
           standard server logs (such as IP address and browser type) to operate and secure the
           site.

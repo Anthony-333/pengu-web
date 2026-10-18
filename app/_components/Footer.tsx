@@ -23,8 +23,8 @@ const links = [
     group: "Support",
     items: [
       { label: "Help Center", href: "#" },
-      { label: "Contact us", href: "mailto:hello@penguapp.com" },
-      { label: "Bug report", href: "mailto:bugs@penguapp.com" },
+      { label: "Contact us", href: "mailto:hello@pengu.family" },
+      { label: "Bug report", href: "mailto:bugs@pengu.family" },
     ],
   },
   {
