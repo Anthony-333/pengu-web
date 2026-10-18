@@ -1,86 +1,124 @@
-import { WaveDivider } from "./WaveDivider";
+import type { ReactNode } from "react";
+import { FeatureTour } from "./FeatureTour";
+import { Phone } from "./phone/Phone";
+import { ExpensesScreen, NotesScreen, ScheduleScreen } from "./phone/screens";
+import { MemoriesScreen } from "./phone/MemoriesScreen";
 
-const features = [
+type Feature = {
+  eyebrow: string;
+  title: string;
+  body: string;
+  points: string[];
+  dot: string;
+  screen: ReactNode;
+};
+
+const features: Feature[] = [
   {
-    icon: "📅",
-    title: "Custody Calendar",
-    desc: "See who has the kids at a glance. The 2-2-3, week-on/off, and 5-2-2-5 patterns are built right in.",
-    color: "bg-cream",
+    eyebrow: "Custody calendar",
+    title: "Always know who has the kids.",
+    body: "Set the pattern once (2-2-3, week on/week off, or your own) and every handover lands on both calendars. When plans change, one parent proposes and the other approves.",
+    points: ["Built-in rotation patterns", "Handover reminders", "Syncs to your phone's calendar"],
+    dot: "bg-maria",
+    screen: <ScheduleScreen />,
   },
   {
-    icon: "💰",
-    title: "50/50 Expenses",
-    desc: "Log any shared cost — medical, school, activities — and split it fairly. Receipt photos included.",
-    color: "bg-amber-light",
+    eyebrow: "Shared expenses",
+    title: "Money, without the arguments.",
+    body: "Log any shared cost, snap the receipt, and Pengu works out each parent's share. Settle or dispute in one tap, with a running ledger you both see.",
+    points: ["Receipt photos attached", "Settle or dispute in one tap", "A balance that's always up to date"],
+    dot: "bg-lily",
+    screen: <ExpensesScreen />,
   },
   {
-    icon: "📸",
-    title: "Shared Photo Wall",
-    desc: "Upload photos and videos to a private wall only co-parents can see. Every milestone, shared.",
-    color: "bg-cream",
+    eyebrow: "Transfer notes",
+    title: "Nothing gets lost at the handover.",
+    body: "Leave a note at every handover, like medication, homework or what they ate, and see when your co-parent has acknowledged it. Chat and voice messages live right beside it.",
+    points: ["Urgent, important or FYI", "Acknowledged when read", "Health, school and activity filters"],
+    dot: "bg-james",
+    screen: <NotesScreen />,
   },
   {
-    icon: "💬",
-    title: "Family Chat",
-    desc: "Coordinate drop-offs, school updates, and anything else — without switching between apps.",
-    color: "bg-amber-light",
-  },
-  {
-    icon: "📋",
-    title: "Activity Log",
-    desc: "Every meal, doctor visit, and notable moment logged and visible to both parents in real time.",
-    color: "bg-cream",
-  },
-  {
-    icon: "📝",
-    title: "Handoff Notes",
-    desc: "Leave a note at every transfer — medication reminders, moods, what they ate. Never forgotten.",
-    color: "bg-amber-light",
+    eyebrow: "Memories",
+    title: "Every milestone, in both homes.",
+    body: "A private photo wall only your nest can see. First steps, school plays, Sunday at the park, kept together no matter whose weekend it was.",
+    points: ["Photos and videos", "Tags and reactions", "Private to your nest"],
+    dot: "bg-accent",
+    screen: <MemoriesScreen />,
   },
 ];
 
 export function Features() {
   return (
-    <section id="features" className="bg-sage">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 pt-16 pb-20">
-        {/* Section header */}
-        <div className="text-center mb-14">
-          <div className="flex items-center justify-center gap-2 mb-5">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#2D2D2D" opacity="0.6" aria-hidden="true">
-              <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" />
-            </svg>
-            <span className="text-sm font-semibold text-charcoal tracking-widest uppercase">Features</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#2D2D2D" opacity="0.6" aria-hidden="true">
-              <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" />
-            </svg>
-          </div>
-          <h2 className="text-4xl sm:text-5xl font-black text-charcoal leading-tight tracking-tight mb-4">
-            One nest.{" "}
-            <span className="text-cream">Everything</span> in it.
+    <section id="features" className="relative pt-24 sm:pt-32">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+        <div className="reveal mx-auto max-w-2xl text-center">
+          <p className="mb-4 text-sm font-semibold text-accent-ink">Everything in one nest</p>
+          <h2 className="text-4xl font-bold leading-[1.05] tracking-[-0.03em] text-ink sm:text-6xl">
+            Built for the space
+            <br />
+            between two homes.
           </h2>
-          <p className="text-charcoal text-lg max-w-xl mx-auto leading-relaxed">
-            You can feel confident leaving your children&apos;s world in one place.
+          <p className="mt-5 text-lg leading-relaxed text-ink-3">
+            Four tools that replace the group texts, spreadsheets and shoebox of receipts.
           </p>
-        </div>
-
-        {/* Feature grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {features.map((f) => (
-            <div
-              key={f.title}
-              className={`${f.color} rounded-2xl p-6 shadow-sm shadow-charcoal/10 border border-charcoal/5 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 group`}
-            >
-              <div className="w-12 h-12 rounded-2xl bg-sage/15 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform duration-200">
-                {f.icon}
-              </div>
-              <h3 className="text-charcoal font-bold text-base mb-2">{f.title}</h3>
-              <p className="text-charcoal-light text-sm leading-relaxed">{f.desc}</p>
-            </div>
-          ))}
         </div>
       </div>
 
-      <WaveDivider topColor="#7B9E87" bottomColor="#FAFAF4" flip />
+      <FeatureTour className="mx-auto mt-10 grid max-w-6xl gap-x-16 px-5 sm:px-8 lg:mt-0 lg:grid-cols-2">
+        {/* Steps */}
+        <div>
+          {features.map((f, i) => (
+            <div
+              key={f.eyebrow}
+              data-step={i}
+              className="tour-step flex flex-col justify-center py-14 lg:min-h-[80vh] lg:py-0"
+            >
+              <div className="mb-5 flex items-center gap-3">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-paper text-xs font-bold text-ink shadow-sm">
+                  0{i + 1}
+                </span>
+                <span className={`h-2 w-2 rounded-full ${f.dot}`} />
+                <span className="text-sm font-semibold text-ink-2">{f.eyebrow}</span>
+              </div>
+              <h3 className="text-3xl font-bold leading-tight tracking-[-0.025em] text-ink sm:text-[44px]">
+                {f.title}
+              </h3>
+              <p className="mt-4 max-w-md text-lg leading-relaxed text-ink-3">{f.body}</p>
+              <ul className="mt-7 space-y-3">
+                {f.points.map((p) => (
+                  <li key={p} className="flex items-center gap-3 text-[15px] font-medium text-ink-2">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-ink text-[10px] text-white">
+                      ✓
+                    </span>
+                    {p}
+                  </li>
+                ))}
+              </ul>
+
+              {/* Small screens: each step carries its own phone */}
+              <div className="reveal-scale relative mt-12 flex justify-center lg:hidden">
+                <div className={`absolute top-1/4 h-64 w-64 rounded-full opacity-25 blur-3xl ${f.dot}`} />
+                <Phone className="[--s:0.68]">{f.screen}</Phone>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Large screens: one sticky phone that swaps screens */}
+        <div className="hidden lg:block">
+          <div className="sticky top-0 flex h-screen items-center justify-center">
+            <div className="tour-glow absolute h-[420px] w-[420px] rounded-full opacity-25 blur-[100px]" />
+            <Phone className="[--s:0.78]">
+              {features.map((f, i) => (
+                <div key={f.eyebrow} data-screen={i} className="tour-screen absolute inset-0">
+                  {f.screen}
+                </div>
+              ))}
+            </Phone>
+          </div>
+        </div>
+      </FeatureTour>
     </section>
   );
 }

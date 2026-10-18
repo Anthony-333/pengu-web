@@ -1,26 +1,55 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-elms), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
 
-  /* Pengu Color System */
-  --color-cream: #FAFAF4;
-  --color-cream-dark: #EEE8DC;
-  --color-sage: #7B9E87;
-  --color-sage-light: #A8C4AF;
-  --color-sage-dark: #5A7A66;
-  --color-amber: #C8893A;
-  --color-amber-light: #F2E0C4;
-  --color-amber-dark: #9E6B28;
-  --color-charcoal: #2D2D2D;
-  --color-charcoal-light: #4A4A4A;
-  --color-charcoal-lighter: #6B6B6B;
+  /* Pengu color system — mirrors pengu/src/constants/colors.ts */
+  --color-ink: #0E0E12;
+  --color-ink-2: #2A2A31;
+  --color-ink-3: #6B6B76;
+  --color-muted: #A0A0AA;
+  --color-hairline: #E8E8ED;
+  --color-canvas: #F2F2F5;
+  --color-snow: #FAFAFB;
+  --color-iceberg: #F4F4F7;
+  --color-frost: #EDEDF1;
+  --color-paper: #FFFFFF;
+
+  /* Brand coral. `accent-ink` is the coral for small text on light
+     surfaces — plain `accent` fails WCAG AA there. */
+  --color-accent: #FF5A3C;
+  --color-accent-soft: #FFECE7;
+  --color-accent-deep: #D63E20;
+  --color-accent-ink: #C2391C;
+
+  /* Parent "m" — emerald */
+  --color-maria: #1FAA77;
+  --color-maria-soft: #E3F5EE;
+  --color-maria-deep: #0D7A52;
+  /* Parent "j" — violet */
+  --color-james: #7B61FF;
+  --color-james-soft: #EEEAFF;
+  --color-james-deep: #5236D9;
+  /* Amber */
+  --color-lily: #F5A623;
+  --color-lily-soft: #FEF3DF;
+  --color-lily-deep: #A15C07;
+  /* Blue */
+  --color-sky: #2F80FF;
+  --color-sky-soft: #E5EFFF;
+  --color-sky-deep: #1A5BCC;
+  /* Semantic */
+  --color-danger: #F04438;
+  --color-danger-soft: #FDECEA;
+  --color-warn: #F59E0B;
+  --color-warn-soft: #FEF3E2;
+  --color-warn-deep: #A15C07;
 }
 
 :root {
-  --background: #FAFAF4;
-  --foreground: #2D2D2D;
+  --background: #F2F2F5;
+  --foreground: #0E0E12;
 }
 
 html {
@@ -30,7 +59,152 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans, system-ui, sans-serif);
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Glass ──────────────────────────────────────────────────────
+   Frosted chips and panels that sit on photography. */
+.glass {
+  background: rgb(255 255 255 / 0.14);
+  border: 1px solid rgb(255 255 255 / 0.22);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+}
+.glass-dark {
+  background: rgb(14 14 18 / 0.78);
+  border: 1px solid rgb(255 255 255 / 0.1);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+}
+
+/* ── Feature tour ───────────────────────────────────────────────
+   `FeatureTour` mirrors the step in view into `data-active` on the
+   sticky phone; each screen fades in when its index matches. */
+.tour-screen {
+  opacity: 0;
+  transform: scale(0.96) translateY(12px);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+[data-active="0"] .tour-screen[data-screen="0"],
+[data-active="1"] .tour-screen[data-screen="1"],
+[data-active="2"] .tour-screen[data-screen="2"],
+[data-active="3"] .tour-screen[data-screen="3"] {
+  opacity: 1;
+  transform: none;
+}
+.tour-step {
+  transition: opacity 0.5s ease;
+}
+@media (min-width: 1024px) {
+  .tour-step {
+    opacity: 0.35;
+  }
+  .tour-step[data-current="true"] {
+    opacity: 1;
+  }
+}
+[data-active="0"] .tour-glow { background: var(--color-maria); }
+[data-active="1"] .tour-glow { background: var(--color-lily); }
+[data-active="2"] .tour-glow { background: var(--color-james); }
+[data-active="3"] .tour-glow { background: var(--color-accent); }
+.tour-glow {
+  transition: background-color 0.8s ease;
+}
+
+/* ── Motion ─────────────────────────────────────────────────────
+   Everything below is progressive: with reduced motion, or without
+   scroll-driven animation support, content simply renders in place. */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(28px); filter: blur(6px); }
+    to   { opacity: 1; transform: none; filter: none; }
+  }
+  @keyframes phone-in {
+    from { opacity: 0; transform: translateY(120px) scale(0.92); }
+    to   { opacity: 1; transform: none; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-10px); }
+  }
+  @keyframes ken-burns {
+    from { transform: scale(1.12); }
+    to   { transform: scale(1); }
+  }
+
+  /* Page-load entrance. Stagger with `style={{ "--d": "200ms" }}`. */
+  .rise {
+    animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: var(--d, 0ms);
+  }
+  .phone-in {
+    animation: phone-in 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: var(--d, 0ms);
+  }
+  .float {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: var(--d, 0ms);
+  }
+  .ken-burns {
+    animation: ken-burns 2.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  @supports (animation-timeline: view()) {
+    @keyframes reveal {
+      from { opacity: 0; transform: translateY(48px); }
+      to   { opacity: 1; transform: none; }
+    }
+    @keyframes reveal-scale {
+      from { opacity: 0; transform: scale(0.94); }
+      to   { opacity: 1; transform: none; }
+    }
+    @keyframes parallax {
+      from { transform: translateY(-8%) scale(1.15); }
+      to   { transform: translateY(8%) scale(1.15); }
+    }
+    @keyframes drift-left {
+      from { transform: translateX(4%); }
+      to   { transform: translateX(-12%); }
+    }
+    @keyframes drift-right {
+      from { transform: translateX(-12%); }
+      to   { transform: translateX(4%); }
+    }
+    @keyframes hero-exit {
+      to { transform: translateY(-60px) scale(0.97); opacity: 0.4; }
+    }
+
+    .reveal {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 28%;
+    }
+    .reveal-scale {
+      animation: reveal-scale linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 35%;
+    }
+    .parallax {
+      animation: parallax linear both;
+      animation-timeline: view();
+    }
+    .drift-left {
+      animation: drift-left linear both;
+      animation-timeline: view();
+    }
+    .drift-right {
+      animation: drift-right linear both;
+      animation-timeline: view();
+    }
+    /* The hero copy eases up and fades as the page scrolls past it. */
+    .hero-exit {
+      animation: hero-exit linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 90vh;
+    }
+  }
 }

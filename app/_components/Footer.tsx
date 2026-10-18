@@ -14,7 +14,7 @@ const links = [
     items: [
       { label: "Features", href: "/#features" },
       { label: "How it works", href: "/#how-it-works" },
-      { label: "Reviews", href: "/#reviews" },
+      { label: "Stories", href: "/#reviews" },
       { label: "Download", href: "/#download" },
     ],
   },
@@ -38,16 +38,16 @@ const links = [
 
 export function Footer() {
   return (
-    <footer className="bg-cream-dark border-t border-charcoal/6">
+    <footer className="bg-paper border-t border-hairline">
       <div className="max-w-6xl mx-auto px-5 sm:px-8 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
               <PenguLogo size={32} />
-              <span className="text-lg font-bold text-charcoal">Pengu</span>
+              <span className="text-lg font-bold text-ink">Pengu</span>
             </div>
-            <p className="text-sm text-charcoal-lighter leading-relaxed mb-5 max-w-xs">
+            <p className="text-sm text-ink-3 leading-relaxed mb-5 max-w-xs">
               Co-parenting made beautiful. One nest for everything your children share.
             </p>
             {/* Social */}
@@ -68,7 +68,7 @@ export function Footer() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-8 h-8 rounded-lg bg-charcoal/8 flex items-center justify-center text-charcoal-lighter hover:bg-charcoal/15 hover:text-charcoal transition-colors"
+                  className="w-8 h-8 rounded-lg bg-ink/5 flex items-center justify-center text-ink-3 hover:bg-ink/10 hover:text-ink transition-colors"
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d={social.path} />
@@ -81,7 +81,7 @@ export function Footer() {
           {/* Link groups */}
           {links.map((group) => (
             <div key={group.group}>
-              <h4 className="text-xs font-semibold text-charcoal uppercase tracking-widest mb-4">
+              <h4 className="text-xs font-semibold text-ink uppercase tracking-widest mb-4">
                 {group.group}
               </h4>
               <ul className="space-y-3">
@@ -89,7 +89,7 @@ export function Footer() {
                   <li key={item.label}>
                     <Link
                       href={item.href}
-                      className="text-sm text-charcoal-lighter hover:text-charcoal transition-colors"
+                      className="text-sm text-ink-3 hover:text-ink transition-colors"
                     >
                       {item.label}
                     </Link>
@@ -101,11 +101,11 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-14 pt-6 border-t border-charcoal/8 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-charcoal-lighter">
+        <div className="mt-14 pt-6 border-t border-hairline flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-xs text-ink-3">
             © <CopyrightYear /> Pengu. All rights reserved.
           </p>
-          <p className="text-xs text-charcoal-lighter">
+          <p className="text-xs text-ink-3">
             Built with ❤️ for families everywhere.
           </p>
         </div>

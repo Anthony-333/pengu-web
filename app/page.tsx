@@ -1,7 +1,7 @@
 import { Nav } from "./_components/Nav";
 import { Hero } from "./_components/Hero";
 import { Features } from "./_components/Features";
-import { AppShowcase } from "./_components/AppShowcase";
+import { Moments } from "./_components/Moments";
 import { HowItWorks } from "./_components/HowItWorks";
 import { Testimonials } from "./_components/Testimonials";
 import { Download } from "./_components/Download";
@@ -14,7 +14,7 @@ export default function Home() {
       <main>
         <Hero />
         <Features />
-        <AppShowcase />
+        <Moments />
         <HowItWorks />
         <Testimonials />
         <Download />

@@ -6,6 +6,7 @@
     "dev": "npx --yes hyperframes@0.8.162 preview",
     "check": "npx --yes hyperframes@0.8.162 check",
     "render": "npx --yes hyperframes@0.8.162 render",
-    "publish": "npx --yes hyperframes@0.8.162 publish"
+    "publish": "npx --yes hyperframes@0.8.162 publish",
+    "screens": "npx --yes esbuild@0.25.10 render-screens.tsx --bundle --platform=node --format=esm --jsx=automatic --external:react --external:react-dom --log-level=warning --outfile=.hyperframes/render-screens.mjs && node .hyperframes/render-screens.mjs"
   }
 }

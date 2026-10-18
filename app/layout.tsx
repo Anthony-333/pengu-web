@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Elms_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Elms Sans is the app's own typeface, so the site reads as the same product.
+const elmsSans = Elms_Sans({
+  variable: "--font-elms",
   subsets: ["latin"],
 });
 
@@ -13,18 +14,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pengu — Co-parenting, made beautiful",
+  title: "Pengu — Co-parenting, made calmer",
   description:
-    "One app for the custody calendar, shared expenses, family memories, and everything your children share. Co-parenting made simple with Pengu.",
+    "One app for the custody calendar, shared expenses, handover notes and family memories. Two homes, one nest.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${elmsSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-canvas text-ink">{children}</body>
     </html>
   );
 }

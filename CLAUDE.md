@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Marketing landing page for **Pengu**, a co-parenting mobile app (custody calendar, shared expenses, family memories). It is a single route: `app/page.tsx` composes the page from section components in order (Nav → Hero → Features → AppShowcase → HowItWorks → Testimonials → Download → Footer).
+Marketing landing page for **Pengu**, a co-parenting mobile app (custody calendar, shared expenses, family memories). It is a single route: `app/page.tsx` composes the page from section components in order (Nav → Hero → Features → Moments → HowItWorks → Testimonials → Download → Footer). `/privacy` and `/terms` share the `LegalPage` shell; the company details they print live in its `LEGAL` object, still with bracketed placeholders.
 
 ## Commands
 
@@ -21,9 +21,13 @@ No test suite is configured.
 
 **Next.js 16.4.0** with the App Router and React 19.3 — read `node_modules/next/dist/docs/` before making changes, as this version has breaking differences from earlier releases. `AGENTS.md` holds the same warning; `next dev` regenerates it, so leave it in place.
 
-**Components** live in `app/_components/` (the `_` prefix makes it a private folder, not a route) and use named exports. They are all Server Components right now, with no `"use client"`. Add the directive only to a component that actually needs interactivity, and keep it as small as possible. `PhoneMockup.tsx` provides the reusable `Phone` frame and the screen mockups (e.g. `HomeScreenMockup`) used by the Hero and AppShowcase sections. `WaveDivider` is the shared section separator.
+**Components** live in `app/_components/` (the `_` prefix makes it a private folder, not a route) and use named exports. Everything is a Server Component except `FeatureTour`, a scroll-spy that writes the in-view step index to `data-active`; the sticky phone's screen crossfade is plain CSS keyed off that attribute (`.tour-screen` in `globals.css`). Keep any new `"use client"` that small.
 
-**Design tokens**: the Pengu palette is defined in `@theme inline` in `app/globals.css` (`cream`/`cream-dark`, `sage`/`-light`/`-dark`, `amber`/`-light`/`-dark`, `charcoal`/`-light`/`-lighter`). Use these utilities (`bg-sage`, `text-charcoal-lighter`, `shadow-charcoal/20`) rather than raw hex values. Many inline SVG attributes and `style={{...}}` objects (e.g. in `AppShowcase`, `Download`, `Hero`, and `WaveDivider` color props) still hardcode the palette's hex values, such as `#C8893A` for amber. If you change a token, search for its hex value too.
+**Phone mockups** live in `app/_components/phone/` and are web ports of the real app's UI (`pengu/src/screens`, `pengu/src/components/ui.tsx`). When the app's UI changes, port the change here. `ui.tsx` mirrors the app primitives (`Card`, `HeroCard`, `RoundButton`, `Chip`, `BigNumber`…). `Phone.tsx` draws the frame, the iOS status bar and the floating Liquid Glass `TabBar`. The screens are in `screens.tsx` and `MemoriesScreen.tsx`; Memories is separate because it imports photos. Screens are authored in iPhone points (390×844, the app's own units) and scaled with `zoom`. Size a phone with `--s`, the fraction of real size (`className="[--s:0.68] lg:[--s:0.8]"`). Every glyph is `font-semibold`, because the app ships only ElmsSans SemiBold. Icons come from `@solar-icons/react` and follow the app's SF-to-Solar map in `pengu/src/components/Icon.tsx`: line-duotone everywhere, plus bold-duotone for selected tabs. The demo data (Sarah and James, Emma, a 2-2-3 rotation, "today" = Wed 21 Oct 2026) comes from `custodyOn()`, so all the screens agree.
+
+**Design tokens**: `@theme inline` in `app/globals.css` mirrors the app's palette in `pengu/src/constants/colors.ts`: `ink`/`ink-2`/`ink-3`, `muted`, `hairline`, `canvas`, `paper`, `accent` (coral), and the parent/category colors `maria` (emerald), `james` (violet), `lily` (amber), `sky` (blue), each with `-soft`/`-deep`. Use the utilities rather than raw hex. For small coral text on light surfaces, use `accent-ink`, because plain `accent` fails WCAG AA there. `PenguLogo` and the `video/` composition still hardcode hex.
+
+**Motion** is CSS in `globals.css`, all inside `prefers-reduced-motion: no-preference`: `.rise`/`.phone-in`/`.float` for load (stagger with `style={delay(ms)}` from `_components/motion.ts`), and scroll-driven `.reveal`, `.reveal-scale`, `.parallax`, `.drift-left/right`, `.hero-exit` behind `@supports (animation-timeline: view())`. Unsupported browsers just render content in place.
 
 **Design work**: a project subagent, `web-designer` (`.claude/agents/web-designer.md`), handles layout, visual-direction and conversion decisions for landing-page sections.
 
@@ -39,8 +43,18 @@ Key enabled features in `next.config.ts`:
 
 **ESLint** uses flat config (`eslint.config.mjs`) with `defineConfig` from `eslint/config`.
 
-**Fonts**: Geist Sans and Geist Mono loaded via `next/font/google`, exposed as CSS variables `--font-geist-sans` / `--font-geist-mono`, and mapped to `--font-sans` / `--font-mono` in the Tailwind theme.
+**Fonts**: Elms Sans (the app's typeface) via `next/font/google` as `--font-elms`, mapped to `--font-sans`; Geist Mono as `--font-mono`. The build warns that Elms Sans has no fallback metrics. That warning is expected.
 
 ## `video/` subproject
 
-`video/` is a separate HyperFrames video-composition project with its own `package.json`, `CLAUDE.md`, and `AGENTS.md`. Read `video/CLAUDE.md` before working there, because it requires invoking the HyperFrames skills first. Run its commands from `video/`: `npm run dev` (preview), `check`, `render`, `publish`. Each one runs a pinned `npx hyperframes@0.8.162`. `video/.hyperframes/` and `video/renders/` are gitignored. The Next.js app does not import from `video/`.
+`video/` is a separate HyperFrames video-composition project with its own `package.json`, `CLAUDE.md`, and `AGENTS.md`. Read `video/CLAUDE.md` before working there, because it requires invoking the HyperFrames skills first. Run its commands from `video/`: `npm run dev` (preview), `check`, `render`, `publish`. Each one runs a pinned `npx hyperframes@0.8.162`. `video/.hyperframes/` and `video/renders/` are gitignored. The composition is the hero's app tour. `index.html` is generated, so don't edit it. Edit `composition.tpl` (layout and GSAP timeline) or the phone screens, then run from `video/`:
+
+```bash
+npm run screens   # renders app/_components/phone screens + globals.css tokens into index.html
+npm run check
+npx --yes hyperframes@0.8.162 render -q delivery -o ../public/video/app-tour.mp4
+npx --yes hyperframes@0.8.162 render --format webm -q delivery -o ../public/video/app-tour.webm
+ffmpeg -y -i ../public/video/app-tour.mp4 -frames:v 1 ../public/video/app-tour-poster.jpg
+```
+
+`npm run screens` bundles `render-screens.tsx` with esbuild into `.hyperframes/`, because `@solar-icons/react` is ESM-only. The video is 780×1688, which is 2× the phone screen. The hero plays it over a static `HomeScreen`, and the frame's `isolate` keeps that screen's z-indexed status bar and tab bar underneath the video. Re-render after any screen change, or the hero will show stale UI.

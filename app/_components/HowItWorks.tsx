@@ -1,94 +1,81 @@
-import { WaveDivider } from "./WaveDivider";
+import Image from "next/image";
+import reading from "@/public/images/vitaly-gariev-kNzJZSAMaxc-unsplash.jpg";
+import drawing from "@/public/images/vitaly-gariev-inrYL3ffAsQ-unsplash.jpg";
+import coralWall from "@/public/images/humphrey-m-Cc-CQTUkbH0-unsplash.jpg";
 
 const steps = [
   {
-    number: "01",
-    icon: "🐧",
     title: "Create your nest",
-    desc: "Sign up and set your name and colour. Your nest is your family's private shared space — no one else can see in.",
+    body: "Sign up, pick your color and add your child. Your nest is a private space only the people you invite can see into.",
+    photo: reading,
+    alt: "A father reading a book with his son",
+    chip: { icon: "🪺", label: "Emma's nest created", bg: "bg-lily-soft" },
   },
   {
-    number: "02",
-    icon: "✉️",
     title: "Invite your co-parent",
-    desc: "Send your co-parent an invite by email or share a join code. They're in the moment they accept — no approval delay.",
+    body: "Send an invite by email or read out a join code. You choose their role and what they can see.",
+    photo: drawing,
+    alt: "A mother drawing with her son at home",
+    chip: { icon: "✉️", label: "James joined your nest", bg: "bg-james-soft" },
   },
   {
-    number: "03",
-    icon: "🎉",
-    title: "Start sharing",
-    desc: "Add your children, set the custody pattern, and start logging expenses, uploading memories, and chatting — all in one place.",
+    title: "Share the load",
+    body: "Set the custody pattern, then start logging expenses, notes and memories. Both of you see the same thing, as it happens.",
+    photo: coralWall,
+    alt: "A father lifting his laughing baby against a coral wall",
+    chip: { icon: "📅", label: "Schedule approved", bg: "bg-maria-soft" },
   },
 ];
 
 export function HowItWorks() {
   return (
-    <>
-      <WaveDivider topColor="#FAFAF4" bottomColor="#EEE8DC" />
-      <section id="how-it-works" className="bg-cream-dark py-20">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <p className="text-xs font-semibold text-amber uppercase tracking-widest mb-3">
-              Simple as 1, 2, 3
-            </p>
-            <h2 className="text-4xl sm:text-5xl font-black text-charcoal tracking-tight leading-tight mb-4">
-              Up and running{" "}
-              <span
-                style={{
-                  background: "linear-gradient(135deg, #C8893A 0%, #9E6B28 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-              >
-                in minutes.
-              </span>
-            </h2>
-            <p className="text-charcoal-lighter text-lg max-w-md mx-auto">
-              No complicated setup. No IT department required.
+    <section id="how-it-works" className="scroll-mt-24 px-2 sm:px-3">
+      <div className="rounded-[28px] bg-paper py-24 sm:rounded-[36px] sm:py-32">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+          <div className="reveal mb-14 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+            <div>
+              <p className="mb-4 text-sm font-semibold text-accent-ink">How it works</p>
+              <h2 className="text-4xl font-bold leading-[1.05] tracking-[-0.03em] text-ink sm:text-6xl">
+                Set up in minutes.
+                <br />
+                <span className="text-ink-3">Calmer for years.</span>
+              </h2>
+            </div>
+            <p className="max-w-sm text-lg leading-relaxed text-ink-3">
+              No complicated setup. Your co-parent joins with one invite, with no separate
+              sign-up hoops.
             </p>
           </div>
 
-          {/* Steps */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 relative">
-            {/* Connector line (desktop) */}
-            <div className="hidden md:block absolute top-16 left-1/3 right-1/3 h-px border-t-2 border-dashed border-sage/30 z-0" />
-
-            {steps.map((step, idx) => (
-              <div key={step.number} className="relative flex flex-col items-center text-center md:items-start md:text-left">
-                {/* Number + icon */}
-                <div className="relative mb-6 z-10">
-                  <div className="w-16 h-16 rounded-2xl bg-white shadow-md flex items-center justify-center text-3xl border border-charcoal/5">
-                    {step.icon}
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-charcoal text-cream text-[11px] font-black flex items-center justify-center leading-none">
-                    {idx + 1}
+          <ol className="grid gap-5 md:grid-cols-3">
+            {steps.map((s, i) => (
+              <li key={s.title} className="reveal group">
+                <div className="relative mb-6 aspect-[4/5] overflow-hidden rounded-3xl">
+                  <Image
+                    src={s.photo}
+                    alt={s.alt}
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent" />
+                  <span className="absolute left-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-paper text-sm font-bold text-ink">
+                    {i + 1}
+                  </span>
+                  <div className="absolute inset-x-4 bottom-4 flex items-center gap-3 rounded-2xl bg-paper/95 p-3 shadow-lg backdrop-blur transition-transform duration-500 group-hover:-translate-y-1">
+                    <span className={`flex h-9 w-9 items-center justify-center rounded-xl ${s.chip.bg}`}>
+                      {s.chip.icon}
+                    </span>
+                    <span className="text-sm font-semibold text-ink">{s.chip.label}</span>
                   </div>
                 </div>
-
-                <h3 className="text-xl font-bold text-charcoal mb-3">{step.title}</h3>
-                <p className="text-charcoal-lighter leading-relaxed">{step.desc}</p>
-              </div>
+                <h3 className="mb-2 text-xl font-bold tracking-tight text-ink">{s.title}</h3>
+                <p className="leading-relaxed text-ink-3">{s.body}</p>
+              </li>
             ))}
-          </div>
-
-          {/* CTA */}
-          <div className="mt-16 text-center">
-            <a
-              href="#download"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-charcoal text-cream font-semibold text-base hover:bg-charcoal-light transition-all duration-200 shadow-lg shadow-charcoal/20"
-            >
-              Get started free
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-            <p className="text-sm text-charcoal-lighter mt-3">Free to download · No credit card needed</p>
-          </div>
+          </ol>
         </div>
-      </section>
-      <WaveDivider topColor="#EEE8DC" bottomColor="#FAFAF4" />
-    </>
+      </div>
+    </section>
   );
 }
