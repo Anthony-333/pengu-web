@@ -1,0 +1,5638 @@
+{
+  "nodes": [
+    {
+      "id": "eslint_config_mjs",
+      "label": "eslint.config.mjs",
+      "file_type": "code",
+      "source_file": "eslint.config.mjs",
+      "source_location": "L1"
+    },
+    {
+      "id": "pengu_web_eslint_config_eslintconfig",
+      "label": "eslintConfig",
+      "file_type": "code",
+      "source_file": "eslint.config.mjs",
+      "source_location": "L5"
+    },
+    {
+      "id": "next_config_ts",
+      "label": "next.config.ts",
+      "file_type": "code",
+      "source_file": "next.config.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "pengu_web_next_config_nextconfig",
+      "label": "nextConfig",
+      "file_type": "code",
+      "source_file": "next.config.ts",
+      "source_location": "L3"
+    },
+    {
+      "id": "package_json",
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "pengu_web_package_name",
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "pengu_web_package_version",
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "pengu_web_package_private",
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "pengu_web_package_scripts",
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "pengu_web_package_scripts_dev",
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "pengu_web_package_scripts_build",
+      "label": "build",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "pengu_web_package_scripts_start",
+      "label": "start",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "pengu_web_package_scripts_lint",
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "pengu_web_package_dependencies",
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "pengu_web_package_dependencies_solar_icons_react",
+      "label": "@solar-icons/react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12"
+    },
+    {
+      "id": "pengu_web_package_dependencies_next",
+      "label": "next",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "pengu_web_package_dependencies_react",
+      "label": "react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14"
+    },
+    {
+      "id": "pengu_web_package_dependencies_react_dom",
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "pengu_web_package_devdependencies",
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L17"
+    },
+    {
+      "id": "pengu_web_package_devdependencies_tailwindcss_turbopack",
+      "label": "@tailwindcss/turbopack",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "pengu_web_package_devdependencies_types_node",
+      "label": "@types/node",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L19"
+    },
+    {
+      "id": "pengu_web_package_devdependencies_types_react",
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L20"
+    },
+    {
+      "id": "pengu_web_package_devdependencies_types_react_dom",
+      "label": "@types/react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21"
+    },
+    {
+      "id": "pengu_web_package_devdependencies_eslint",
+      "label": "eslint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "pengu_web_package_devdependencies_eslint_config_next",
+      "label": "eslint-config-next",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L23"
+    },
+    {
+      "id": "pengu_web_package_devdependencies_tailwindcss",
+      "label": "tailwindcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L24"
+    },
+    {
+      "id": "pengu_web_package_devdependencies_typescript",
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L25"
+    },
+    {
+      "id": "tsconfig_json",
+      "label": "tsconfig.json",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "pengu_web_tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "pengu_web_tsconfig_compileroptions_target",
+      "label": "target",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "pengu_web_tsconfig_compileroptions_lib",
+      "label": "lib",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "pengu_web_tsconfig_compileroptions_allowjs",
+      "label": "allowJs",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "pengu_web_tsconfig_compileroptions_skiplibcheck",
+      "label": "skipLibCheck",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "pengu_web_tsconfig_compileroptions_strict",
+      "label": "strict",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "pengu_web_tsconfig_compileroptions_noemit",
+      "label": "noEmit",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "pengu_web_tsconfig_compileroptions_esmoduleinterop",
+      "label": "esModuleInterop",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "pengu_web_tsconfig_compileroptions_module",
+      "label": "module",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "pengu_web_tsconfig_compileroptions_moduleresolution",
+      "label": "moduleResolution",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "pengu_web_tsconfig_compileroptions_resolvejsonmodule",
+      "label": "resolveJsonModule",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L12"
+    },
+    {
+      "id": "pengu_web_tsconfig_compileroptions_isolatedmodules",
+      "label": "isolatedModules",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "pengu_web_tsconfig_compileroptions_jsx",
+      "label": "jsx",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L14"
+    },
+    {
+      "id": "pengu_web_tsconfig_compileroptions_incremental",
+      "label": "incremental",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "pengu_web_tsconfig_compileroptions_plugins",
+      "label": "plugins",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L16"
+    },
+    {
+      "id": "pengu_web_tsconfig_compileroptions_paths",
+      "label": "paths",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L21"
+    },
+    {
+      "id": "pengu_web_tsconfig_paths",
+      "label": "@/*",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "pengu_web_tsconfig_include",
+      "label": "include",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L25"
+    },
+    {
+      "id": "pengu_web_tsconfig_exclude",
+      "label": "exclude",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L33"
+    },
+    {
+      "id": "app_layout_tsx",
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "app\\layout.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_layout_elmssans",
+      "label": "elmsSans",
+      "file_type": "code",
+      "source_file": "app\\layout.tsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "app_layout_geistmono",
+      "label": "geistMono",
+      "file_type": "code",
+      "source_file": "app\\layout.tsx",
+      "source_location": "L12"
+    },
+    {
+      "id": "app_layout_metadata",
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "app\\layout.tsx",
+      "source_location": "L18"
+    },
+    {
+      "id": "app_layout_viewport",
+      "label": "viewport",
+      "file_type": "code",
+      "source_file": "app\\layout.tsx",
+      "source_location": "L50"
+    },
+    {
+      "id": "app_layout_rootlayout",
+      "label": "RootLayout()",
+      "file_type": "code",
+      "source_file": "app\\layout.tsx",
+      "source_location": "L54"
+    },
+    {
+      "id": "app_manifest_ts",
+      "label": "manifest.ts",
+      "file_type": "code",
+      "source_file": "app\\manifest.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_manifest_manifest",
+      "label": "manifest()",
+      "file_type": "code",
+      "source_file": "app\\manifest.ts",
+      "source_location": "L4"
+    },
+    {
+      "id": "app_opengraph_image_tsx",
+      "label": "opengraph-image.tsx",
+      "file_type": "code",
+      "source_file": "app\\opengraph-image.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_opengraph_image_size",
+      "label": "size",
+      "file_type": "code",
+      "source_file": "app\\opengraph-image.tsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "app_opengraph_image_image",
+      "label": "Image()",
+      "file_type": "code",
+      "source_file": "app\\opengraph-image.tsx",
+      "source_location": "L11"
+    },
+    {
+      "id": "app_page_tsx",
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "app\\page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_page_home",
+      "label": "Home()",
+      "file_type": "code",
+      "source_file": "app\\page.tsx",
+      "source_location": "L12"
+    },
+    {
+      "id": "app_robots_ts",
+      "label": "robots.ts",
+      "file_type": "code",
+      "source_file": "app\\robots.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_robots_aiagents",
+      "label": "aiAgents",
+      "file_type": "code",
+      "source_file": "app\\robots.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "app_robots_robots",
+      "label": "robots()",
+      "file_type": "code",
+      "source_file": "app\\robots.ts",
+      "source_location": "L29"
+    },
+    {
+      "id": "app_sitemap_ts",
+      "label": "sitemap.ts",
+      "file_type": "code",
+      "source_file": "app\\sitemap.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_sitemap_sitemap",
+      "label": "sitemap()",
+      "file_type": "code",
+      "source_file": "app\\sitemap.ts",
+      "source_location": "L5"
+    },
+    {
+      "id": "app_llms_txt_route_ts",
+      "label": "route.ts",
+      "file_type": "code",
+      "source_file": "app\\llms.txt\\route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "llms_txt_route_get",
+      "label": "GET()",
+      "file_type": "code",
+      "source_file": "app\\llms.txt\\route.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "app_privacy_page_tsx",
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "app\\privacy\\page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "privacy_page_metadata",
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "app\\privacy\\page.tsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "privacy_page_toc",
+      "label": "toc",
+      "file_type": "code",
+      "source_file": "app\\privacy\\page.tsx",
+      "source_location": "L13"
+    },
+    {
+      "id": "privacy_page_privacypage",
+      "label": "PrivacyPage()",
+      "file_type": "code",
+      "source_file": "app\\privacy\\page.tsx",
+      "source_location": "L33"
+    },
+    {
+      "id": "app_terms_page_tsx",
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "app\\terms\\page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "terms_page_metadata",
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "app\\terms\\page.tsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "terms_page_toc",
+      "label": "toc",
+      "file_type": "code",
+      "source_file": "app\\terms\\page.tsx",
+      "source_location": "L13"
+    },
+    {
+      "id": "terms_page_termspage",
+      "label": "TermsPage()",
+      "file_type": "code",
+      "source_file": "app\\terms\\page.tsx",
+      "source_location": "L35"
+    },
+    {
+      "id": "app_components_download_tsx",
+      "label": "Download.tsx",
+      "file_type": "code",
+      "source_file": "app\\_components\\Download.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_download_download",
+      "label": "Download()",
+      "file_type": "code",
+      "source_file": "app\\_components\\Download.tsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "app_components_faq_tsx",
+      "label": "FAQ.tsx",
+      "file_type": "code",
+      "source_file": "app\\_components\\FAQ.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_faq_faq",
+      "label": "FAQ()",
+      "file_type": "code",
+      "source_file": "app\\_components\\FAQ.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "app_components_features_tsx",
+      "label": "Features.tsx",
+      "file_type": "code",
+      "source_file": "app\\_components\\Features.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_features_feature",
+      "label": "Feature",
+      "file_type": "code",
+      "source_file": "app\\_components\\Features.tsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "components_features_features",
+      "label": "features",
+      "file_type": "code",
+      "source_file": "app\\_components\\Features.tsx",
+      "source_location": "L20"
+    },
+    {
+      "id": "components_features_featurevideo",
+      "label": "FeatureVideo()",
+      "file_type": "code",
+      "source_file": "app\\_components\\Features.tsx",
+      "source_location": "L68"
+    },
+    {
+      "id": "app_components_featuretour_tsx",
+      "label": "FeatureTour.tsx",
+      "file_type": "code",
+      "source_file": "app\\_components\\FeatureTour.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_featuretour_featuretour",
+      "label": "FeatureTour()",
+      "file_type": "code",
+      "source_file": "app\\_components\\FeatureTour.tsx",
+      "source_location": "L16"
+    },
+    {
+      "id": "app_components_footer_tsx",
+      "label": "Footer.tsx",
+      "file_type": "code",
+      "source_file": "app\\_components\\Footer.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_footer_copyrightyear",
+      "label": "CopyrightYear()",
+      "file_type": "code",
+      "source_file": "app\\_components\\Footer.tsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "components_footer_links",
+      "label": "links",
+      "file_type": "code",
+      "source_file": "app\\_components\\Footer.tsx",
+      "source_location": "L11"
+    },
+    {
+      "id": "components_footer_footer",
+      "label": "Footer()",
+      "file_type": "code",
+      "source_file": "app\\_components\\Footer.tsx",
+      "source_location": "L40"
+    },
+    {
+      "id": "app_components_hero_tsx",
+      "label": "Hero.tsx",
+      "file_type": "code",
+      "source_file": "app\\_components\\Hero.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_hero_apptourvideo",
+      "label": "AppTourVideo()",
+      "file_type": "code",
+      "source_file": "app\\_components\\Hero.tsx",
+      "source_location": "L14"
+    },
+    {
+      "id": "components_hero_hero",
+      "label": "Hero()",
+      "file_type": "code",
+      "source_file": "app\\_components\\Hero.tsx",
+      "source_location": "L32"
+    },
+    {
+      "id": "components_hero_floatingchip",
+      "label": "FloatingChip()",
+      "file_type": "code",
+      "source_file": "app\\_components\\Hero.tsx",
+      "source_location": "L118"
+    },
+    {
+      "id": "app_components_hideonscroll_tsx",
+      "label": "HideOnScroll.tsx",
+      "file_type": "code",
+      "source_file": "app\\_components\\HideOnScroll.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_hideonscroll_hideonscroll",
+      "label": "HideOnScroll()",
+      "file_type": "code",
+      "source_file": "app\\_components\\HideOnScroll.tsx",
+      "source_location": "L9"
+    },
+    {
+      "id": "app_components_howitworks_tsx",
+      "label": "HowItWorks.tsx",
+      "file_type": "code",
+      "source_file": "app\\_components\\HowItWorks.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_howitworks_steps",
+      "label": "steps",
+      "file_type": "code",
+      "source_file": "app\\_components\\HowItWorks.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "components_howitworks_howitworks",
+      "label": "HowItWorks()",
+      "file_type": "code",
+      "source_file": "app\\_components\\HowItWorks.tsx",
+      "source_location": "L30"
+    },
+    {
+      "id": "app_components_legalpage_tsx",
+      "label": "LegalPage.tsx",
+      "file_type": "code",
+      "source_file": "app\\_components\\LegalPage.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_legalpage_legal",
+      "label": "LEGAL",
+      "file_type": "code",
+      "source_file": "app\\_components\\LegalPage.tsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "components_legalpage_tocitem",
+      "label": "TocItem",
+      "file_type": "code",
+      "source_file": "app\\_components\\LegalPage.tsx",
+      "source_location": "L18"
+    },
+    {
+      "id": "components_legalpage_legalpage",
+      "label": "LegalPage()",
+      "file_type": "code",
+      "source_file": "app\\_components\\LegalPage.tsx",
+      "source_location": "L20"
+    },
+    {
+      "id": "components_legalpage_legalsection",
+      "label": "LegalSection()",
+      "file_type": "code",
+      "source_file": "app\\_components\\LegalPage.tsx",
+      "source_location": "L75"
+    },
+    {
+      "id": "app_components_moments_tsx",
+      "label": "Moments.tsx",
+      "file_type": "code",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_moments_tile",
+      "label": "Tile",
+      "file_type": "code",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L11"
+    },
+    {
+      "id": "components_moments_rowa",
+      "label": "rowA",
+      "file_type": "code",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L13"
+    },
+    {
+      "id": "components_moments_rowb",
+      "label": "rowB",
+      "file_type": "code",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L19"
+    },
+    {
+      "id": "components_moments_row",
+      "label": "Row()",
+      "file_type": "code",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L26"
+    },
+    {
+      "id": "components_moments_moments",
+      "label": "Moments()",
+      "file_type": "code",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L46"
+    },
+    {
+      "id": "app_components_motion_ts",
+      "label": "motion.ts",
+      "file_type": "code",
+      "source_file": "app\\_components\\motion.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_motion_delay",
+      "label": "delay()",
+      "file_type": "code",
+      "source_file": "app\\_components\\motion.ts",
+      "source_location": "L4"
+    },
+    {
+      "id": "app_components_nav_tsx",
+      "label": "Nav.tsx",
+      "file_type": "code",
+      "source_file": "app\\_components\\Nav.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_nav_links",
+      "label": "links",
+      "file_type": "code",
+      "source_file": "app\\_components\\Nav.tsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "components_nav_nav",
+      "label": "Nav()",
+      "file_type": "code",
+      "source_file": "app\\_components\\Nav.tsx",
+      "source_location": "L16"
+    },
+    {
+      "id": "app_components_pengulogo_tsx",
+      "label": "PenguLogo.tsx",
+      "file_type": "code",
+      "source_file": "app\\_components\\PenguLogo.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_pengulogo_pengulogo",
+      "label": "PenguLogo()",
+      "file_type": "code",
+      "source_file": "app\\_components\\PenguLogo.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_components_storebuttons_tsx",
+      "label": "StoreButtons.tsx",
+      "file_type": "code",
+      "source_file": "app\\_components\\StoreButtons.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_storebuttons_appleicon",
+      "label": "AppleIcon()",
+      "file_type": "code",
+      "source_file": "app\\_components\\StoreButtons.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "components_storebuttons_playicon",
+      "label": "PlayIcon()",
+      "file_type": "code",
+      "source_file": "app\\_components\\StoreButtons.tsx",
+      "source_location": "L11"
+    },
+    {
+      "id": "components_storebuttons_storebuttons",
+      "label": "StoreButtons()",
+      "file_type": "code",
+      "source_file": "app\\_components\\StoreButtons.tsx",
+      "source_location": "L23"
+    },
+    {
+      "id": "app_components_structureddata_tsx",
+      "label": "StructuredData.tsx",
+      "file_type": "code",
+      "source_file": "app\\_components\\StructuredData.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_structureddata_abs",
+      "label": "abs()",
+      "file_type": "code",
+      "source_file": "app\\_components\\StructuredData.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "components_structureddata_graph",
+      "label": "graph",
+      "file_type": "code",
+      "source_file": "app\\_components\\StructuredData.tsx",
+      "source_location": "L11"
+    },
+    {
+      "id": "components_structureddata_structureddata",
+      "label": "StructuredData()",
+      "file_type": "code",
+      "source_file": "app\\_components\\StructuredData.tsx",
+      "source_location": "L74"
+    },
+    {
+      "id": "app_components_testimonials_tsx",
+      "label": "Testimonials.tsx",
+      "file_type": "code",
+      "source_file": "app\\_components\\Testimonials.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_testimonials_reviews",
+      "label": "reviews",
+      "file_type": "code",
+      "source_file": "app\\_components\\Testimonials.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "components_testimonials_testimonials",
+      "label": "Testimonials()",
+      "file_type": "code",
+      "source_file": "app\\_components\\Testimonials.tsx",
+      "source_location": "L28"
+    },
+    {
+      "id": "app_components_phone_memoriesscreen_tsx",
+      "label": "MemoriesScreen.tsx",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "phone_memoriesscreen_memory",
+      "label": "Memory",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L15"
+    },
+    {
+      "id": "phone_memoriesscreen_cola",
+      "label": "colA",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L27"
+    },
+    {
+      "id": "phone_memoriesscreen_colb",
+      "label": "colB",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L31"
+    },
+    {
+      "id": "phone_memoriesscreen_height",
+      "label": "HEIGHT",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L36"
+    },
+    {
+      "id": "phone_memoriesscreen_memorycard",
+      "label": "MemoryCard()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L38"
+    },
+    {
+      "id": "phone_memoriesscreen_memoriesscreen",
+      "label": "MemoriesScreen()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L74"
+    },
+    {
+      "id": "app_components_phone_phone_tsx",
+      "label": "Phone.tsx",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "phone_phone_screenprops",
+      "label": "ScreenProps",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L11"
+    },
+    {
+      "id": "phone_phone_phone",
+      "label": "Phone()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L25"
+    },
+    {
+      "id": "phone_phone_statusbar",
+      "label": "StatusBar()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L59"
+    },
+    {
+      "id": "phone_phone_homeindicator",
+      "label": "HomeIndicator()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L83"
+    },
+    {
+      "id": "phone_phone_tabs",
+      "label": "TABS",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L89"
+    },
+    {
+      "id": "phone_phone_tabbar",
+      "label": "TabBar()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L100"
+    },
+    {
+      "id": "app_components_phone_screens_tsx",
+      "label": "screens.tsx",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "phone_screens_custodyon",
+      "label": "custodyOn()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L51"
+    },
+    {
+      "id": "phone_screens_tone",
+      "label": "TONE",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L55"
+    },
+    {
+      "id": "phone_screens_childselector",
+      "label": "ChildSelector()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L62"
+    },
+    {
+      "id": "phone_screens_greetingheader",
+      "label": "GreetingHeader()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L93"
+    },
+    {
+      "id": "phone_screens_shortcuts",
+      "label": "SHORTCUTS",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L114"
+    },
+    {
+      "id": "phone_screens_custodyhero",
+      "label": "CustodyHero()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L121"
+    },
+    {
+      "id": "phone_screens_exchangecard",
+      "label": "ExchangeCard()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L162"
+    },
+    {
+      "id": "phone_screens_eventrow",
+      "label": "EventRow",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L187"
+    },
+    {
+      "id": "phone_screens_upcoming",
+      "label": "UPCOMING",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L189"
+    },
+    {
+      "id": "phone_screens_upcomingevents",
+      "label": "UpcomingEvents()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L195"
+    },
+    {
+      "id": "phone_screens_homefab",
+      "label": "HomeFab()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L222"
+    },
+    {
+      "id": "phone_screens_homescreen",
+      "label": "HomeScreen()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L230"
+    },
+    {
+      "id": "phone_screens_event_days",
+      "label": "EVENT_DAYS",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L245"
+    },
+    {
+      "id": "phone_screens_schedulescreen",
+      "label": "ScheduleScreen()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L247"
+    },
+    {
+      "id": "phone_screens_expense",
+      "label": "Expense",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L351"
+    },
+    {
+      "id": "phone_screens_expenses",
+      "label": "EXPENSES",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L361"
+    },
+    {
+      "id": "phone_screens_status",
+      "label": "STATUS",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L367"
+    },
+    {
+      "id": "phone_screens_expensesscreen",
+      "label": "ExpensesScreen()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L373"
+    },
+    {
+      "id": "phone_screens_prio",
+      "label": "PRIO",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L470"
+    },
+    {
+      "id": "phone_screens_notes",
+      "label": "NOTES",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L476"
+    },
+    {
+      "id": "phone_screens_notesscreen",
+      "label": "NotesScreen()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L509"
+    },
+    {
+      "id": "app_components_phone_ui_tsx",
+      "label": "ui.tsx",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "phone_ui_solaricon",
+      "label": "SolarIcon",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "phone_ui_card",
+      "label": "Card()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L15"
+    },
+    {
+      "id": "phone_ui_herocard",
+      "label": "HeroCard()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L31"
+    },
+    {
+      "id": "phone_ui_eyebrow",
+      "label": "Eyebrow()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L51"
+    },
+    {
+      "id": "phone_ui_sectionheader",
+      "label": "SectionHeader()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L55"
+    },
+    {
+      "id": "phone_ui_icontile",
+      "label": "IconTile()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L65"
+    },
+    {
+      "id": "phone_ui_statuspill",
+      "label": "StatusPill()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L88"
+    },
+    {
+      "id": "phone_ui_roundbutton",
+      "label": "RoundButton()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L107"
+    },
+    {
+      "id": "phone_ui_chip",
+      "label": "Chip()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L133"
+    },
+    {
+      "id": "phone_ui_bignumber",
+      "label": "BigNumber()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L159"
+    },
+    {
+      "id": "phone_ui_segmentbar",
+      "label": "SegmentBar()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L173"
+    },
+    {
+      "id": "phone_ui_initialsavatar",
+      "label": "InitialsAvatar()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L185"
+    },
+    {
+      "id": "phone_ui_subscreenheader",
+      "label": "SubScreenHeader()",
+      "file_type": "code",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L208"
+    },
+    {
+      "id": "app_lib_site_ts",
+      "label": "site.ts",
+      "file_type": "code",
+      "source_file": "app\\_lib\\site.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "lib_site_site",
+      "label": "SITE",
+      "file_type": "code",
+      "source_file": "app\\_lib\\site.ts",
+      "source_location": "L11"
+    },
+    {
+      "id": "lib_site_features",
+      "label": "features",
+      "file_type": "code",
+      "source_file": "app\\_lib\\site.ts",
+      "source_location": "L41"
+    },
+    {
+      "id": "lib_site_faqs",
+      "label": "faqs",
+      "file_type": "code",
+      "source_file": "app\\_lib\\site.ts",
+      "source_location": "L64"
+    },
+    {
+      "id": "video_hyperframes_json",
+      "label": "hyperframes.json",
+      "file_type": "code",
+      "source_file": "video\\hyperframes.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "video_hyperframes_schema",
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": "video\\hyperframes.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "video_hyperframes_registry",
+      "label": "registry",
+      "file_type": "code",
+      "source_file": "video\\hyperframes.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "video_hyperframes_paths",
+      "label": "paths",
+      "file_type": "code",
+      "source_file": "video\\hyperframes.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "video_hyperframes_paths_blocks",
+      "label": "blocks",
+      "file_type": "code",
+      "source_file": "video\\hyperframes.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "video_hyperframes_paths_components",
+      "label": "components",
+      "file_type": "code",
+      "source_file": "video\\hyperframes.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "video_hyperframes_paths_assets",
+      "label": "assets",
+      "file_type": "code",
+      "source_file": "video\\hyperframes.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "video_hyperframes_media",
+      "label": "media",
+      "file_type": "code",
+      "source_file": "video\\hyperframes.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "video_hyperframes_media_autoproxy",
+      "label": "autoProxy",
+      "file_type": "code",
+      "source_file": "video\\hyperframes.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "video_meta_json",
+      "label": "meta.json",
+      "file_type": "code",
+      "source_file": "video\\meta.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "video_meta_id",
+      "label": "id",
+      "file_type": "code",
+      "source_file": "video\\meta.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "video_meta_name",
+      "label": "name",
+      "file_type": "code",
+      "source_file": "video\\meta.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "video_meta_createdat",
+      "label": "createdAt",
+      "file_type": "code",
+      "source_file": "video\\meta.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "video_next_image_tsx",
+      "label": "next-image.tsx",
+      "file_type": "code",
+      "source_file": "video\\next-image.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "video_next_image_props",
+      "label": "Props",
+      "file_type": "code",
+      "source_file": "video\\next-image.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "video_next_image_assetname",
+      "label": "assetName()",
+      "file_type": "code",
+      "source_file": "video\\next-image.tsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "video_next_image_image",
+      "label": "Image()",
+      "file_type": "code",
+      "source_file": "video\\next-image.tsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "video_package_json",
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "video\\package.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "video_package_name",
+      "label": "name",
+      "file_type": "code",
+      "source_file": "video\\package.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "video_package_private",
+      "label": "private",
+      "file_type": "code",
+      "source_file": "video\\package.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "video_package_type",
+      "label": "type",
+      "file_type": "code",
+      "source_file": "video\\package.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "video_package_scripts",
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "video\\package.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "video_package_scripts_dev",
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "video\\package.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "video_package_scripts_check",
+      "label": "check",
+      "file_type": "code",
+      "source_file": "video\\package.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "video_package_scripts_render",
+      "label": "render",
+      "file_type": "code",
+      "source_file": "video\\package.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "video_package_scripts_publish",
+      "label": "publish",
+      "file_type": "code",
+      "source_file": "video\\package.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "video_package_scripts_screens",
+      "label": "screens",
+      "file_type": "code",
+      "source_file": "video\\package.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "video_render_screens_tsx",
+      "label": "render-screens.tsx",
+      "file_type": "code",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "video_render_screens_here",
+      "label": "here()",
+      "file_type": "code",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L20"
+    },
+    {
+      "id": "video_render_screens_css",
+      "label": "css",
+      "file_type": "code",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L22"
+    },
+    {
+      "id": "video_render_screens_tokens",
+      "label": "tokens",
+      "file_type": "code",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L26"
+    },
+    {
+      "id": "video_render_screens_html",
+      "label": "html()",
+      "file_type": "code",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L28"
+    },
+    {
+      "id": "video_render_screens_out",
+      "label": "out",
+      "file_type": "code",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L30"
+    },
+    {
+      "id": "video_render_screens_features",
+      "label": "FEATURES",
+      "file_type": "code",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L50"
+    },
+    {
+      "id": "video_render_screens_shell",
+      "label": "shell",
+      "file_type": "code",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L61"
+    },
+    {
+      "id": "video_render_screens_src",
+      "label": "src",
+      "file_type": "code",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L63"
+    },
+    {
+      "id": "video_render_screens_part",
+      "label": "part()",
+      "file_type": "code",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L64"
+    },
+    {
+      "id": "video_render_screens_at",
+      "label": "at",
+      "file_type": "code",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L65"
+    },
+    {
+      "id": "video_render_screens_filled",
+      "label": "filled",
+      "file_type": "code",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L68"
+    }
+  ],
+  "edges": [
+    {
+      "source": "eslint_config_mjs",
+      "target": "config",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "eslint.config.mjs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "eslint_config_mjs",
+      "target": "core_web_vitals",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "eslint.config.mjs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "eslint_config_mjs",
+      "target": "typescript",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "eslint.config.mjs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "eslint_config_mjs",
+      "target": "pengu_web_eslint_config_eslintconfig",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "eslint.config.mjs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "next_config_ts",
+      "target": "next",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "next.config.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "next_config_ts",
+      "target": "pengu_web_next_config_nextconfig",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "next.config.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "package_json",
+      "target": "pengu_web_package_name",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "package_json",
+      "target": "pengu_web_package_version",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "package_json",
+      "target": "pengu_web_package_private",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "package_json",
+      "target": "pengu_web_package_scripts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_package_scripts",
+      "target": "pengu_web_package_scripts_dev",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_package_scripts",
+      "target": "pengu_web_package_scripts_build",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_package_scripts",
+      "target": "pengu_web_package_scripts_start",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_package_scripts",
+      "target": "pengu_web_package_scripts_lint",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "package_json",
+      "target": "pengu_web_package_dependencies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_package_dependencies",
+      "target": "pengu_web_package_dependencies_solar_icons_react",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_package_dependencies_solar_icons_react",
+      "target": "solar_icons_react",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "pengu_web_package_dependencies",
+      "target": "pengu_web_package_dependencies_next",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_package_dependencies_next",
+      "target": "next",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "pengu_web_package_dependencies",
+      "target": "pengu_web_package_dependencies_react",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_package_dependencies_react",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "pengu_web_package_dependencies",
+      "target": "pengu_web_package_dependencies_react_dom",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_package_dependencies_react_dom",
+      "target": "react_dom",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "package_json",
+      "target": "pengu_web_package_devdependencies",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_package_devdependencies",
+      "target": "pengu_web_package_devdependencies_tailwindcss_turbopack",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_package_devdependencies_tailwindcss_turbopack",
+      "target": "tailwindcss_turbopack",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "pengu_web_package_devdependencies",
+      "target": "pengu_web_package_devdependencies_types_node",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_package_devdependencies_types_node",
+      "target": "types_node",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "pengu_web_package_devdependencies",
+      "target": "pengu_web_package_devdependencies_types_react",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_package_devdependencies_types_react",
+      "target": "types_react",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "pengu_web_package_devdependencies",
+      "target": "pengu_web_package_devdependencies_types_react_dom",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_package_devdependencies_types_react_dom",
+      "target": "types_react_dom",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "pengu_web_package_devdependencies",
+      "target": "pengu_web_package_devdependencies_eslint",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_package_devdependencies_eslint",
+      "target": "eslint",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "pengu_web_package_devdependencies",
+      "target": "pengu_web_package_devdependencies_eslint_config_next",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_package_devdependencies_eslint_config_next",
+      "target": "eslint_config_next",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "pengu_web_package_devdependencies",
+      "target": "pengu_web_package_devdependencies_tailwindcss",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_package_devdependencies_tailwindcss",
+      "target": "tailwindcss",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "pengu_web_package_devdependencies",
+      "target": "pengu_web_package_devdependencies_typescript",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_package_devdependencies_typescript",
+      "target": "typescript",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "tsconfig_json",
+      "target": "pengu_web_tsconfig_compileroptions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_tsconfig_compileroptions",
+      "target": "pengu_web_tsconfig_compileroptions_target",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_tsconfig_compileroptions",
+      "target": "pengu_web_tsconfig_compileroptions_lib",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_tsconfig_compileroptions_lib",
+      "target": "ref_dom",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "pengu_web_tsconfig_compileroptions_lib",
+      "target": "ref_dom_iterable",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "pengu_web_tsconfig_compileroptions_lib",
+      "target": "ref_esnext",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "pengu_web_tsconfig_compileroptions",
+      "target": "pengu_web_tsconfig_compileroptions_allowjs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_tsconfig_compileroptions",
+      "target": "pengu_web_tsconfig_compileroptions_skiplibcheck",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_tsconfig_compileroptions",
+      "target": "pengu_web_tsconfig_compileroptions_strict",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_tsconfig_compileroptions",
+      "target": "pengu_web_tsconfig_compileroptions_noemit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_tsconfig_compileroptions",
+      "target": "pengu_web_tsconfig_compileroptions_esmoduleinterop",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_tsconfig_compileroptions",
+      "target": "pengu_web_tsconfig_compileroptions_module",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_tsconfig_compileroptions",
+      "target": "pengu_web_tsconfig_compileroptions_moduleresolution",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_tsconfig_compileroptions",
+      "target": "pengu_web_tsconfig_compileroptions_resolvejsonmodule",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_tsconfig_compileroptions",
+      "target": "pengu_web_tsconfig_compileroptions_isolatedmodules",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_tsconfig_compileroptions",
+      "target": "pengu_web_tsconfig_compileroptions_jsx",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_tsconfig_compileroptions",
+      "target": "pengu_web_tsconfig_compileroptions_incremental",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_tsconfig_compileroptions",
+      "target": "pengu_web_tsconfig_compileroptions_plugins",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_tsconfig_compileroptions",
+      "target": "pengu_web_tsconfig_compileroptions_paths",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_tsconfig_compileroptions_paths",
+      "target": "pengu_web_tsconfig_paths",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_tsconfig_paths",
+      "target": "ref",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "tsconfig_json",
+      "target": "pengu_web_tsconfig_include",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_tsconfig_include",
+      "target": "ref_next_env_d_ts",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "pengu_web_tsconfig_include",
+      "target": "ref_ts",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "pengu_web_tsconfig_include",
+      "target": "ref_tsx",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "pengu_web_tsconfig_include",
+      "target": "ref_next_types_ts",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "pengu_web_tsconfig_include",
+      "target": "ref_next_dev_types_ts",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "pengu_web_tsconfig_include",
+      "target": "ref_mts",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "tsconfig_json",
+      "target": "pengu_web_tsconfig_exclude",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "pengu_web_tsconfig_exclude",
+      "target": "ref_node_modules",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "app_layout_tsx",
+      "target": "next",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\layout.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_layout_tsx",
+      "target": "google",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\layout.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_layout_tsx",
+      "target": "app_lib_site_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\layout.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_layout_tsx",
+      "target": "lib_site_site",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\layout.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_layout_tsx",
+      "target": "lib_site_site_url",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\layout.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_layout_tsx",
+      "target": "c_users_acer_onedrive_desktop_webdev_pengu_web_app_globals_css",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\layout.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_layout_tsx",
+      "target": "app_layout_elmssans",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\layout.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_layout_tsx",
+      "target": "app_layout_geistmono",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\layout.tsx",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "app_layout_tsx",
+      "target": "app_layout_metadata",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\layout.tsx",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "app_layout_tsx",
+      "target": "app_layout_viewport",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\layout.tsx",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "app_layout_tsx",
+      "target": "app_layout_rootlayout",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\layout.tsx",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "app_manifest_ts",
+      "target": "next",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\manifest.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_manifest_ts",
+      "target": "app_lib_site_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\manifest.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_manifest_ts",
+      "target": "lib_site_site",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\manifest.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_manifest_ts",
+      "target": "app_manifest_manifest",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\manifest.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_opengraph_image_tsx",
+      "target": "og",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\opengraph-image.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_opengraph_image_tsx",
+      "target": "promises",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\opengraph-image.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_opengraph_image_tsx",
+      "target": "node_path",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\opengraph-image.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_opengraph_image_tsx",
+      "target": "app_lib_site_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\opengraph-image.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_opengraph_image_tsx",
+      "target": "lib_site_site",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\opengraph-image.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_opengraph_image_tsx",
+      "target": "app_opengraph_image_size",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\opengraph-image.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_opengraph_image_tsx",
+      "target": "app_opengraph_image_image",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\opengraph-image.tsx",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "app_components_nav_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "components_nav_nav",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "app_components_hero_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "components_hero_hero",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "app_components_features_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "components_features_features",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "app_components_moments_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "components_moments_moments",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "app_components_howitworks_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "components_howitworks_howitworks",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "app_components_testimonials_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "components_testimonials_testimonials",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "app_components_faq_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "components_faq_faq",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "app_components_download_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "components_download_download",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "app_components_footer_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "components_footer_footer",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "app_components_structureddata_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "components_structureddata_structureddata",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "app_page_tsx",
+      "target": "app_page_home",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\page.tsx",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "app_robots_ts",
+      "target": "next",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\robots.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_robots_ts",
+      "target": "app_lib_site_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\robots.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_robots_ts",
+      "target": "lib_site_site_url",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\robots.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_robots_ts",
+      "target": "app_robots_aiagents",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\robots.ts",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "app_robots_ts",
+      "target": "app_robots_robots",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\robots.ts",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "app_sitemap_ts",
+      "target": "next",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\sitemap.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_sitemap_ts",
+      "target": "app_components_legalpage_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\sitemap.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_sitemap_ts",
+      "target": "components_legalpage_legal",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\sitemap.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_sitemap_ts",
+      "target": "app_lib_site_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\sitemap.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_sitemap_ts",
+      "target": "lib_site_site_url",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\sitemap.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_sitemap_ts",
+      "target": "app_sitemap_sitemap",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\sitemap.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_llms_txt_route_ts",
+      "target": "app_lib_site_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\llms.txt\\route.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_llms_txt_route_ts",
+      "target": "lib_site_site",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\llms.txt\\route.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_llms_txt_route_ts",
+      "target": "lib_site_site_url",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\llms.txt\\route.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_llms_txt_route_ts",
+      "target": "lib_site_faqs",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\llms.txt\\route.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_llms_txt_route_ts",
+      "target": "lib_site_features",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\llms.txt\\route.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_llms_txt_route_ts",
+      "target": "llms_txt_route_get",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\llms.txt\\route.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "app_privacy_page_tsx",
+      "target": "next",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\privacy\\page.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_privacy_page_tsx",
+      "target": "link",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\privacy\\page.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_privacy_page_tsx",
+      "target": "app_components_legalpage_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\privacy\\page.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_privacy_page_tsx",
+      "target": "components_legalpage_legal",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\privacy\\page.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_privacy_page_tsx",
+      "target": "components_legalpage_legalpage",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\privacy\\page.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_privacy_page_tsx",
+      "target": "components_legalpage_legalsection",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\privacy\\page.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_privacy_page_tsx",
+      "target": "privacy_page_metadata",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\privacy\\page.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_privacy_page_tsx",
+      "target": "privacy_page_toc",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\privacy\\page.tsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "app_privacy_page_tsx",
+      "target": "privacy_page_privacypage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\privacy\\page.tsx",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "app_terms_page_tsx",
+      "target": "next",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\terms\\page.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_terms_page_tsx",
+      "target": "link",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\terms\\page.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_terms_page_tsx",
+      "target": "app_components_legalpage_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\terms\\page.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_terms_page_tsx",
+      "target": "components_legalpage_legal",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\terms\\page.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_terms_page_tsx",
+      "target": "components_legalpage_legalpage",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\terms\\page.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_terms_page_tsx",
+      "target": "components_legalpage_legalsection",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\terms\\page.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_terms_page_tsx",
+      "target": "terms_page_metadata",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\terms\\page.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_terms_page_tsx",
+      "target": "terms_page_toc",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\terms\\page.tsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "app_terms_page_tsx",
+      "target": "terms_page_termspage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\terms\\page.tsx",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_download_tsx",
+      "target": "image",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Download.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_download_tsx",
+      "target": "c_users_acer_onedrive_desktop_webdev_pengu_web_public_images_vitaly_gariev_knzjzsamaxc_unsplash_jpg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Download.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_download_tsx",
+      "target": "app_components_phone_phone_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Download.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_download_tsx",
+      "target": "phone_phone_phone",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Download.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_download_tsx",
+      "target": "app_components_phone_screens_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Download.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_download_tsx",
+      "target": "phone_screens_homescreen",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Download.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_download_tsx",
+      "target": "app_components_storebuttons_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Download.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_download_tsx",
+      "target": "components_storebuttons_storebuttons",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Download.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_download_tsx",
+      "target": "components_download_download",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Download.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_faq_tsx",
+      "target": "app_lib_site_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\FAQ.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_faq_tsx",
+      "target": "lib_site_site",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\FAQ.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_faq_tsx",
+      "target": "lib_site_faqs",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\FAQ.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_faq_tsx",
+      "target": "components_faq_faq",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\FAQ.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_features_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Features.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_features_tsx",
+      "target": "app_components_featuretour_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Features.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_features_tsx",
+      "target": "components_featuretour_featuretour",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Features.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_features_tsx",
+      "target": "app_components_phone_phone_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Features.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_features_tsx",
+      "target": "phone_phone_phone",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Features.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_features_tsx",
+      "target": "app_components_phone_screens_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Features.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_features_tsx",
+      "target": "phone_screens_expensesscreen",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Features.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_features_tsx",
+      "target": "phone_screens_notesscreen",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Features.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_features_tsx",
+      "target": "phone_screens_schedulescreen",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Features.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_features_tsx",
+      "target": "app_components_phone_memoriesscreen_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Features.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_features_tsx",
+      "target": "phone_memoriesscreen_memoriesscreen",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Features.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_features_tsx",
+      "target": "components_features_feature",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Features.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_features_tsx",
+      "target": "components_features_features",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Features.tsx",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_features_tsx",
+      "target": "components_features_featurevideo",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Features.tsx",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_features_tsx",
+      "target": "components_features_features",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Features.tsx",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_featuretour_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\FeatureTour.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_featuretour_tsx",
+      "target": "components_featuretour_featuretour",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\FeatureTour.tsx",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_footer_tsx",
+      "target": "link",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Footer.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_footer_tsx",
+      "target": "cache",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Footer.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_footer_tsx",
+      "target": "app_components_pengulogo_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Footer.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_footer_tsx",
+      "target": "components_pengulogo_pengulogo",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Footer.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_footer_tsx",
+      "target": "components_footer_copyrightyear",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Footer.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_footer_tsx",
+      "target": "components_footer_links",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Footer.tsx",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_footer_tsx",
+      "target": "components_footer_footer",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Footer.tsx",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_hero_tsx",
+      "target": "image",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Hero.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_hero_tsx",
+      "target": "c_users_acer_onedrive_desktop_webdev_pengu_web_public_images_nathan_dumlao_wr3comvzjxu_unsplash_jpg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Hero.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_hero_tsx",
+      "target": "app_components_phone_phone_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Hero.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_hero_tsx",
+      "target": "phone_phone_phone",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Hero.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_hero_tsx",
+      "target": "app_components_phone_screens_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Hero.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_hero_tsx",
+      "target": "phone_screens_homescreen",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Hero.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_hero_tsx",
+      "target": "app_components_storebuttons_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Hero.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_hero_tsx",
+      "target": "components_storebuttons_storebuttons",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Hero.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_hero_tsx",
+      "target": "app_components_motion_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Hero.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_hero_tsx",
+      "target": "components_motion_delay",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Hero.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_hero_tsx",
+      "target": "components_hero_apptourvideo",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Hero.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_hero_tsx",
+      "target": "components_hero_hero",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Hero.tsx",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_hero_tsx",
+      "target": "components_hero_floatingchip",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Hero.tsx",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_hideonscroll_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\HideOnScroll.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_hideonscroll_tsx",
+      "target": "components_hideonscroll_hideonscroll",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\HideOnScroll.tsx",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_howitworks_tsx",
+      "target": "image",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\HowItWorks.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_howitworks_tsx",
+      "target": "c_users_acer_onedrive_desktop_webdev_pengu_web_public_images_vitaly_gariev_knzjzsamaxc_unsplash_jpg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\HowItWorks.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_howitworks_tsx",
+      "target": "c_users_acer_onedrive_desktop_webdev_pengu_web_public_images_vitaly_gariev_inryl3ffasq_unsplash_jpg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\HowItWorks.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_howitworks_tsx",
+      "target": "c_users_acer_onedrive_desktop_webdev_pengu_web_public_images_estee_janssens_zni0zgb3bkq_unsplash_jpg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\HowItWorks.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_howitworks_tsx",
+      "target": "components_howitworks_steps",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\HowItWorks.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_howitworks_tsx",
+      "target": "components_howitworks_howitworks",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\HowItWorks.tsx",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_legalpage_tsx",
+      "target": "link",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\LegalPage.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_legalpage_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\LegalPage.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_legalpage_tsx",
+      "target": "app_components_nav_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\LegalPage.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_legalpage_tsx",
+      "target": "components_nav_nav",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\LegalPage.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_legalpage_tsx",
+      "target": "app_components_footer_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\LegalPage.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_legalpage_tsx",
+      "target": "components_footer_footer",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\LegalPage.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_legalpage_tsx",
+      "target": "components_legalpage_legal",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\LegalPage.tsx",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_legalpage_tsx",
+      "target": "components_legalpage_tocitem",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\LegalPage.tsx",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_legalpage_tsx",
+      "target": "components_legalpage_legalpage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\LegalPage.tsx",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_legalpage_tsx",
+      "target": "components_legalpage_legalsection",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\LegalPage.tsx",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_moments_tsx",
+      "target": "image",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_moments_tsx",
+      "target": "c_users_acer_onedrive_desktop_webdev_pengu_web_public_images_humphrey_m_cc_cqtukbh0_unsplash_jpg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_moments_tsx",
+      "target": "c_users_acer_onedrive_desktop_webdev_pengu_web_public_images_arifur_rahman_yikkotj3h94_unsplash_jpg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_moments_tsx",
+      "target": "c_users_acer_onedrive_desktop_webdev_pengu_web_public_images_cdc_gdokeynofne_unsplash_jpg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_moments_tsx",
+      "target": "c_users_acer_onedrive_desktop_webdev_pengu_web_public_images_compagnons_ov44gxh71du_unsplash_jpg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_moments_tsx",
+      "target": "c_users_acer_onedrive_desktop_webdev_pengu_web_public_images_morgan_lane_yzhbeflehrg_unsplash_jpg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_moments_tsx",
+      "target": "c_users_acer_onedrive_desktop_webdev_pengu_web_public_images_alan_rodriguez_n17nkbsc_zy_unsplash_jpg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_moments_tsx",
+      "target": "c_users_acer_onedrive_desktop_webdev_pengu_web_public_images_vitaly_gariev_inryl3ffasq_unsplash_jpg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_moments_tsx",
+      "target": "c_users_acer_onedrive_desktop_webdev_pengu_web_public_images_vitaly_gariev_knzjzsamaxc_unsplash_jpg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_moments_tsx",
+      "target": "components_moments_tile",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_moments_tsx",
+      "target": "components_moments_rowa",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_moments_tsx",
+      "target": "components_moments_rowb",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_moments_tsx",
+      "target": "components_moments_row",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_moments_tsx",
+      "target": "components_moments_moments",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Moments.tsx",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_motion_ts",
+      "target": "react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\motion.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_motion_ts",
+      "target": "components_motion_delay",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\motion.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_nav_tsx",
+      "target": "link",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Nav.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_nav_tsx",
+      "target": "app_components_pengulogo_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Nav.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_nav_tsx",
+      "target": "components_pengulogo_pengulogo",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Nav.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_nav_tsx",
+      "target": "app_components_hideonscroll_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Nav.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_nav_tsx",
+      "target": "components_hideonscroll_hideonscroll",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Nav.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_nav_tsx",
+      "target": "components_nav_links",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Nav.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_nav_tsx",
+      "target": "components_nav_nav",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Nav.tsx",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_pengulogo_tsx",
+      "target": "components_pengulogo_pengulogo",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\PenguLogo.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_storebuttons_tsx",
+      "target": "link",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\StoreButtons.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_storebuttons_tsx",
+      "target": "components_storebuttons_appleicon",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\StoreButtons.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_storebuttons_tsx",
+      "target": "components_storebuttons_playicon",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\StoreButtons.tsx",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_storebuttons_tsx",
+      "target": "components_storebuttons_storebuttons",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\StoreButtons.tsx",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_structureddata_tsx",
+      "target": "app_lib_site_ts",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\StructuredData.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_structureddata_tsx",
+      "target": "lib_site_site",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\StructuredData.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_structureddata_tsx",
+      "target": "lib_site_site_url",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\StructuredData.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_structureddata_tsx",
+      "target": "lib_site_faqs",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\StructuredData.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_structureddata_tsx",
+      "target": "lib_site_features",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\StructuredData.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_structureddata_tsx",
+      "target": "components_structureddata_abs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\StructuredData.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_structureddata_tsx",
+      "target": "components_structureddata_graph",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\StructuredData.tsx",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_structureddata_tsx",
+      "target": "components_structureddata_structureddata",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\StructuredData.tsx",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_testimonials_tsx",
+      "target": "image",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Testimonials.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_testimonials_tsx",
+      "target": "c_users_acer_onedrive_desktop_webdev_pengu_web_public_images_arifur_rahman_yikkotj3h94_unsplash_jpg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Testimonials.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_testimonials_tsx",
+      "target": "components_testimonials_reviews",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Testimonials.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_testimonials_tsx",
+      "target": "components_testimonials_testimonials",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\Testimonials.tsx",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "image",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "alt_arrow_left",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "arrow_up_to_line",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "camera",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "gallery",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "heart",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "play",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "c_users_acer_onedrive_desktop_webdev_pengu_web_public_images_nathan_dumlao_wr3comvzjxu_unsplash_jpg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "c_users_acer_onedrive_desktop_webdev_pengu_web_public_images_vitaly_gariev_inryl3ffasq_unsplash_jpg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "c_users_acer_onedrive_desktop_webdev_pengu_web_public_images_morgan_lane_yzhbeflehrg_unsplash_jpg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "c_users_acer_onedrive_desktop_webdev_pengu_web_public_images_alan_rodriguez_n17nkbsc_zy_unsplash_jpg",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "app_components_phone_phone_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "phone_phone_tabbar",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "phone_phone_screenprops",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "app_components_phone_ui_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "phone_ui_chip",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "phone_ui_roundbutton",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "phone_ui_subscreenheader",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "phone_memoriesscreen_memory",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "phone_memoriesscreen_cola",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "phone_memoriesscreen_colb",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "phone_memoriesscreen_height",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "phone_memoriesscreen_memorycard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_memoriesscreen_tsx",
+      "target": "phone_memoriesscreen_memoriesscreen",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\MemoriesScreen.tsx",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_phone_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_phone_tsx",
+      "target": "home",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_phone_tsx",
+      "target": "calendar",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_phone_tsx",
+      "target": "folder",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_phone_tsx",
+      "target": "user_circle",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_phone_tsx",
+      "target": "home",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_phone_tsx",
+      "target": "calendar",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_phone_tsx",
+      "target": "folder",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_phone_tsx",
+      "target": "user_circle",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_phone_tsx",
+      "target": "phone_phone_screenprops",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_phone_tsx",
+      "target": "phone_phone_phone",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_phone_tsx",
+      "target": "phone_phone_statusbar",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_phone_tsx",
+      "target": "phone_phone_homeindicator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L83",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_phone_tsx",
+      "target": "phone_phone_tabs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_phone_tsx",
+      "target": "phone_phone_tabbar",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\Phone.tsx",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "add",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "alt_arrow_left",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "alt_arrow_right",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "backpack",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "bell",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "calendar",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "card",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "chat_round",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "check",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "check_circle",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "clipboard",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "clock_circle",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "document_text",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "football",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "gallery_wide",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "heart",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "map_point",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "medal_ribbon",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "medical_kit",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "menu_dots_circle",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "send_square",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "settings",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "square_academic_cap",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "transfer_horizontal",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "app_components_phone_phone_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_phone_tabbar",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_phone_screenprops",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "app_components_phone_ui_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_ui_bignumber",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_ui_card",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_ui_chip",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_ui_eyebrow",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_ui_herocard",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_ui_icontile",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_ui_initialsavatar",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_ui_roundbutton",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_ui_sectionheader",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_ui_segmentbar",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_ui_statuspill",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_ui_subscreenheader",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_custodyon",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_tone",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_childselector",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_greetingheader",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_shortcuts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_custodyhero",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L121",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_exchangecard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L162",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_eventrow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L187",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_upcoming",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L189",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_upcomingevents",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L195",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_homefab",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L222",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_homescreen",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L230",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_event_days",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L245",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_schedulescreen",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L247",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_expense",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L351",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_expenses",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L361",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_status",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L367",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_expensesscreen",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L373",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_prio",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L470",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_notes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L476",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_screens_tsx",
+      "target": "phone_screens_notesscreen",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L509",
+      "weight": 1.0
+    },
+    {
+      "source": "phone_screens_childselector",
+      "target": "phone_screens_custodyon",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\screens.tsx",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_ui_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_ui_tsx",
+      "target": "phone_ui_solaricon",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_ui_tsx",
+      "target": "phone_ui_card",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_ui_tsx",
+      "target": "phone_ui_herocard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_ui_tsx",
+      "target": "phone_ui_eyebrow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_ui_tsx",
+      "target": "phone_ui_sectionheader",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_ui_tsx",
+      "target": "phone_ui_icontile",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_ui_tsx",
+      "target": "phone_ui_statuspill",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_ui_tsx",
+      "target": "phone_ui_roundbutton",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_ui_tsx",
+      "target": "phone_ui_chip",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_ui_tsx",
+      "target": "phone_ui_bignumber",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L159",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_ui_tsx",
+      "target": "phone_ui_segmentbar",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L173",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_ui_tsx",
+      "target": "phone_ui_initialsavatar",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L185",
+      "weight": 1.0
+    },
+    {
+      "source": "app_components_phone_ui_tsx",
+      "target": "phone_ui_subscreenheader",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_components\\phone\\ui.tsx",
+      "source_location": "L208",
+      "weight": 1.0
+    },
+    {
+      "source": "app_lib_site_ts",
+      "target": "lib_site_site",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_lib\\site.ts",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app_lib_site_ts",
+      "target": "lib_site_features",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_lib\\site.ts",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "app_lib_site_ts",
+      "target": "lib_site_faqs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\_lib\\site.ts",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "video_hyperframes_json",
+      "target": "video_hyperframes_schema",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\hyperframes.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "video_hyperframes_json",
+      "target": "video_hyperframes_registry",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\hyperframes.json",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "video_hyperframes_json",
+      "target": "video_hyperframes_paths",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\hyperframes.json",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "video_hyperframes_paths",
+      "target": "video_hyperframes_paths_blocks",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\hyperframes.json",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "video_hyperframes_paths",
+      "target": "video_hyperframes_paths_components",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\hyperframes.json",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "video_hyperframes_paths",
+      "target": "video_hyperframes_paths_assets",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\hyperframes.json",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "video_hyperframes_json",
+      "target": "video_hyperframes_media",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\hyperframes.json",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "video_hyperframes_media",
+      "target": "video_hyperframes_media_autoproxy",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\hyperframes.json",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "video_meta_json",
+      "target": "video_meta_id",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\meta.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "video_meta_json",
+      "target": "video_meta_name",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\meta.json",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "video_meta_json",
+      "target": "video_meta_createdat",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\meta.json",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "video_next_image_tsx",
+      "target": "video_next_image_props",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\next-image.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "video_next_image_tsx",
+      "target": "video_next_image_assetname",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\next-image.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "video_next_image_tsx",
+      "target": "video_next_image_image",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\next-image.tsx",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "video_next_image_image",
+      "target": "video_next_image_assetname",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\next-image.tsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "video_package_json",
+      "target": "video_package_name",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\package.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "video_package_json",
+      "target": "video_package_private",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\package.json",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "video_package_json",
+      "target": "video_package_type",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\package.json",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "video_package_json",
+      "target": "video_package_scripts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\package.json",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "video_package_scripts",
+      "target": "video_package_scripts_dev",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\package.json",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "video_package_scripts",
+      "target": "video_package_scripts_check",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\package.json",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "video_package_scripts",
+      "target": "video_package_scripts_render",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\package.json",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "video_package_scripts",
+      "target": "video_package_scripts_publish",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\package.json",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "video_package_scripts",
+      "target": "video_package_scripts_screens",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\package.json",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "node_fs",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "server",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "app_components_phone_phone_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "phone_phone_homeindicator",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "phone_phone_statusbar",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "phone_phone_tabbar",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "app_components_phone_screens_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "phone_screens_expensesscreen",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "phone_screens_homescreen",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "phone_screens_notesscreen",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "phone_screens_schedulescreen",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "app_components_phone_memoriesscreen_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "phone_memoriesscreen_memoriesscreen",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "app_components_pengulogo_tsx",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "components_pengulogo_pengulogo",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "video_render_screens_here",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "video_render_screens_css",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "video_render_screens_tokens",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "video_render_screens_html",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "video_render_screens_out",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "video_render_screens_features",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "video_render_screens_shell",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "video_render_screens_src",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "video_render_screens_part",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "video_render_screens_at",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "video_render_screens_tsx",
+      "target": "video_render_screens_filled",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "video\\render-screens.tsx",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "components_hero_hero",
+      "target": "components_motion_delay",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app\\_components\\Hero.tsx",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "components_hero_floatingchip",
+      "target": "components_motion_delay",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app\\_components\\Hero.tsx",
+      "source_location": "L136",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
