@@ -5,14 +5,11 @@ import { Nav } from "./Nav";
 import { Footer } from "./Footer";
 import { SITE } from "../_lib/site";
 
-/**
- * Facts both legal pages state. The bracketed values are placeholders that
- * must be filled in before launch — they render verbatim until then.
- */
+/** Facts both legal pages state. */
 export const LEGAL = {
   effectiveDate: "October 18, 2026",
   company: "John Anthony Oling, doing business as Pengu",
-  address: "[Registered business address]",
+  address: "0258 J. Sumulong St., Saudi Village, Brgy. Lunsad, Binangonan, Rizal 1940, Philippines",
   jurisdiction: "the Republic of the Philippines",
   contactEmail: "hello@pengu.family",
 } as const;
