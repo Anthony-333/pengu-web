@@ -1,7 +1,9 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
+import { SITE } from "../_lib/site";
 
 /**
  * Facts both legal pages state. The bracketed values are placeholders that
@@ -14,6 +16,31 @@ export const LEGAL = {
   jurisdiction: "[State / country]",
   contactEmail: "hello@pengu.family",
 } as const;
+
+/**
+ * Page metadata for a legal page. A child's `openGraph`/`twitter` replaces the
+ * layout's rather than merging with it, so every field is restated here, and
+ * the root opengraph-image is passed on explicitly.
+ */
+export function legalMetadata(title: string, description: string, path: string): Metadata {
+  const fullTitle = `${title} — ${SITE.name}`;
+  const image = { url: "/opengraph-image", width: 1200, height: 630, alt: `${SITE.name}, the co-parenting app` };
+  return {
+    title,
+    description,
+    alternates: { canonical: path },
+    openGraph: {
+      type: "website",
+      siteName: SITE.name,
+      locale: "en_US",
+      url: path,
+      title: fullTitle,
+      description,
+      images: [image],
+    },
+    twitter: { card: "summary_large_image", title: fullTitle, description, images: [image] },
+  };
+}
 
 type TocItem = { id: string; label: string };
 

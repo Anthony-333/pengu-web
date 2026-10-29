@@ -5,7 +5,7 @@ import { HideOnScroll } from "./HideOnScroll";
 const links = [
   { label: "Features", href: "/#features" },
   { label: "How it works", href: "/#how-it-works" },
-  { label: "Stories", href: "/#reviews" },
+  { label: "FAQ", href: "/#faq" },
 ];
 
 /**

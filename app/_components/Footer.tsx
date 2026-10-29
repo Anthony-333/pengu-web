@@ -14,7 +14,6 @@ const links = [
     items: [
       { label: "Features", href: "/#features" },
       { label: "How it works", href: "/#how-it-works" },
-      { label: "Stories", href: "/#reviews" },
       { label: "FAQ", href: "/#faq" },
       { label: "Download", href: "/#download" },
     ],

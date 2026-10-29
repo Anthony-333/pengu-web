@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Marketing landing page for **Pengu**, a co-parenting mobile app (custody calendar, shared expenses, family memories). It is a single route: `app/page.tsx` composes the page from section components in order (Nav → Hero → Features → Moments → HowItWorks → Testimonials → Download → Footer). `/privacy` and `/terms` share the `LegalPage` shell; the company details they print live in its `LEGAL` object, still with bracketed placeholders.
+Marketing landing page for **Pengu**, a co-parenting mobile app (custody calendar, shared expenses, family memories). It is a single route: `app/page.tsx` composes the page from section components in order (Nav → Hero → Features → Moments → HowItWorks → FAQ → Download → Footer). `Testimonials` is built but hidden until there are real quotes. `/privacy` and `/terms` share the `LegalPage` shell; the company details they print live in its `LEGAL` object, still with bracketed placeholders.
 
 ## Commands
 
