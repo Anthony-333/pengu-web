@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Marketing landing page for **Pengu**, a co-parenting mobile app (custody calendar, shared expenses, family memories). It is a single route: `app/page.tsx` composes the page from section components in order (Nav → Hero → Features → Moments → HowItWorks → FAQ → Download → Footer). `Testimonials` is built but hidden until there are real quotes. `/privacy` and `/terms` share the `LegalPage` shell; the company details they print live in its `LEGAL` object, still with bracketed placeholders.
+Marketing landing page for **Pengu**, a co-parenting mobile app (custody calendar, shared expenses, family memories). It is a single route: `app/page.tsx` composes the page from section components in order (Nav → Hero → Features → Moments → HowItWorks → FAQ → Download → Footer). `Testimonials` is built but hidden until there are real quotes. `/privacy` and `/terms` share the `LegalPage` shell; the company details they print live in its `LEGAL` object, with the address still a bracketed placeholder.
 
 ## Commands
 
@@ -19,7 +19,7 @@ No test suite is configured.
 
 ## Architecture
 
-**Next.js 16.4.0** with the App Router and React 19.3 — read `node_modules/next/dist/docs/` before making changes, as this version has breaking differences from earlier releases. `AGENTS.md` holds the same warning; `next dev` regenerates it, so leave it in place.
+**Next.js 16.4.3** with the App Router and React 19.3 — read `node_modules/next/dist/docs/` before making changes, as this version has breaking differences from earlier releases. `AGENTS.md` holds the same warning; `next dev` regenerates it, so leave it in place.
 
 **Components** live in `app/_components/` (the `_` prefix makes it a private folder, not a route) and use named exports. Everything is a Server Component except `FeatureTour` and `HideOnScroll` (the nav). `FeatureTour` is a scroll-spy that writes the in-view step index to `data-active`; the sticky phone's screen crossfade, and its left/right side are plain CSS keyed off that attribute (`.tour-screen`, `.tour-phone` in `globals.css`). It also restarts the active step's problem → Pengu clip (`video[data-tour-video]`). Keep any new `"use client"` that small.
 

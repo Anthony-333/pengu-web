@@ -11,9 +11,9 @@ import { SITE } from "../_lib/site";
  */
 export const LEGAL = {
   effectiveDate: "October 18, 2026",
-  company: "[Company legal name]",
+  company: "John Anthony Oling, doing business as Pengu",
   address: "[Registered business address]",
-  jurisdiction: "[State / country]",
+  jurisdiction: "the Republic of the Philippines",
   contactEmail: "hello@pengu.family",
 } as const;
 
