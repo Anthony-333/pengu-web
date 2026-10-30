@@ -161,7 +161,7 @@ function CustodyHero() {
 
 function ExchangeCard() {
   return (
-    <Card className="mx-4 mt-3">
+    <Card className="exchange-card mx-4 mt-3">
       <div className="flex items-center justify-between gap-3">
         <p className="text-[14px] tracking-[-0.2px] text-accent">Next exchange</p>
         <StatusPill label="In 2 Days" className="bg-maria-soft text-maria-deep" />
@@ -525,7 +525,7 @@ export function NotesScreen({ tabBar = true }: ScreenProps) {
         const p = PRIO[n.prio];
         const mine = n.author.name === "Sarah";
         return (
-          <Card key={n.title} className="mx-4 mb-3">
+          <Card key={n.title} className="note-card mx-4 mb-3">
             <div className="mb-3 flex items-center gap-2.5">
               <IconTile icon={n.icon} tint={p.tint} bg={p.bg} size={34} />
               <div className="flex-1">
