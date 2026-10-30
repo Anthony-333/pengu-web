@@ -20,6 +20,7 @@ import { compile } from "@tailwindcss/node";
 import { HomeIndicator, SCREEN_H, SCREEN_W, StatusBar } from "../app/_components/phone/Phone";
 import { ExpensesScreen, ScheduleScreen } from "../app/_components/phone/screens";
 import { MemoriesScreen } from "../app/_components/phone/MemoriesScreen";
+import { PenguLogo } from "../app/_components/PenguLogo";
 
 // Each screenshot is 1290×2796. The three are drawn side by side on one wide
 // canvas so the ribbon flows across them, then sliced.
@@ -77,12 +78,13 @@ const SHOTS: Shot[] = [
     script: "the arguments.",
     size: 150,
     tilt: 6,
-    phoneX: 680,
+    // Far enough right that its edge crosses into the memories shot.
+    phoneX: 1060,
     phoneY: 1900,
     screen: () => <ExpensesScreen />,
     callouts: [
-      { target: '.bg-ink[class*="rounded-[28px]"]', k: 3, dx: -40, dy: -20, tilt: -4 },
-      { target: ".ex-row", k: 3.2, dx: 60, dy: 30, tilt: 2, radius: 24 },
+      { target: '.bg-ink[class*="rounded-[28px]"]', k: 3, dx: -330, dy: -20, tilt: -4 },
+      { target: ".ex-row", k: 3.2, dx: -320, dy: 30, tilt: 2, radius: 24 },
     ],
   },
   {
@@ -91,7 +93,7 @@ const SHOTS: Shot[] = [
     script: "in both homes.",
     size: 150,
     tilt: -6,
-    phoneX: 600,
+    phoneX: 840,
     phoneY: 1920,
     screen: () => <MemoriesScreen />,
     callouts: [
@@ -102,12 +104,13 @@ const SHOTS: Shot[] = [
 ];
 
 // iPhone 16 Pro proportions in points: a titanium band, a black bezel, then the screen.
-const S = 2.45;
+const S = 2.35;
 const BAND = 3.5;
 const BEZEL = 10;
 const TITANIUM = "#B9B3A9";
 const CORAL = "#FF5A3C";
 const AMBER = "#F5A623";
+const INK = "#0E0E12";
 
 function IPhone({ children }: { children: ReactNode }) {
   const pt = (n: number) => `${n * S}px`;
@@ -167,20 +170,68 @@ function Sparkle({ x, y, size, color = AMBER }: { x: number; y: number; size: nu
   );
 }
 
+/** A starburst sticker with app wording on it (never a claim). */
+function Burst({ x, y, size, fill, ink, tilt, lines }: { x: number; y: number; size: number; fill: string; ink: string; tilt: number; lines: string[] }) {
+  const points = Array.from({ length: 32 }, (_, i) => {
+    const r = i % 2 ? 0.86 : 1;
+    const a = (i / 32) * Math.PI * 2;
+    return `${50 + 50 * r * Math.cos(a)},${50 + 50 * r * Math.sin(a)}`;
+  }).join(" ");
+  return (
+    <div
+      className="absolute flex items-center justify-center drop-shadow-[0_20px_30px_rgb(14_14_18/0.22)]"
+      style={{ left: x - size / 2, top: y - size / 2, width: size, height: size, transform: `rotate(${tilt}deg)` }}
+    >
+      <svg className="absolute inset-0" viewBox="0 0 100 100" aria-hidden="true">
+        <polygon points={points} fill={fill} />
+      </svg>
+      <span className="relative text-center font-extrabold leading-[1.02] tracking-[-0.02em]" style={{ color: ink, fontSize: size * 0.15 }}>
+        {lines.map((l) => (
+          <span key={l} className="block">{l}</span>
+        ))}
+      </span>
+    </div>
+  );
+}
+
 const DECOR: ReactNode[] = [
   <>
-    <Sparkle x={150} y={760} size={90} />
-    <Sparkle x={1170} y={1500} size={60} color={CORAL} />
+    <Burst x={1090} y={830} size={300} fill="#1FAA77" ink="#FFFFFF" tilt={10} lines={["2-2-3", "rotation"]} />
+    <Sparkle x={140} y={800} size={90} />
   </>,
   <>
-    <Sparkle x={1150} y={2000} size={90} />
-    <Sparkle x={120} y={2050} size={56} color={CORAL} />
+    <Burst x={250} y={2680} size={320} fill={AMBER} ink={INK} tilt={-12} lines={["Settle in", "one tap"]} />
+    <Sparkle x={150} y={860} size={70} color={CORAL} />
   </>,
   <>
-    <Sparkle x={1150} y={1100} size={90} />
-    <Sparkle x={1130} y={2350} size={60} color={CORAL} />
+    <Burst x={1090} y={2520} size={320} fill="#7B61FF" ink="#FFFFFF" tilt={12} lines={["Private", "to your", "nest"]} />
+    <Sparkle x={1150} y={860} size={90} />
   </>,
 ];
+
+/** A hand-drawn wavy underline across the script phrase. */
+function Wave() {
+  const d = Array.from({ length: 12 }, (_, i) => `Q ${i * 50 + 12.5} ${i % 2 ? 26 : 4} ${i * 50 + 25} 15 T ${i * 50 + 50} 15`).join(" ");
+  return (
+    <svg className="absolute inset-x-[2%] -bottom-[0.12em] h-[0.22em] w-[96%] overflow-visible" viewBox="0 0 600 30" preserveAspectRatio="none" aria-hidden="true">
+      <path d={`M 0 15 ${d}`} fill="none" stroke={AMBER} strokeWidth={9} strokeLinecap="round" vectorEffect="non-scaling-stroke" />
+    </svg>
+  );
+}
+
+// A dashed trail that loops through all three shots, from a pin to Pengu.
+const TRAIL = [
+  "M 110 880",
+  "C 300 690, 520 790, 700 760",
+  "C 880 730, 1000 640, 1150 720",
+  "C 1300 800, 1260 980, 1150 950",
+  "C 1040 920, 1110 770, 1330 760",
+  "C 1600 745, 1800 820, 2000 760",
+  "C 2200 700, 2330 700, 2470 760",
+  "C 2620 830, 2600 1000, 2500 975",
+  "C 2400 950, 2470 790, 2680 760",
+  "C 2950 720, 3300 820, 3560 740",
+].join(" ");
 
 const css = readFileSync("../app/globals.css", "utf8");
 const theme = css.match(/@theme inline \{([\s\S]*?)\n\}/)?.[1];
@@ -228,34 +279,33 @@ async function page() {
   const body = renderToStaticMarkup(
     <div className="relative h-full w-full overflow-hidden bg-accent-soft font-semibold text-ink">
       <svg className="absolute inset-0" width={W * 3} height={H} aria-hidden="true">
-        <path
-          d={`M -200 1400 C 500 800, 900 2500, ${W * 1.5} 1850 S ${W * 2.6} 1000, ${W * 3 + 200} 1900`}
-          fill="none"
-          stroke={CORAL}
-          strokeWidth={300}
-          strokeLinecap="round"
-        />
+        <path d={TRAIL} fill="none" stroke={INK} strokeWidth={9} strokeDasharray="26 22" strokeLinecap="round" />
+        <circle cx={110} cy={880} r={22} fill={CORAL} stroke={INK} strokeWidth={9} />
       </svg>
+      <div className="absolute" style={{ left: 3560, top: 680 }}>
+        <PenguLogo size={130} />
+      </div>
       {SHOTS.map((s, i) => (
-        <div key={s.name} data-slide className="absolute top-0 h-full overflow-hidden" style={{ left: W * i, width: W }}>
+        <div key={s.name} data-slide className="absolute top-0 h-full" style={{ left: W * i, width: W }}>
           <div
             className="absolute drop-shadow-[0_60px_70px_rgb(14_14_18/0.3)]"
             style={{ left: s.phoneX, top: s.phoneY, transform: `translate(-50%, -50%) rotate(${s.tilt}deg)` }}
           >
             <IPhone>{s.screen()}</IPhone>
           </div>
-          {DECOR[i]}
           {s.callouts.map((c) => (
             <Lifted key={c.target} c={c} screen={s.screen()} />
           ))}
+          {DECOR[i]}
           <h1 className="absolute inset-x-0 top-[130px] text-center text-ink">
             {s.lines.map((l) => (
               <span key={l} className="block leading-[0.98] font-extrabold tracking-[-0.03em]" style={{ fontSize: s.size }}>
                 {l}
               </span>
             ))}
-            <span className="block font-[Dancing_Script] font-bold leading-[1.05] text-accent-deep" style={{ fontSize: s.size * 1.35 }}>
+            <span className="relative inline-block font-[Dancing_Script] font-bold leading-[1.05] text-accent-deep" style={{ fontSize: s.size * 1.35 }}>
               {s.script}
+              <Wave />
             </span>
           </h1>
         </div>
