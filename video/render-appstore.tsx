@@ -1,14 +1,15 @@
 /**
  * App Store screenshots: the site's phone screens (app/_components/phone) in
- * tilted iPhone frames under a script headline, at 1290×2796, the 6.9" iPhone
- * size App Store Connect also scales down for smaller iPhones. The three
- * share one flat background and a ribbon that runs across them.
+ * tilted iPhone frames, at 1290×2796, the 6.9" iPhone size App Store Connect
+ * also scales down for smaller iPhones. The three share one flat background
+ * and a ribbon that runs across them; each lifts real cards out of its
+ * screen as enlarged callouts.
  *
  *   cd video && npm run appstore    # → renders/appstore/<n>-<name>.png
  *
  * Bundled with esbuild like render-screens.tsx. Tailwind is compiled locally
- * from the classes each page uses (no CDN), Elms Sans and Dancing Script load from Google Fonts,
- * then Playwright screenshots each page.
+ * from the classes the page uses (no CDN), Elms Sans and Dancing Script load
+ * from Google Fonts, then Playwright screenshots each slice.
  */
 import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { createRequire } from "node:module";
@@ -25,18 +26,80 @@ import { MemoriesScreen } from "../app/_components/phone/MemoriesScreen";
 const W = 1290;
 const H = 2796;
 
+/**
+ * A card lifted out of the screen and enlarged `k` times (the phone is S).
+ * `target` selects it; the page script crops to it and centres it over the
+ * same card in the phone, moved by (dx, dy), so it reads as popping out.
+ */
+type Callout = { target: string; k: number; dx: number; dy: number; tilt: number };
+
+type Shot = {
+  name: string;
+  /** Plain lines, then the phrase set in script. */
+  lines: string[];
+  script: string;
+  size: number;
+  tilt: number;
+  /** Phone centre, in slide pixels. */
+  phoneX: number;
+  phoneY: number;
+  screen: () => ReactNode;
+  callouts: Callout[];
+};
+
 // Copy matches the Features section, so the store page and the site agree.
-const SHOTS: { name: string; title: ReactNode; tilt: number; screen: ReactNode }[] = [
-  { name: "calendar", title: <>Always know who<br />has the kids.</>, tilt: -7, screen: <ScheduleScreen /> },
-  { name: "expenses", title: <>Money, without<br />the arguments.</>, tilt: 6, screen: <ExpensesScreen /> },
-  { name: "memories", title: <>Every milestone,<br />in both homes.</>, tilt: -6, screen: <MemoriesScreen /> },
+const SHOTS: Shot[] = [
+  {
+    name: "calendar",
+    lines: ["Always know", "who has"],
+    script: "the kids.",
+    size: 150,
+    tilt: -7,
+    phoneX: 650,
+    phoneY: 1900,
+    screen: () => <ScheduleScreen />,
+    callouts: [
+      { target: ".cal-day.bg-accent", k: 5.4, dx: 330, dy: -150, tilt: 8 },
+      { target: ".day-detail > :last-child", k: 2.9, dx: -20, dy: -40, tilt: 3 },
+    ],
+  },
+  {
+    name: "expenses",
+    lines: ["Money,", "without"],
+    script: "the arguments.",
+    size: 150,
+    tilt: 6,
+    phoneX: 680,
+    phoneY: 1900,
+    screen: () => <ExpensesScreen />,
+    callouts: [
+      { target: '.bg-ink[class*="rounded-[28px]"]', k: 3, dx: -40, dy: -20, tilt: -4 },
+      { target: ".ex-row", k: 3.2, dx: 60, dy: 30, tilt: 2 },
+    ],
+  },
+  {
+    name: "memories",
+    lines: ["Every", "milestone,"],
+    script: "in both homes.",
+    size: 150,
+    tilt: -6,
+    phoneX: 600,
+    phoneY: 1920,
+    screen: () => <MemoriesScreen />,
+    callouts: [
+      { target: ".memory", k: 3.3, dx: 260, dy: -20, tilt: 6 },
+      { target: ".react", k: 6, dx: -90, dy: 150, tilt: -10 },
+    ],
+  },
 ];
 
 // iPhone 16 Pro proportions in points: a titanium band, a black bezel, then the screen.
-const S = 2.28;
+const S = 2.45;
 const BAND = 3.5;
 const BEZEL = 10;
 const TITANIUM = "#B9B3A9";
+const CORAL = "#FF5A3C";
+const AMBER = "#F5A623";
 
 function IPhone({ children }: { children: ReactNode }) {
   const pt = (n: number) => `${n * S}px`;
@@ -54,7 +117,7 @@ function IPhone({ children }: { children: ReactNode }) {
       {button("right", 240, 100)}
       <div className="bg-black" style={{ borderRadius: pt(64.5), padding: pt(BEZEL) }}>
         <div className="relative overflow-hidden bg-canvas" style={{ borderRadius: pt(54), width: pt(SCREEN_W), height: pt(SCREEN_H) }}>
-          <div className="relative isolate overflow-hidden text-left font-semibold text-ink" style={{ width: SCREEN_W, height: SCREEN_H, zoom: S }}>
+          <div data-phone-screen className="relative isolate overflow-hidden text-left font-semibold text-ink" style={{ width: SCREEN_W, height: SCREEN_H, zoom: S }}>
             {children}
             <StatusBar />
             <HomeIndicator />
@@ -64,6 +127,51 @@ function IPhone({ children }: { children: ReactNode }) {
     </div>
   );
 }
+
+/** Sized and placed by the page script once the target is measured. */
+function Lifted({ c, screen }: { c: Callout; screen: ReactNode }) {
+  return (
+    <div
+      data-callout={c.target}
+      data-k={c.k}
+      data-dx={c.dx}
+      data-dy={c.dy}
+      className="absolute drop-shadow-[0_40px_50px_rgb(14_14_18/0.28)]"
+      style={{ transform: `rotate(${c.tilt}deg)` }}
+    >
+      <div data-clip className="overflow-hidden">
+        <div style={{ zoom: c.k }}>
+          <div data-screen className="relative overflow-hidden text-left font-semibold text-ink" style={{ width: SCREEN_W, height: SCREEN_H }}>
+            {screen}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Sparkle({ x, y, size, color = AMBER }: { x: number; y: number; size: number; color?: string }) {
+  return (
+    <svg className="absolute" style={{ left: x - size / 2, top: y - size / 2 }} width={size} height={size} viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0Z" fill={color} />
+    </svg>
+  );
+}
+
+const DECOR: ReactNode[] = [
+  <>
+    <Sparkle x={150} y={760} size={90} />
+    <Sparkle x={1170} y={1500} size={60} color={CORAL} />
+  </>,
+  <>
+    <Sparkle x={1150} y={2000} size={90} />
+    <Sparkle x={120} y={2050} size={56} color={CORAL} />
+  </>,
+  <>
+    <Sparkle x={1150} y={1100} size={90} />
+    <Sparkle x={1130} y={2350} size={60} color={CORAL} />
+  </>,
+];
 
 const css = readFileSync("../app/globals.css", "utf8");
 const theme = css.match(/@theme inline \{([\s\S]*?)\n\}/)?.[1];
@@ -77,29 +185,70 @@ async function tailwind(html: string) {
   return compiler.build([...classes]);
 }
 
+// Runs in the page. Crops each callout to its target: offsets are summed up
+// to the unzoomed screen root, so they are in points, then scaled by k. Then
+// centres it over the same card in the (tilted) phone.
+function placeCallouts() {
+  for (const el of document.querySelectorAll<HTMLElement>("[data-callout]")) {
+    const slide = el.closest<HTMLElement>("[data-slide]")!;
+    const source = slide.querySelector("[data-phone-screen]")!.querySelector(el.dataset.callout!)!.getBoundingClientRect();
+    const box = slide.getBoundingClientRect();
+    const root = el.querySelector<HTMLElement>("[data-screen]")!;
+    const target = root.querySelector<HTMLElement>(el.dataset.callout!);
+    if (!target) throw new Error(`No callout target ${el.dataset.callout}`);
+    let x = 0;
+    let y = 0;
+    for (let n: HTMLElement | null = target; n && n !== root; n = n.offsetParent as HTMLElement | null) {
+      x += n.offsetLeft;
+      y += n.offsetTop;
+    }
+    const k = Number(el.dataset.k);
+    const w = target.offsetWidth * k;
+    const h = target.offsetHeight * k;
+    const clip = el.querySelector<HTMLElement>("[data-clip]")!;
+    clip.style.width = `${w}px`;
+    clip.style.height = `${h}px`;
+    clip.style.borderRadius = `${parseFloat(getComputedStyle(target).borderRadius) * k}px`;
+    root.style.transform = `translate(${-x}px, ${-y}px)`;
+    el.style.left = `${source.x + source.width / 2 - box.x + Number(el.dataset.dx) - w / 2}px`;
+    el.style.top = `${source.y + source.height / 2 - box.y + Number(el.dataset.dy) - h / 2}px`;
+  }
+}
+
 async function page() {
   const body = renderToStaticMarkup(
     <div className="relative h-full w-full overflow-hidden bg-accent-soft font-semibold text-ink">
       <svg className="absolute inset-0" width={W * 3} height={H} aria-hidden="true">
         <path
-          d={`M -200 1500 C 500 900, 900 2500, ${W * 1.5} 1850 S ${W * 2.6} 1000, ${W * 3 + 200} 1900`}
+          d={`M -200 1400 C 500 800, 900 2500, ${W * 1.5} 1850 S ${W * 2.6} 1000, ${W * 3 + 200} 1900`}
           fill="none"
-          stroke="#FF5A3C"
+          stroke={CORAL}
           strokeWidth={300}
           strokeLinecap="round"
         />
       </svg>
       {SHOTS.map((s, i) => (
-        <div key={s.name} className="absolute top-0 flex h-full flex-col items-center" style={{ left: W * i, width: W }}>
-          <h1 className="relative mt-[150px] text-center font-[Dancing_Script] text-[160px] leading-[0.98] font-bold tracking-[-1px]">
-            {s.title}
-          </h1>
+        <div key={s.name} data-slide className="absolute top-0 h-full overflow-hidden" style={{ left: W * i, width: W }}>
           <div
-            className="relative mt-[120px] drop-shadow-[0_50px_60px_rgb(14_14_18/0.3)]"
-            style={{ transform: `rotate(${s.tilt}deg)` }}
+            className="absolute drop-shadow-[0_60px_70px_rgb(14_14_18/0.3)]"
+            style={{ left: s.phoneX, top: s.phoneY, transform: `translate(-50%, -50%) rotate(${s.tilt}deg)` }}
           >
-            <IPhone>{s.screen}</IPhone>
+            <IPhone>{s.screen()}</IPhone>
           </div>
+          {DECOR[i]}
+          {s.callouts.map((c) => (
+            <Lifted key={c.target} c={c} screen={s.screen()} />
+          ))}
+          <h1 className="absolute inset-x-0 top-[130px] text-center text-ink">
+            {s.lines.map((l) => (
+              <span key={l} className="block leading-[0.98] font-extrabold tracking-[-0.03em]" style={{ fontSize: s.size }}>
+                {l}
+              </span>
+            ))}
+            <span className="block font-[Dancing_Script] font-bold leading-[1.05] text-accent-deep" style={{ fontSize: s.size * 1.35 }}>
+              {s.script}
+            </span>
+          </h1>
         </div>
       ))}
     </div>,
@@ -115,7 +264,7 @@ async function page() {
       body { font-family: "Elms Sans", ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
     </style>
   </head>
-  <body>${body}</body>
+  <body>${body}<script>(${placeCallouts.toString()})()</script></body>
 </html>`;
 }
 
@@ -137,11 +286,14 @@ for (const img of [
 const { chromium } = createRequire(import.meta.url)("playwright");
 const browser = await chromium.launch();
 const tab = await browser.newPage({ viewport: { width: W * 3, height: H } });
+const errors: string[] = [];
+tab.on("pageerror", (e: Error) => errors.push(e.message));
 const file = resolve(`${dir}/flow.html`);
 writeFileSync(file, await page());
 await tab.goto(`file://${file}`, { waitUntil: "networkidle" });
 await tab.evaluate(() => document.fonts.ready);
 await tab.waitForFunction(() => [...document.images].every((img) => img.complete));
+if (errors.length) throw new Error(errors.join("\n"));
 for (const [i, s] of SHOTS.entries()) {
   // App Store Connect rejects screenshots with an alpha channel.
   await tab.screenshot({ path: `${out}/${i + 1}-${s.name}.png`, clip: { x: W * i, y: 0, width: W, height: H } });
