@@ -8,7 +8,7 @@
  *   cd video && npm run appstore    # → renders/appstore/<n>-<name>.png
  *
  * Bundled with esbuild like render-screens.tsx. Tailwind is compiled locally
- * from the classes the page uses (no CDN), Elms Sans and Dancing Script load
+ * from the classes the page uses (no CDN), Elms Sans and Gochi Hand load
  * from Google Fonts, then Playwright screenshots each slice.
  */
 import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -44,9 +44,10 @@ type Callout = {
 
 type Shot = {
   name: string;
-  /** Plain lines, then the phrase set in script. */
+  /** Plain lines, then the phrase hand-lettered on a highlighter block. */
   lines: string[];
   script: string;
+  highlight: string;
   size: number;
   tilt: number;
   /** Phone centre, in slide pixels. */
@@ -62,6 +63,7 @@ const SHOTS: Shot[] = [
     name: "calendar",
     lines: ["Always know", "who has"],
     script: "the kids.",
+    highlight: "#8EE6C0",
     size: 150,
     tilt: -7,
     phoneX: 650,
@@ -76,6 +78,7 @@ const SHOTS: Shot[] = [
     name: "expenses",
     lines: ["Money,", "without"],
     script: "the arguments.",
+    highlight: "#FFD84D",
     size: 150,
     tilt: 6,
     // Far enough right that its edge crosses into the memories shot.
@@ -91,6 +94,7 @@ const SHOTS: Shot[] = [
     name: "memories",
     lines: ["Every", "milestone,"],
     script: "in both homes.",
+    highlight: "#FFB8C6",
     size: 150,
     tilt: -6,
     phoneX: 840,
@@ -209,15 +213,6 @@ const DECOR: ReactNode[] = [
   </>,
 ];
 
-/** A hand-drawn wavy underline across the script phrase. */
-function Wave() {
-  const d = Array.from({ length: 12 }, (_, i) => `Q ${i * 50 + 12.5} ${i % 2 ? 26 : 4} ${i * 50 + 25} 15 T ${i * 50 + 50} 15`).join(" ");
-  return (
-    <svg className="absolute inset-x-[2%] -bottom-[0.12em] h-[0.22em] w-[96%] overflow-visible" viewBox="0 0 600 30" preserveAspectRatio="none" aria-hidden="true">
-      <path d={`M 0 15 ${d}`} fill="none" stroke={AMBER} strokeWidth={9} strokeLinecap="round" vectorEffect="non-scaling-stroke" />
-    </svg>
-  );
-}
 
 // A dashed trail that loops through all three shots, from a pin to Pengu.
 const TRAIL = [
@@ -303,9 +298,9 @@ async function page() {
                 {l}
               </span>
             ))}
-            <span className="relative inline-block font-[Dancing_Script] font-bold leading-[1.05] text-accent-deep" style={{ fontSize: s.size * 1.35 }}>
-              {s.script}
-              <Wave />
+            <span className="relative mt-[0.15em] inline-block px-[0.2em] font-[Gochi_Hand] leading-[1.1] text-ink" style={{ fontSize: s.size * 1.2 }}>
+              <span className="absolute inset-x-0 top-[0.12em] bottom-[0.02em] -rotate-2 rounded-[6px]" style={{ background: s.highlight }} />
+              <span className="relative">{s.script}</span>
             </span>
           </h1>
         </div>
@@ -316,7 +311,7 @@ async function page() {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:wght@400..800&family=Dancing+Script:wght@700&display=block" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:wght@400..800&family=Gochi+Hand&display=block" rel="stylesheet" />
     <style>${await tailwind(body)}</style>
     <style>
       html, body { width: ${W * 3}px; height: ${H}px; margin: 0; overflow: hidden; }
