@@ -31,7 +31,15 @@ const H = 2796;
  * `target` selects it; the page script crops to it and centres it over the
  * same card in the phone, moved by (dx, dy), so it reads as popping out.
  */
-type Callout = { target: string; k: number; dx: number; dy: number; tilt: number };
+type Callout = {
+  target: string;
+  k: number;
+  dx: number;
+  dy: number;
+  tilt: number;
+  /** Corner radius in points, for a target with square corners (a list row). */
+  radius?: number;
+};
 
 type Shot = {
   name: string;
@@ -74,7 +82,7 @@ const SHOTS: Shot[] = [
     screen: () => <ExpensesScreen />,
     callouts: [
       { target: '.bg-ink[class*="rounded-[28px]"]', k: 3, dx: -40, dy: -20, tilt: -4 },
-      { target: ".ex-row", k: 3.2, dx: 60, dy: 30, tilt: 2 },
+      { target: ".ex-row", k: 3.2, dx: 60, dy: 30, tilt: 2, radius: 24 },
     ],
   },
   {
@@ -134,6 +142,7 @@ function Lifted({ c, screen }: { c: Callout; screen: ReactNode }) {
     <div
       data-callout={c.target}
       data-k={c.k}
+      data-radius={c.radius}
       data-dx={c.dx}
       data-dy={c.dy}
       className="absolute drop-shadow-[0_40px_50px_rgb(14_14_18/0.28)]"
@@ -208,7 +217,7 @@ function placeCallouts() {
     const clip = el.querySelector<HTMLElement>("[data-clip]")!;
     clip.style.width = `${w}px`;
     clip.style.height = `${h}px`;
-    clip.style.borderRadius = `${parseFloat(getComputedStyle(target).borderRadius) * k}px`;
+    clip.style.borderRadius = `${Number(el.dataset.radius ?? parseFloat(getComputedStyle(target).borderRadius)) * k}px`;
     root.style.transform = `translate(${-x}px, ${-y}px)`;
     el.style.left = `${source.x + source.width / 2 - box.x + Number(el.dataset.dx) - w / 2}px`;
     el.style.top = `${source.y + source.height / 2 - box.y + Number(el.dataset.dy) - h / 2}px`;
