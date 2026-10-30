@@ -139,7 +139,6 @@ function Photo({ p }: { p: NonNullable<Shot["photo"]> }) {
       className="absolute overflow-hidden rounded-[64px] border-[18px] border-paper bg-paper shadow-[0_50px_70px_-10px_rgb(14_14_18/0.3)]"
       style={{ left: p.x, top: p.y, width: p.w, height: p.h, transform: `rotate(${p.tilt}deg)` }}
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={`assets/${p.src}`} alt="" className="h-full w-full rounded-[46px] object-cover" style={{ objectPosition: p.focus ?? "center" }} />
     </div>
   );
