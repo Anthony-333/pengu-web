@@ -21,14 +21,14 @@ export function Download() {
               tonight.
             </h2>
             <p className="mx-auto mt-5 max-w-md text-lg leading-relaxed text-white/80 lg:mx-0">
-              Download Pengu and invite your co-parent. Your first month of the full app is
-              free.
+              Download Pengu and invite your co-parent. The calendar, events and chat are
+              free, with no trial to run out.
             </p>
             <div className="mt-9 flex justify-center lg:justify-start">
               <StoreButtons tone="onDark" />
             </div>
             <ul className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-white/70 lg:justify-start">
-              {["1-month free trial", "Cancel anytime", "Private to your nest"].map((t) => (
+              {["Free plan", "Cancel anytime", "Private to your nest"].map((t) => (
                 <li key={t} className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-accent" />
                   {t}

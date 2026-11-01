@@ -76,7 +76,7 @@ export const faqs = [
   },
   {
     q: "Is Pengu free?",
-    a: "Pengu starts with a one-month free trial of the full app. After that, adding events, notes, expenses and memories needs a subscription, billed through the App Store or Google Play. You can cancel anytime from your store account.",
+    a: "Yes, Pengu has a free plan. The custody calendar, events and chat are free, and each parent gets monthly allowances for expenses, notes, activity and photos. Pengu Pro removes those limits for the person who subscribes, billed monthly or yearly through the App Store or Google Play. You can cancel anytime from your store account.",
   },
   {
     q: "Who can see what we share?",
@@ -96,6 +96,6 @@ export const faqs = [
   },
   {
     q: "Can I export or delete my data?",
-    a: "Yes. Under Account → Privacy & data you can export your data as a JSON file or delete your account at any time.",
+    a: "Yes. Under Account → Privacy & sharing you can export your data as a JSON file, and you can delete your account at any time from Account → Delete account.",
   },
 ] as const;

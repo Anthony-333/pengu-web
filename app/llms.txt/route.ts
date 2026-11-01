@@ -28,7 +28,7 @@ Pengu is a mobile app (iOS and Android) for separated, divorced and co-parenting
 ${features.map((f) => `- **${f.name}:** ${f.summary}`).join("\n")}
 - **Chat and voice messages:** co-parent messaging lives next to the notes, with blocking and reporting built in.
 - **Roles and permissions:** each invited member gets a role and per-module access (for example, calendar but not expenses).
-- **Data export and deletion:** export everything as JSON, or delete your account, from Account → Privacy & data.
+- **Data export and deletion:** export everything as JSON, or delete your account, from Account → Privacy & sharing (export) and Account → Delete account.
 
 ## Getting started
 
@@ -38,7 +38,7 @@ ${features.map((f) => `- **${f.name}:** ${f.summary}`).join("\n")}
 
 ## Pricing
 
-A one-month free trial of the full app, then a subscription billed through the Apple App Store or Google Play. Cancel anytime. Prices are shown in the app and vary by country.
+Free plan: the custody calendar, events and chat text are free, and each person gets monthly allowances in each nest (10 expenses, 10 notes, 7 activity days, 5 videos or chat media, 30 photo memories in total, 2 adults per nest). Pengu Pro removes those limits for the person who subscribes; it does not cover their co-parent. Monthly or annual, billed through the Apple App Store or Google Play. No free trial. Cancel anytime. Prices are shown in the app and vary by country.
 
 ## Privacy
 

@@ -4,7 +4,7 @@ import { LEGAL, LegalPage, LegalSection, legalMetadata } from "../_components/Le
 
 export const metadata: Metadata = legalMetadata(
   "Terms of Service",
-  "The terms that govern your use of Pengu, including subscriptions, free trials, shared nests and acceptable use.",
+  "The terms that govern your use of Pengu, including the free plan, Pengu Pro subscriptions, shared nests and acceptable use.",
   "/terms",
 );
 
@@ -12,7 +12,7 @@ const toc = [
   { id: "acceptance", label: "Accepting these terms" },
   { id: "eligibility", label: "Eligibility and accounts" },
   { id: "nests", label: "Nests and shared content" },
-  { id: "subscriptions", label: "Subscriptions and free trial" },
+  { id: "subscriptions", label: "Free plan and subscriptions" },
   { id: "your-content", label: "Your content" },
   { id: "acceptable-use", label: "Acceptable use" },
   { id: "safety", label: "Reporting and blocking" },
@@ -62,7 +62,7 @@ export default function TermsPage() {
             You are responsible for keeping your login secure and for everything that happens
             under your account. If you think someone else has accessed it, tell us right away.
           </li>
-          <li>One person per account. Don&apos;t share your account or create accounts to get around a suspension or the one-trial-per-device rule.</li>
+          <li>One person per account. Don&apos;t share your account, or create extra accounts to get around a suspension or the free plan&apos;s allowances.</li>
         </ul>
       </LegalSection>
 
@@ -92,17 +92,42 @@ export default function TermsPage() {
         </ul>
       </LegalSection>
 
-      <LegalSection id="subscriptions" title="4. Subscriptions and free trial">
+      <LegalSection id="subscriptions" title="4. Free plan and subscriptions">
         <p>
-          Some features need a <strong>Pengu subscription</strong>, including adding calendar
-          events, notes, memories, expenses and activity. The price and billing period are
-          shown in the app before you buy, and they may vary by country and currency.
+          Pengu is free to use, with monthly allowances. A <strong>Pengu Pro</strong>{" "}
+          subscription removes those allowances. There is no free trial: the free plan is how
+          you try Pengu.
         </p>
         <ul>
           <li>
+            <strong>Always free:</strong> the custody schedule, calendar events, chat text,
+            responding to what others add (acknowledging, settling, approving, commenting and
+            reacting), viewing, editing, deleting and exporting your records, reporting and
+            blocking, and deleting your account.
+          </li>
+          <li>
+            <strong>Free allowances:</strong> in each nest, each person on the free plan can
+            log 10 expenses and 10 transfer notes a month, log activity on 7 days a month, keep
+            30 photo memories in total, and add 5 videos, chat photos or voice messages a month.
+            A nest on the free plan holds 2 adults; inviting a third needs the person inviting
+            to have Pro. Monthly allowances reset on the 1st of each month (UTC). The current
+            allowances are shown in the app, and we may change them with notice.
+          </li>
+          <li>
+            <strong>Pro is per person:</strong> Pro lifts the limits only for the person who
+            buys it, in every nest they belong to. It does not cover your co-parent or other
+            nest members. They stay on the free plan unless they subscribe themselves.
+          </li>
+          <li>
+            <strong>Plans and price:</strong> Pro is offered as a monthly or annual
+            subscription. The price and billing period are shown in the app before you buy,
+            and they may vary by country and currency.
+          </li>
+          <li>
             <strong>Billing:</strong> subscriptions are bought and billed through your Apple
-            App Store or Google Play account, under that store&apos;s terms. We don&apos;t
-            process payments or see your payment details.
+            App Store or Google Play account, under that store&apos;s terms. Payment is charged
+            to that account when you confirm the purchase. We don&apos;t process payments or
+            see your payment details.
           </li>
           <li>
             <strong>Auto-renewal:</strong> your subscription renews automatically at the end of
@@ -111,17 +136,15 @@ export default function TermsPage() {
             the current period ends.
           </li>
           <li>
-            <strong>Free trial:</strong> eligible new subscribers may get a free trial. When it
-            ends, you are charged automatically unless you cancel at least 24 hours before the
-            trial ends. Each person and each device can claim the trial once. We use a device
-            identifier to apply this rule. Any unused part of a trial is forfeited when you
-            buy a subscription.
-          </li>
-          <li>
             <strong>Managing and cancelling:</strong> manage or cancel your subscription in your
             App Store or Google Play account settings. Deleting the app or your Pengu account
-            does <em>not</em> cancel your subscription. If you cancel, you keep access until the
+            does <em>not</em> cancel your subscription. If you cancel, you keep Pro until the
             end of the current period.
+          </li>
+          <li>
+            <strong>When Pro ends:</strong> nothing you have added is locked or deleted. You can
+            still see, edit and export everything. New additions beyond the free allowances are
+            refused until you subscribe again.
           </li>
           <li>
             <strong>Refunds:</strong> refunds are handled by Apple or Google under their
@@ -158,11 +181,13 @@ export default function TermsPage() {
           <li>Add information about a child you don&apos;t have authority to share, or invite people to a nest to cause harm.</li>
           <li>Impersonate anyone or misrepresent your relationship to a child.</li>
           <li>Access or try to access nests, accounts or data you aren&apos;t authorized to see.</li>
-          <li>Reverse-engineer, scrape, overload or interfere with the Service, or get around its security, permissions or trial limits.</li>
+          <li>Reverse-engineer, scrape, overload or interfere with the Service, or get around its security, permissions or free-plan allowances.</li>
           <li>Use the Service for spam or any commercial purpose other than managing your own family.</li>
         </ul>
         <p>
-          We report child sexual abuse material to the appropriate authorities.
+          Pengu automatically refuses messages, notes, memory captions, expense comments and
+          settlement notes that contain slurs or explicit threats of violence. We report child
+          sexual abuse material to the appropriate authorities.
         </p>
       </LegalSection>
 
@@ -201,7 +226,7 @@ export default function TermsPage() {
       <LegalSection id="termination" title="10. Ending your use">
         <p>
           You can stop using Pengu at any time and delete your account from{" "}
-          <strong>Account → Privacy &amp; data</strong>. Remember to cancel your subscription
+          <strong>Account → Delete account</strong>. Remember to cancel your subscription
           separately in the App Store or Google Play. We may suspend or end your access if you
           seriously or repeatedly break these terms, if the law requires it, or if your use
           puts others at risk. Where it&apos;s appropriate, we will tell you first. Sections that

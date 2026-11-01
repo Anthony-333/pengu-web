@@ -7,7 +7,7 @@ import { SITE } from "../_lib/site";
 
 /** Facts both legal pages state. */
 export const LEGAL = {
-  effectiveDate: "October 18, 2026",
+  effectiveDate: "November 1, 2026",
   company: "John Anthony Oling, doing business as Pengu",
   address: "0258 J. Sumulong St., Saudi Village, Brgy. Lunsad, Binangonan, Rizal 1940, Philippines",
   jurisdiction: "the Republic of the Philippines",
