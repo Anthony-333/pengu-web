@@ -9,7 +9,7 @@ function HeaderButton({ children }: { children: ReactNode }) {
   return <div className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-iceberg">{children}</div>;
 }
 
-/** A message bubble: coral for you, paper with a hairline for them. */
+/** A message bubble: lavender for you, paper with a hairline for them. */
 function Bubble({ me, time, children }: { me?: boolean; time: string; children: ReactNode }) {
   return (
     <div className={`my-0.5 flex items-end gap-2 ${me ? "justify-end" : "justify-start"}`}>

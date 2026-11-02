@@ -44,7 +44,7 @@ export function Hero() {
           className="ken-burns object-cover object-[50%_35%]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/35 to-ink/80" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgb(255_90_60/0.28),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgb(142_134_240/0.32),transparent_60%)]" />
       </div>
 
       <div className="relative mx-auto flex max-w-6xl flex-col items-center px-4 pt-28 text-center sm:pt-32 lg:grid lg:grid-cols-[1fr_auto] lg:items-center lg:gap-16 lg:px-8 lg:pt-24 lg:pb-12 lg:text-left xl:gap-24">

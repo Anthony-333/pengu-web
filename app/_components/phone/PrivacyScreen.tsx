@@ -7,7 +7,7 @@ import { UsersGroupRoundedIcon } from "@solar-icons/react/line-duotone/users-gro
 import { TabBar, type ScreenProps } from "./Phone";
 import { Card, IconTile, SectionHeader, SubScreenHeader } from "./ui";
 
-/** iOS switch, coral when on (the app's `trackColor`). */
+/** iOS switch, lavender when on (the app's `trackColor`). */
 function Switch({ on }: { on: boolean }) {
   return (
     <span className={`relative h-[31px] w-[51px] shrink-0 rounded-full ${on ? "bg-accent" : "bg-frost"}`}>

@@ -16,12 +16,13 @@
   --color-frost: #EDEDF1;
   --color-paper: #FFFFFF;
 
-  /* Brand coral. `accent-ink` is the coral for small text on light
-     surfaces — plain `accent` fails WCAG AA there. */
-  --color-accent: #FF5A3C;
-  --color-accent-soft: #FFECE7;
-  --color-accent-deep: #D63E20;
-  --color-accent-ink: #C2391C;
+  /* Brand lavender, the logo tile's violet (app `accent`/`accentSoft`/`accentDeep`).
+     `accent-ink` is the lavender for small text on light surfaces — plain
+     `accent` fails WCAG AA there. */
+  --color-accent: #8E86F0;
+  --color-accent-soft: #ECEAFC;
+  --color-accent-deep: #5A4FD4;
+  --color-accent-ink: #5A4FD4;
 
   /* Parent "m" — emerald */
   --color-maria: #1FAA77;
@@ -109,7 +110,7 @@ body {
 }
 [data-active="0"] .tour-glow { background: var(--color-maria); }
 [data-active="1"] .tour-glow { background: var(--color-lily); }
-[data-active="2"] .tour-glow { background: var(--color-james); }
+[data-active="2"] .tour-glow { background: var(--color-sky); }
 [data-active="3"] .tour-glow { background: var(--color-accent); }
 .tour-glow {
   transition: background-color 0.8s ease;
