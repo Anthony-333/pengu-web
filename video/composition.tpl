@@ -79,7 +79,7 @@
 
         <!-- iOS notification banner -->
         <div id="banner" class="absolute inset-x-2.5 top-[56px] z-40 flex items-center gap-3 rounded-[24px] bg-white/85 px-3.5 py-3 shadow-[0_12px_32px_rgb(14_14_18/0.18)] backdrop-blur-xl">
-          <div class="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-[10px] bg-paper shadow-[inset_0_0_0_0.5px_rgb(14_14_18/0.1)]">{{LOGO}}</div>
+          <div class="h-[38px] w-[38px] shrink-0">{{LOGO}}</div>
           <div class="min-w-0 flex-1">
             <div class="flex items-center justify-between">
               <p class="text-[15px] tracking-[-0.2px] text-ink">James added an expense</p>

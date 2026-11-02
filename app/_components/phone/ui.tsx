@@ -113,7 +113,7 @@ export function RoundButton({
   icon: SolarIcon;
   size?: number;
   badge?: boolean;
-  /** Coral fill with a white glyph — the screen's primary "add" action. */
+  /** Lavender fill with a white glyph — the screen's primary "add" action. */
   accent?: boolean;
 }) {
   return (

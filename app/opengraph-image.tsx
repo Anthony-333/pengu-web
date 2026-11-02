@@ -23,7 +23,7 @@ export default async function Image() {
           justifyContent: "space-between",
           padding: 72,
           background: "#F2F2F5",
-          backgroundImage: "radial-gradient(circle at 100% 100%, #FFECE7 0%, #F2F2F5 55%)",
+          backgroundImage: "radial-gradient(circle at 100% 100%, #ECEAFC 0%, #F2F2F5 55%)",
           color: "#0E0E12",
         }}
       >
@@ -50,8 +50,8 @@ export default async function Image() {
           {[
             ["Who has the kids", "#1FAA77"],
             ["Fair splits", "#F5A623"],
-            ["Calm handovers", "#7B61FF"],
-            ["Every milestone", "#FF5A3C"],
+            ["Calm handovers", "#2F80FF"],
+            ["Every milestone", "#8E86F0"],
           ].map(([label, dot]) => (
             <div
               key={label}

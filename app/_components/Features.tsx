@@ -45,7 +45,7 @@ const features: Feature[] = [
     points: ["Urgent things stand out at a glance", "Know for sure it's been read", "Find any school or health detail in seconds"],
     problem: "“What medicine??”",
     video: "notes",
-    dot: "bg-james",
+    dot: "bg-sky",
     screen: <NotesScreen />,
   },
   {

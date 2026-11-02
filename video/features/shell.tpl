@@ -81,7 +81,7 @@
 
         <!-- Resolution beat: the Pengu mark lands, then opens into the app -->
         <div class="absolute inset-0 z-40 flex items-center justify-center" style="pointer-events: none">
-          <div id="badge" class="flex h-[92px] w-[92px] items-center justify-center rounded-[28px] bg-paper shadow-[0_18px_50px_rgb(14_14_18/0.28),inset_0_0_0_0.5px_rgb(14_14_18/0.08)]">{{LOGO}}</div>
+          <div id="badge" class="h-[92px] w-[92px] rounded-[21px] shadow-[0_18px_50px_rgb(14_14_18/0.28)]">{{LOGO}}</div>
         </div>
       </div>
     </div>

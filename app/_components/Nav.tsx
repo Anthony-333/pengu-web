@@ -18,9 +18,7 @@ export function Nav() {
     <HideOnScroll className="fixed inset-x-0 top-4 z-50 px-4 sm:top-5">
       <nav className="glass-dark mx-auto flex h-14 max-w-5xl items-center justify-between rounded-full pl-3 pr-2 shadow-[0_10px_40px_-10px_rgb(14_14_18/0.5)]">
         <Link href="/" className="flex items-center gap-2" aria-label="Pengu home">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-paper">
-            <PenguLogo size={26} />
-          </span>
+          <PenguLogo size={36} className="shrink-0" />
           <span className="text-lg font-bold tracking-tight text-white">Pengu</span>
         </Link>
 

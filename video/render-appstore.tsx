@@ -37,7 +37,7 @@ import { PenguLogo } from "../app/_components/PenguLogo";
 const W = 1290;
 const H = 2796;
 
-const CORAL = "#FF5A3C";
+const ACCENT = "#8E86F0";
 const AMBER = "#F5A623";
 const INK = "#0E0E12";
 
@@ -182,7 +182,7 @@ const MODULES = [
   { label: "Calendar", icon: CalendarIcon, tint: "#0D7A52", bg: "#E3F5EE" },
   { label: "Expenses", icon: CardIcon, tint: "#A15C07", bg: "#FEF3DF" },
   { label: "Handoff notes", icon: DocumentTextIcon, tint: "#5236D9", bg: "#EEEAFF" },
-  { label: "Memories", icon: GalleryWideIcon, tint: "#D63E20", bg: "#FFECE7" },
+  { label: "Memories", icon: GalleryWideIcon, tint: "#5A4FD4", bg: "#ECEAFC" },
   { label: "Chat", icon: ChatRoundIcon, tint: "#1A5BCC", bg: "#E5EFFF" },
   { label: "Activity log", icon: ClipboardIcon, tint: "#2A2A31", bg: "#EDEDF1" },
 ];
@@ -242,7 +242,7 @@ const SHOTS: Shot[] = [
     decor: (
       <>
         <Burst x={250} y={2680} size={320} fill={AMBER} ink={INK} tilt={-12} lines={["Settle in", "one tap"]} />
-        <Sparkle x={150} y={860} size={70} color={CORAL} />
+        <Sparkle x={150} y={860} size={70} color={ACCENT} />
       </>
     ),
   },
@@ -296,7 +296,7 @@ const SHOTS: Shot[] = [
     decor: (
       <>
         <Burst x={1060} y={2560} size={320} fill="#2F80FF" ink="#FFFFFF" tilt={10} lines={["Voice", "messages"]} />
-        <Sparkle x={130} y={840} size={80} color={CORAL} />
+        <Sparkle x={130} y={840} size={80} color={ACCENT} />
       </>
     ),
   },
@@ -333,7 +333,7 @@ const SHOTS: Shot[] = [
     decor: (
       <>
         <Sparkle x={1170} y={760} size={90} />
-        <Sparkle x={110} y={1500} size={60} color={CORAL} />
+        <Sparkle x={110} y={1500} size={60} color={ACCENT} />
       </>
     ),
   },
@@ -368,7 +368,7 @@ const SHOTS: Shot[] = [
     decor: (
       <>
         <Burst x={1060} y={2640} size={320} fill="#7B61FF" ink="#FFFFFF" tilt={-10} lines={["Limited", "access"]} />
-        <Sparkle x={150} y={2600} size={80} color={CORAL} />
+        <Sparkle x={150} y={2600} size={80} color={ACCENT} />
       </>
     ),
   },
@@ -464,7 +464,7 @@ async function page() {
     <div className="relative h-full w-full overflow-hidden bg-accent-soft font-semibold text-ink">
       <svg className="absolute inset-0" width={W * N} height={H} aria-hidden="true">
         <path d={TRAIL} fill="none" stroke={INK} strokeWidth={9} strokeDasharray="26 22" strokeLinecap="round" />
-        <circle cx={110} cy={880} r={22} fill={CORAL} stroke={INK} strokeWidth={9} />
+        <circle cx={110} cy={880} r={22} fill={ACCENT} stroke={INK} strokeWidth={9} />
       </svg>
       {SHOTS.map((s, i) => (
         <div key={s.name} data-slide className="absolute top-0 h-full" style={{ left: W * i, width: W }}>
