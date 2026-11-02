@@ -40,7 +40,7 @@ export function Nav() {
           href="/#download"
           className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-accent-deep hover:shadow-[0_8px_24px_-6px_var(--color-accent)]"
         >
-          Get Pengu
+          Start free
         </Link>
       </nav>
     </HideOnScroll>

@@ -51,7 +51,7 @@ export function Hero() {
         <div className="hero-exit flex flex-col items-center lg:items-start">
           <span className="rise glass mb-7 inline-flex items-center gap-2 rounded-full py-1.5 pl-1.5 pr-4 text-xs font-medium text-white sm:text-sm">
             <span className="rounded-full bg-accent px-2.5 py-0.5 text-[11px] font-semibold">New</span>
-            Custody schedules both parents approve
+            Schedule changes you&rsquo;ve both said yes to
           </span>
 
           <h1
@@ -60,15 +60,15 @@ export function Hero() {
           >
             Two homes.
             <br />
-            <span className="text-white/70">One calm nest.</span>
+            <span className="text-white/70">One happy kid.</span>
           </h1>
 
           <p
             className="rise mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg"
             style={delay(240)}
           >
-            The custody calendar, shared expenses, handover notes and family memories,
-            in one private place you and your co-parent both trust.
+            Know who has the kids, who owes what and what happened at the last handover,
+            without the back-and-forth texts. Less refereeing, more parenting.
           </p>
 
           <div className="rise mt-9" style={delay(360)}>
@@ -91,22 +91,22 @@ export function Hero() {
             icon="🚗"
             iconBg="bg-james-soft"
             title="Handover · Fri 6:00 PM"
-            sub="Both calendars updated"
+            sub="You’re both on the same page"
           />
           <FloatingChip
             className="-right-56 top-56 lg:-right-24"
             delayMs={1100}
             icon="✓"
             iconBg="bg-maria-soft text-maria-deep font-bold"
-            title="Dentist visit settled"
-            sub="$240 · split 50/50"
+            title="Dentist bill settled"
+            sub="$240 split 50/50, no debate"
           />
           <FloatingChip
             className="-left-48 top-[400px] lg:-left-36 lg:top-110"
             delayMs={1300}
             icon="📝"
             iconBg="bg-accent-soft"
-            title="Note seen by James"
+            title="James saw your note"
             sub="Antibiotics until Sunday"
           />
         </div>
