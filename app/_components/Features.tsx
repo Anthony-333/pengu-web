@@ -20,9 +20,9 @@ type Feature = {
 const features: Feature[] = [
   {
     eyebrow: "Custody calendar",
-    title: "Always know who has the kids.",
-    body: "Set the pattern once (2-2-3, week on/week off, or your own) and every handover lands on both calendars. When plans change, one parent proposes and the other approves.",
-    points: ["Built-in rotation patterns", "Handover reminders", "Syncs to your phone's calendar"],
+    title: "Always know where the kids sleep tonight.",
+    body: "Set your rotation once (2-2-3, week on/week off, or your own) and every pickup and drop-off shows up on both your calendars. When plans change, you get a clear yes or no instead of a long thread.",
+    points: ["Plan your life months ahead", "A nudge before every handover", "Your custody days in the calendar you already use"],
     problem: "“Wait, is this weekend yours or mine?”",
     video: "calendar",
     dot: "bg-maria",
@@ -30,9 +30,9 @@ const features: Feature[] = [
   },
   {
     eyebrow: "Shared expenses",
-    title: "Money, without the arguments.",
-    body: "Log any shared cost, snap the receipt, and Pengu works out each parent's share. Settle or dispute in one tap, with a running ledger you both see.",
-    points: ["Receipt photos attached", "Settle or dispute in one tap", "A balance that's always up to date"],
+    title: "Fair splits. No awkward asks.",
+    body: "Snap the receipt and Pengu works out each parent's share, so you're never the one keeping score. Your co-parent settles up in one tap, and you both see the same balance.",
+    points: ["Proof of every cost, right there", "Paid back in a tap, no chasing", "Always know exactly where you stand"],
     problem: "“Who paid for the dentist again?”",
     video: "expenses",
     dot: "bg-lily",
@@ -40,9 +40,9 @@ const features: Feature[] = [
   },
   {
     eyebrow: "Transfer notes",
-    title: "Nothing gets lost at the handover.",
-    body: "Leave a note at every handover, like medication, homework or what they ate, and see when your co-parent has acknowledged it. Chat and voice messages live right beside it.",
-    points: ["Urgent, important or FYI", "Acknowledged when read", "Health, school and activity filters"],
+    title: "Hand over the kids, not a list of worries.",
+    body: "Medication, homework, what they ate. Leave it in a note and see the moment your co-parent has read it, so nothing important relies on memory. Need to talk it through? Chat and voice messages are right there.",
+    points: ["Urgent things stand out at a glance", "Know for sure it's been read", "Find any school or health detail in seconds"],
     problem: "“What medicine??”",
     video: "notes",
     dot: "bg-james",
@@ -50,9 +50,9 @@ const features: Feature[] = [
   },
   {
     eyebrow: "Memories",
-    title: "Every milestone, in both homes.",
-    body: "A private photo wall only your nest can see. First steps, school plays, Sunday at the park, kept together no matter whose weekend it was.",
-    points: ["Photos and videos", "Tags and reactions", "Private to your nest"],
+    title: "Never miss a milestone, in either home.",
+    body: "First steps, school plays, Sunday at the park. See the moments from the other home too, all kept together in one private place only your family can see.",
+    points: ["Catch up on the days you weren't there", "Celebrate their wins together, even apart", "Only the people you invite can see them"],
     problem: "“The shared album link expired.”",
     video: "memories",
     dot: "bg-accent",
@@ -87,14 +87,15 @@ export function Features() {
     <section id="features" className="relative pt-24 sm:pt-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="reveal mx-auto max-w-2xl text-center">
-          <p className="mb-4 text-sm font-semibold text-accent-ink">Everything in one nest</p>
+          <p className="mb-4 text-sm font-semibold text-accent-ink">What changes with Pengu</p>
           <h2 className="text-4xl font-bold leading-[1.05] tracking-[-0.03em] text-ink sm:text-6xl">
-            Built for the space
+            Less coordinating.
             <br />
-            between two homes.
+            More parenting.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-ink-3">
-            Four tools that replace the group texts, spreadsheets and shoebox of receipts.
+            No more scrolling old group texts, chasing receipts or wondering what you missed.
+            Here&rsquo;s what your week looks like instead.
           </p>
         </div>
       </div>

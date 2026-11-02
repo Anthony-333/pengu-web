@@ -47,11 +47,11 @@ export function Moments() {
   return (
     <section className="overflow-hidden py-24 sm:py-32">
       <div className="reveal mx-auto mb-14 max-w-3xl px-5 text-center sm:px-8">
-        <p className="mb-4 text-sm font-semibold text-accent-ink">Why families switch</p>
+        <p className="mb-4 text-sm font-semibold text-accent-ink">What you get back</p>
         <h2 className="text-4xl font-bold leading-[1.05] tracking-[-0.03em] text-ink sm:text-6xl">
-          Less logistics.
+          Less admin.
           <br />
-          <span className="text-ink-3">More of the good part.</span>
+          <span className="text-ink-3">More bedtime stories.</span>
         </h2>
       </div>
       <div className="space-y-4">

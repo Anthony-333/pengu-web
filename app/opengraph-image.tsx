@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { SITE } from "./_lib/site";
 
-export const alt = "Pengu, the co-parenting app: custody calendar, shared expenses, handover notes and memories";
+export const alt = "Pengu, the co-parenting app: know who has the kids, split costs fairly, calm handovers and every milestone";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -38,20 +38,20 @@ export default async function Image() {
             Two homes.
           </span>
           <span style={{ fontSize: 84, fontWeight: 700, letterSpacing: -3, lineHeight: 1.02, color: "#6B6B76" }}>
-            One calm nest.
+            One happy kid.
           </span>
           <span style={{ marginTop: 28, fontSize: 32, color: "#2A2A31", maxWidth: 900 }}>
-            The co-parenting app for custody calendars, shared expenses, handover notes and
-            family memories.
+            Know who has the kids, who owes what and what happened at handover, without
+            the back-and-forth.
           </span>
         </div>
 
         <div style={{ display: "flex", gap: 14 }}>
           {[
-            ["Custody calendar", "#1FAA77"],
-            ["Shared expenses", "#F5A623"],
-            ["Handover notes", "#7B61FF"],
-            ["Memories", "#FF5A3C"],
+            ["Who has the kids", "#1FAA77"],
+            ["Fair splits", "#F5A623"],
+            ["Calm handovers", "#7B61FF"],
+            ["Every milestone", "#FF5A3C"],
           ].map(([label, dot]) => (
             <div
               key={label}

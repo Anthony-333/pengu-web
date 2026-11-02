@@ -48,7 +48,7 @@ export function Footer() {
               <span className="text-lg font-bold text-ink">Pengu</span>
             </div>
             <p className="text-sm text-ink-3 leading-relaxed mb-5 max-w-xs">
-              Co-parenting made beautiful. One nest for everything your children share.
+              Calmer co-parenting, so your kids feel at home in both homes.
             </p>
             {/* Social */}
             <div className="flex gap-2">
@@ -106,7 +106,7 @@ export function Footer() {
             © <CopyrightYear /> Pengu. All rights reserved.
           </p>
           <p className="text-xs text-ink-3">
-            Built with ❤️ for families everywhere.
+            Built with ❤️ for kids with two homes.
           </p>
         </div>
       </div>
