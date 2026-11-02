@@ -27,6 +27,8 @@ No test suite is configured.
 
 **Design tokens**: `@theme inline` in `app/globals.css` mirrors the app's palette in `pengu/src/constants/colors.ts`: `ink`/`ink-2`/`ink-3`, `muted`, `hairline`, `canvas`, `paper`, `accent` (coral), and the parent/category colors `maria` (emerald), `james` (violet), `lily` (amber), `sky` (blue), each with `-soft`/`-deep`. Use the utilities rather than raw hex. For small coral text on light surfaces, use `accent-ink`, because plain `accent` fails WCAG AA there. `PenguLogo` and the `video/` composition still hardcode hex.
 
+**Logo**: `PenguLogo` is the app icon (the penguin family on violet, as a rounded tile), ported from `pengu/assets/brand/app-icon.svg`. `public/pengu-icon.png` is a copy of `pengu/assets/images/icon.png` and feeds the Apple touch icon, the manifest, the JSON-LD logo and the OG image. `app/favicon.ico` is that PNG with the 229/1024 corner, at 48/32/16 px. When the app icon changes, update all three and re-render the videos, which embed `PenguLogo`.
+
 **Motion** is CSS in `globals.css`, all inside `prefers-reduced-motion: no-preference`: `.rise`/`.phone-in`/`.float` for load (stagger with `style={delay(ms)}` from `_components/motion.ts`), infinite `.marquee-left/right` for the Moments rows, and scroll-driven `.reveal`, `.reveal-scale`, `.parallax`, `.hero-exit` behind `@supports (animation-timeline: view())`. Unsupported browsers just render content in place.
 
 **Design work**: a project subagent, `web-designer` (`.claude/agents/web-designer.md`), handles layout, visual-direction and conversion decisions for landing-page sections.

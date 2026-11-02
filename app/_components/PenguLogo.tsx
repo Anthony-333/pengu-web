@@ -1,66 +1,58 @@
-export function PenguLogo({ size = 36 }: { size?: number }) {
+import { useId } from "react";
+
+/**
+ * The app icon: the Pengu family (two parents and a chick) on violet, as a
+ * rounded tile. A port of `pengu/assets/images/icon.png`, drawn from
+ * `pengu/assets/brand/app-icon.svg`; when the app's icon changes, port it here.
+ * Hex is hardcoded because the icon is fixed brand art, not themed UI.
+ */
+const VIOLET = "#8E86F0";
+const INK = "#15132B";
+/** iOS-style corner, 229 of 1024 (the radius `AnimatedSplash` uses in the app). */
+const RADIUS = 229;
+
+const BODY = "M-100 500L-100 0C-100 -62 -56 -102 0 -102C56 -102 100 -62 100 0L100 500Z";
+const FACE =
+  "M0 -38C-12 -38 -20 -58 -40 -66C-56 -72 -70 -64 -78 -50C-98 -26 -94 20 -76 46C-58 72 -28 86 0 86C28 86 58 72 76 46C94 20 98 -26 78 -50C70 -64 56 -72 40 -66C20 -58 12 -38 0 -38Z";
+const BEAK = "M-26 22Q0 13 26 22Q34 26 28 34L7 58Q0 65 -7 58L-28 34Q-34 26 -26 22Z";
+const TUFT = "M2 -104C4 -124 14 -138 30 -146M14 -130C30 -136 46 -134 56 -124";
+
+function Penguin({ transform, chick = false }: { transform: string; chick?: boolean }) {
+  return (
+    <g transform={transform} strokeLinecap="round" strokeLinejoin="round">
+      {chick && <circle r="112" fill={VIOLET} />}
+      <path fill={INK} d={BODY} />
+      {chick && <path fill="none" stroke={INK} strokeWidth="11" d={TUFT} />}
+      <path fill="#FFFFFF" d={FACE} />
+      <ellipse fill={INK} cx="-36" cy="-4" rx="8.5" ry="14.5" />
+      <ellipse fill={INK} cx="36" cy="-4" rx="8.5" ry="14.5" />
+      <path fill="#FF9E7A" stroke={INK} strokeWidth="8" d={BEAK} />
+    </g>
+  );
+}
+
+export function PenguLogo({ size = 36, className }: { size?: number; className?: string }) {
+  const clip = useId();
   return (
     <svg
       width={size}
       height={size}
-      viewBox="0 0 40 44"
-      fill="none"
+      viewBox="0 0 1024 1024"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
+      className={className}
     >
-      {/* Body */}
-      <ellipse cx="20" cy="23" rx="12" ry="14" fill="#0E0E12" />
-      {/* Belly */}
-      <ellipse cx="20" cy="26" rx="7.5" ry="10" fill="#F2F2F5" />
-      {/* Left wing */}
-      <ellipse
-        cx="8"
-        cy="26"
-        rx="3.5"
-        ry="8"
-        fill="#0E0E12"
-        transform="rotate(-12 8 26)"
-      />
-      {/* Right wing */}
-      <ellipse
-        cx="32"
-        cy="26"
-        rx="3.5"
-        ry="8"
-        fill="#0E0E12"
-        transform="rotate(12 32 26)"
-      />
-      {/* Left eye white */}
-      <circle cx="15.5" cy="18" r="3" fill="white" />
-      {/* Right eye white */}
-      <circle cx="24.5" cy="18" r="3" fill="white" />
-      {/* Left pupil */}
-      <circle cx="16" cy="17.5" r="1.6" fill="#0E0E12" />
-      {/* Right pupil */}
-      <circle cx="25" cy="17.5" r="1.6" fill="#0E0E12" />
-      {/* Left eye shine */}
-      <circle cx="16.6" cy="16.9" r="0.55" fill="white" />
-      <circle cx="25.6" cy="16.9" r="0.55" fill="white" />
-      {/* Beak */}
-      <path d="M18.5 21.5 L20 24.5 L21.5 21.5 Q20 20.5 18.5 21.5Z" fill="#FF5A3C" />
-      {/* Left foot */}
-      <ellipse
-        cx="14.5"
-        cy="37"
-        rx="5"
-        ry="2.2"
-        fill="#FF5A3C"
-        transform="rotate(-18 14.5 37)"
-      />
-      {/* Right foot */}
-      <ellipse
-        cx="25.5"
-        cy="37"
-        rx="5"
-        ry="2.2"
-        fill="#FF5A3C"
-        transform="rotate(18 25.5 37)"
-      />
+      <defs>
+        <clipPath id={clip}>
+          <rect width="1024" height="1024" rx={RADIUS} />
+        </clipPath>
+      </defs>
+      <g clipPath={`url(#${clip})`}>
+        <rect width="1024" height="1024" fill={VIOLET} />
+        <Penguin transform="translate(290 610) rotate(6) scale(2.3)" />
+        <Penguin transform="translate(734 610) rotate(-6) scale(2.3)" />
+        <Penguin transform="translate(512 812) scale(1.62)" chick />
+      </g>
     </svg>
   );
 }

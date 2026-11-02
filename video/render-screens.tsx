@@ -37,7 +37,7 @@ const out = readFileSync(here("composition.tpl"), "utf8")
   .replace("{{TABBAR_2}}", html(<TabBar active={2} />))
   .replace("{{STATUS}}", html(<StatusBar />))
   .replace("{{INDICATOR}}", html(<HomeIndicator />))
-  .replace("{{LOGO}}", html(<PenguLogo size={30} />));
+  .replace("{{LOGO}}", html(<PenguLogo size={38} />));
 
 if (out.includes("{{")) throw new Error("Unfilled placeholder in composition.tpl");
 writeFileSync(here("index.html"), out);
@@ -77,7 +77,7 @@ for (const f of FEATURES) {
     .replace("{{TABBAR}}", html(<TabBar active={f.tab} />))
     .replace("{{STATUS}}", html(<StatusBar />))
     .replace("{{INDICATOR}}", html(<HomeIndicator />))
-    .replace("{{LOGO}}", html(<PenguLogo size={58} />))
+    .replace("{{LOGO}}", html(<PenguLogo size={92} />))
     .replace("{{SCRIPT}}", part("script"));
   if (filled.includes("{{")) throw new Error(`Unfilled placeholder in feature ${f.name}`);
   writeFileSync(here(`feature-${f.name}.html`), filled);
