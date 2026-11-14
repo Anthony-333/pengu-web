@@ -109,7 +109,7 @@ export function MemoriesScreen({ tabBar = true }: ScreenProps) {
       </div>
       {/* Camera + Upload bar, sitting above the floating tab bar */}
       <div className="absolute inset-x-0 bottom-[96px] z-10 flex gap-2.5 bg-gradient-to-t from-canvas via-canvas to-transparent px-4 pb-2 pt-6">
-        <span className="flex h-[54px] flex-1 items-center justify-center gap-2 rounded-full bg-accent text-[15px] text-white shadow-[0_6px_8px_rgb(255_90_60/0.25)]">
+        <span className="flex h-[54px] flex-1 items-center justify-center gap-2 rounded-full bg-accent text-[15px] text-white shadow-[0_6px_8px_rgb(142_134_240/0.25)]">
           <CameraIcon size={20} color="#FFFFFF" />
           Camera
         </span>

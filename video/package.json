@@ -7,6 +7,7 @@
     "check": "npx --yes hyperframes@0.8.162 check",
     "render": "npx --yes hyperframes@0.8.162 render",
     "publish": "npx --yes hyperframes@0.8.162 publish",
-    "screens": "npx --yes esbuild@0.25.10 render-screens.tsx --bundle --platform=node --format=esm --jsx=automatic --external:react --external:react-dom --alias:next/image=./next-image.tsx --loader:.jpg=file --asset-names=[name] --log-level=warning --outfile=.hyperframes/render-screens.mjs && node .hyperframes/render-screens.mjs"
+    "screens": "npx --yes esbuild@0.25.10 render-screens.tsx --bundle --platform=node --format=esm --jsx=automatic --external:react --external:react-dom --alias:next/image=./next-image.tsx --loader:.jpg=file --asset-names=[name] --log-level=warning --outfile=.hyperframes/render-screens.mjs && node .hyperframes/render-screens.mjs",
+    "appstore": "npx --yes esbuild@0.25.10 render-appstore.tsx --bundle --platform=node --format=esm --jsx=automatic --external:react --external:react-dom --external:@tailwindcss/node --alias:next/image=./next-image.tsx --loader:.jpg=file --asset-names=[name] --log-level=warning --outfile=.hyperframes/render-appstore.mjs && node .hyperframes/render-appstore.mjs"
   }
 }

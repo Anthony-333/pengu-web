@@ -137,7 +137,7 @@ function CustodyHero() {
           <InitialsAvatar initials="E" size={84} className="bg-lily-soft text-lily-deep" ring="3px solid rgb(255 255 255 / 0.12)" />
         </div>
         <span className="mt-3.5 inline-flex items-center gap-[7px] rounded-full bg-white/12 px-3 py-[7px] text-[12px] text-white">
-          <ClockCircleIcon size={12} color="#FF5A3C" />
+          <ClockCircleIcon size={12} color="#8E86F0" />
           Ends Fri, 6:00 PM
         </span>
       </div>
@@ -161,7 +161,7 @@ function CustodyHero() {
 
 function ExchangeCard() {
   return (
-    <Card className="mx-4 mt-3">
+    <Card className="exchange-card mx-4 mt-3">
       <div className="flex items-center justify-between gap-3">
         <p className="text-[14px] tracking-[-0.2px] text-accent">Next exchange</p>
         <StatusPill label="In 2 Days" className="bg-maria-soft text-maria-deep" />
@@ -221,7 +221,7 @@ function UpcomingEvents({ rows = UPCOMING }: { rows?: EventRow[] }) {
 
 function HomeFab() {
   return (
-    <div data-layout-allow-occlusion className="absolute bottom-[100px] right-5 z-10 flex h-[62px] w-[62px] items-center justify-center rounded-full bg-accent shadow-[0_8px_20px_rgb(255_90_60/0.45)]">
+    <div data-layout-allow-occlusion className="absolute bottom-[100px] right-5 z-10 flex h-[62px] w-[62px] items-center justify-center rounded-full bg-accent shadow-[0_8px_20px_rgb(142_134_240/0.45)]">
       <AddIcon size={28} color="#FFFFFF" />
     </div>
   );
@@ -525,7 +525,7 @@ export function NotesScreen({ tabBar = true }: ScreenProps) {
         const p = PRIO[n.prio];
         const mine = n.author.name === "Sarah";
         return (
-          <Card key={n.title} className="mx-4 mb-3">
+          <Card key={n.title} className="note-card mx-4 mb-3">
             <div className="mb-3 flex items-center gap-2.5">
               <IconTile icon={n.icon} tint={p.tint} bg={p.bg} size={34} />
               <div className="flex-1">

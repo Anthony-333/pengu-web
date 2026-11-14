@@ -95,7 +95,7 @@ const TABS = [
 
 /**
  * iOS 26 native tab bar (NativeTabs): a floating Liquid Glass capsule with
- * Solar icons — line-duotone at rest, bold-duotone and coral when selected.
+ * Solar icons — line-duotone at rest, bold-duotone and lavender when selected.
  */
 export function TabBar({ active }: { active: number }) {
   return (
@@ -109,7 +109,7 @@ export function TabBar({ active }: { active: number }) {
             data-tab={i}
             className={`tab flex h-[54px] flex-1 flex-col items-center justify-center gap-[3px] rounded-full ${on ? "bg-ink/[0.06]" : ""}`}
           >
-            <Icon size={26} color={on ? "#FF5A3C" : "#8E8E99"} />
+            <Icon size={26} color={on ? "#8E86F0" : "#8E8E99"} />
             <span className={`text-[10px] tracking-[0.1px] ${on ? "text-accent" : "text-[#8E8E99]"}`}>{t.label}</span>
           </div>
         );

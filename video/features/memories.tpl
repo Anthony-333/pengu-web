@@ -34,7 +34,7 @@
   </div>
 </div>
 <div id="n2" class="absolute inset-x-2.5 top-[124px] z-20 flex items-center gap-3 rounded-[22px] bg-white/90 px-3.5 py-3 shadow-[0_12px_32px_rgb(14_14_18/0.18)] backdrop-blur-xl">
-  <span class="flex h-[36px] w-[36px] items-center justify-center rounded-[10px] bg-accent-ink text-[18px] text-white">!</span>
+  <span class="flex h-[36px] w-[36px] items-center justify-center rounded-[10px] bg-danger text-[18px] text-white">!</span>
   <div class="min-w-0 flex-1">
     <p class="text-[15px] text-ink">Storage full</p>
     <p class="text-[13px] text-ink-3">New photos can’t be backed up</p>

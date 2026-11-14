@@ -9,7 +9,7 @@
     <p class="line text-[17px] text-ink-2">Swim fees $180 (paid? ask J)</p>
     <p class="line text-[17px] text-ink-2">Backpack $64.50, receipt lost</p>
     <p class="line text-[17px] text-ink-2">Shoes $55 ÷ 2 = ?</p>
-    <p class="line text-[17px] text-accent-ink">Total I owe: ???</p>
+    <p class="line text-[17px] text-danger">Total I owe: ???</p>
   </div>
 </div>
 
@@ -43,7 +43,7 @@
 </div>
 
 <div id="declined" class="absolute inset-x-2.5 top-[52px] z-20 flex items-center gap-3 rounded-[22px] bg-white/90 px-3.5 py-3 shadow-[0_12px_32px_rgb(14_14_18/0.18)] backdrop-blur-xl">
-  <span class="flex h-[36px] w-[36px] items-center justify-center rounded-[10px] bg-accent-ink text-[18px] text-white">!</span>
+  <span class="flex h-[36px] w-[36px] items-center justify-center rounded-[10px] bg-danger text-[18px] text-white">!</span>
   <div class="min-w-0 flex-1">
     <p class="text-[15px] text-ink">Payment request declined</p>
     <p class="text-[13px] text-ink-3">James: “I already paid for that”</p>

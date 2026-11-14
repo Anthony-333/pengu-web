@@ -6,14 +6,14 @@ export function FAQ() {
     <section id="faq" className="scroll-mt-24 pt-24 sm:pt-32">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
         <div className="reveal">
-          <p className="mb-4 text-sm font-semibold text-accent-ink">Questions</p>
+          <p className="mb-4 text-sm font-semibold text-accent-ink">Before you start</p>
           <h2 className="text-4xl font-bold leading-[1.05] tracking-[-0.03em] text-ink sm:text-6xl">
-            Co-parenting,
+            Questions,
             <br />
             <span className="text-ink-3">answered.</span>
           </h2>
           <p className="mt-5 max-w-sm text-lg leading-relaxed text-ink-3">
-            Still wondering? Write to{" "}
+            Not sure it fits your family? Ask us at{" "}
             <a href={`mailto:${SITE.email}`} className="text-accent-ink underline underline-offset-2">
               {SITE.email}
             </a>

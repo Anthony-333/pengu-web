@@ -3,7 +3,6 @@ import { Hero } from "./_components/Hero";
 import { Features } from "./_components/Features";
 import { Moments } from "./_components/Moments";
 import { HowItWorks } from "./_components/HowItWorks";
-import { Testimonials } from "./_components/Testimonials";
 import { FAQ } from "./_components/FAQ";
 import { Download } from "./_components/Download";
 import { Footer } from "./_components/Footer";
@@ -19,7 +18,7 @@ export default function Home() {
         <Features />
         <Moments />
         <HowItWorks />
-        <Testimonials />
+        {/* Testimonials hidden until there are real user quotes to show. */}
         <FAQ />
         <Download />
       </main>

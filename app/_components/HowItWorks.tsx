@@ -5,25 +5,25 @@ import planner from "@/public/images/estee-janssens-zni0zgb3bkQ-unsplash.jpg";
 
 const steps = [
   {
-    title: "Create your nest",
-    body: "Sign up, pick your color and add your child. Your nest is a private space only the people you invite can see into.",
+    title: "Give your child one home base",
+    body: "Sign up, add your child and pick your color. Your nest is a private space only the people you invite can see into.",
     photo: drawing,
     alt: "A mother drawing with her son at home",
     chip: { icon: "🪺", label: "Emma's nest created", bg: "bg-lily-soft" },
   },
   {
-    title: "Invite your co-parent",
-    body: "Send an invite by email or read out a join code. You choose their role and what they can see.",
+    title: "Get on the same page",
+    body: "Send your co-parent an invite by email or read out a join code. You decide what they can see, from the full picture to just the calendar.",
     photo: reading,
     alt: "A father reading a book with his son",
     chip: { icon: "✉️", label: "James joined your nest", bg: "bg-james-soft" },
   },
   {
-    title: "Share the load",
-    body: "Set the custody pattern, then start logging expenses, notes and memories. Both of you see the same thing, as it happens.",
+    title: "Breathe easier",
+    body: "Add your custody pattern and you're set. From then on, plans, costs, notes and photos are shared the moment they happen, so neither of you is left guessing.",
     photo: planner,
     alt: "A hand-drawn monthly calendar in a planner, with a yellow marker",
-    chip: { icon: "📅", label: "Schedule approved", bg: "bg-maria-soft" },
+    chip: { icon: "📅", label: "Schedule agreed by both", bg: "bg-maria-soft" },
   },
 ];
 
@@ -34,16 +34,16 @@ export function HowItWorks() {
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="reveal mb-14 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <div>
-              <p className="mb-4 text-sm font-semibold text-accent-ink">How it works</p>
+              <p className="mb-4 text-sm font-semibold text-accent-ink">Up and running tonight</p>
               <h2 className="text-4xl font-bold leading-[1.05] tracking-[-0.03em] text-ink sm:text-6xl">
-                Set up in minutes.
+                Set up tonight.
                 <br />
-                <span className="text-ink-3">Calmer for years.</span>
+                <span className="text-ink-3">Calmer from week one.</span>
               </h2>
             </div>
             <p className="max-w-sm text-lg leading-relaxed text-ink-3">
-              No complicated setup. Your co-parent joins with one invite, with no separate
-              sign-up hoops.
+              No sit-down meeting, no new system to agree on. Send one invite and your
+              co-parent is in.
             </p>
           </div>
 

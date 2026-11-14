@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { LEGAL, LegalPage, LegalSection } from "../_components/LegalPage";
+import { LEGAL, LegalPage, LegalSection, legalMetadata } from "../_components/LegalPage";
 
-export const metadata: Metadata = {
-  title: "Terms of Service",
-  description:
-    "The terms that govern your use of Pengu, including subscriptions, free trials, shared nests and acceptable use.",
-  alternates: { canonical: "/terms" },
-  openGraph: { title: "Terms of Service — Pengu", url: "/terms" },
-};
+export const metadata: Metadata = legalMetadata(
+  "Terms of Service",
+  "The terms that govern your use of Pengu, including subscriptions, free trials, shared nests and acceptable use.",
+  "/terms",
+);
 
 const toc = [
   { id: "acceptance", label: "Accepting these terms" },
