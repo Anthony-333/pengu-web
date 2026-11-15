@@ -21,7 +21,7 @@ const links = [
   {
     group: "Support",
     items: [
-      { label: "Help Center", href: "#" },
+      { label: "Support", href: "/support" },
       { label: "Contact us", href: "mailto:hello@pengu.family" },
       { label: "Bug report", href: "mailto:bugs@pengu.family" },
     ],

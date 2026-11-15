@@ -7,7 +7,7 @@ import { SITE } from "../_lib/site";
 
 /** Facts both legal pages state. */
 export const LEGAL = {
-  effectiveDate: "October 18, 2026",
+  effectiveDate: "November 15, 2026",
   company: "John Anthony Oling, doing business as Pengu",
   address: "0258 J. Sumulong St., Saudi Village, Brgy. Lunsad, Binangonan, Rizal 1940, Philippines",
   jurisdiction: "the Republic of the Philippines",
@@ -43,11 +43,17 @@ type TocItem = { id: string; label: string };
 
 export function LegalPage({
   title,
+  eyebrow = "Legal",
+  dated = true,
   intro,
   toc,
   children,
 }: {
   title: string;
+  /** Small label above the title. */
+  eyebrow?: string;
+  /** Show the "Effective" date (legal pages only). */
+  dated?: boolean;
   intro: ReactNode;
   toc: TocItem[];
   children: ReactNode;
@@ -58,14 +64,14 @@ export function LegalPage({
       <main className="bg-canvas pt-28 pb-24">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
           <p className="text-xs font-semibold text-accent-ink uppercase tracking-widest mb-3">
-            Legal
+            {eyebrow}
           </p>
-          <h1 className="text-4xl sm:text-5xl font-bold text-ink tracking-tight mb-4">
+          <h1 className={`text-4xl sm:text-5xl font-bold text-ink tracking-tight ${dated ? "mb-4" : "mb-8"}`}>
             {title}
           </h1>
-          <p className="text-sm text-ink-3 mb-8">
-            Effective {LEGAL.effectiveDate}
-          </p>
+          {dated && (
+            <p className="text-sm text-ink-3 mb-8">Effective {LEGAL.effectiveDate}</p>
+          )}
           <div className="text-lg text-ink-2 leading-relaxed mb-10">{intro}</div>
 
           <nav

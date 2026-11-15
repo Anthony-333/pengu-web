@@ -96,23 +96,19 @@ export default function PrivacyPage() {
             <strong>Usage and diagnostics:</strong> which screens you open, the features you
             use, app lifecycle events, logs and crash information. Collection includes{" "}
             <strong>session replays</strong> that show how you move through the app.
-            In these replays, all text you type and all images are masked on your device before
-            anything is sent, so they don&apos;t contain your children&apos;s photos, your
-            messages or your receipts. You can turn analytics off at any time (see{" "}
+            Before anything leaves your device, all text on screen and everything you type, all
+            images and videos, and the system photo and camera pickers are masked, so replays
+            don&apos;t contain your children&apos;s photos or videos, your messages, your notes or
+            your receipts. You can turn analytics off at any time (see{" "}
             <Link href="#your-choices">Your choices</Link>).
-          </li>
-          <li>
-            <strong>Device identifier:</strong> an identifier for your device, used to work
-            out whether you&apos;re eligible for the free trial and to prevent the trial from
-            being claimed repeatedly with new accounts.
           </li>
           <li>
             <strong>Push notification token:</strong> lets us send notifications to your
             device.
           </li>
           <li>
-            <strong>Subscription status:</strong> whether you have an active subscription or
-            trial, and when it renews or expires. Payments are handled entirely by Apple or
+            <strong>Subscription status:</strong> whether you have an active Pengu Pro subscription,
+            and when it renews or expires. Payments are handled entirely by Apple or
             Google. We never see your card details.
           </li>
         </ul>
@@ -150,7 +146,7 @@ export default function PrivacyPage() {
       <LegalSection id="how-we-use" title="4. How we use information">
         <ul>
           <li>To provide the Service: create your account and nests, sync shared content between co-parents, and send notifications and emails you need (such as verification, password reset, invitations and account-deletion confirmation).</li>
-          <li>To manage subscriptions and free-trial eligibility.</li>
+          <li>To manage subscriptions.</li>
           <li>To keep Pengu safe: authenticate requests, enforce nest permissions, prevent abuse and fraud, and review content reported to us.</li>
           <li>To understand how Pengu is used, fix bugs and improve features.</li>
           <li>To respond to your support requests.</li>
@@ -179,16 +175,16 @@ export default function PrivacyPage() {
         <ul>
           <li>
             <strong>Your email address</strong> is shown to your co-parents only if
-            &ldquo;Share email&rdquo; is on in your privacy settings.
+            &ldquo;Show my email to co-parents&rdquo; is on in your privacy settings.
           </li>
           <li>
             <strong>Whether you have a Pengu account</strong> can be confirmed to someone who
-            enters your email address only if &ldquo;Discoverable by email&rdquo; is on.
+            enters your email address only if &ldquo;Let people find me by email&rdquo; is on.
             Invitations sent to your email still reach you either way.
           </li>
           <li>
             <strong>Push notifications</strong> may show message and note text on your lock
-            screen. You can turn on &ldquo;Hide push content&rdquo; to keep that text off it.
+            screen. You can turn on &ldquo;Hide content in notifications&rdquo; to keep that text off it.
           </li>
         </ul>
         <p>
@@ -229,7 +225,7 @@ export default function PrivacyPage() {
           The Service does hold information that adults enter <em>about</em> children. We treat
           it with extra care. We use it only to provide the Service to that child&apos;s
           nest, never for advertising or profiling. We store media under keys tied to the
-          child&apos;s nest, so that every request is checked against nest membership. Images are
+          child&apos;s nest, so that every request is checked against nest membership. Text, images and videos are
           masked out of analytics session replays. By adding a child, you confirm that you
           have the authority to share their information with the people you invite.
         </p>
@@ -241,18 +237,21 @@ export default function PrivacyPage() {
       </LegalSection>
 
       <LegalSection id="your-choices" title="8. Your choices and controls">
-        <p>In the app, under <strong>Account → Privacy &amp; data</strong>, you can:</p>
+        <p>In the app, under <strong>Account → Privacy &amp; sharing</strong>, you can:</p>
         <ul>
-          <li>Choose whether co-parents can see your email address and whether you are discoverable by email.</li>
+          <li>Choose whether co-parents can see your email address and whether people can find you by email.</li>
           <li>Hide message and note content from push notifications.</li>
-          <li>Turn analytics (including session replay) off or back on.</li>
+          <li>Turn &ldquo;Share usage analytics&rdquo; (including session replay) off or back on.</li>
           <li>
             <strong>Export your data</strong> as a JSON file. The export contains what your
             account can currently see in each of your nests. For very large histories it is a
             recent snapshot, and the file marks any section that was shortened.
           </li>
-          <li><strong>Delete your account</strong> (see below).</li>
         </ul>
+        <p>
+          You can <strong>delete your account</strong> from{" "}
+          <strong>Account → Delete account</strong> (see below).
+        </p>
         <p>
           You can also change device permissions in your phone&apos;s settings, and manage or
           cancel your subscription through the App Store or Google Play.
@@ -262,9 +261,10 @@ export default function PrivacyPage() {
       <LegalSection id="retention" title="9. Retention and deletion">
         <p>
           We keep your information for as long as your account is active. You can delete your
-          account from <strong>Account → Privacy &amp; data</strong>. To protect shared family
+          account from <strong>Account → Delete account</strong>. To protect shared family
           records from someone holding an unlocked phone, we email you a confirmation link
           that expires after one hour. Your account is deleted only once you open that link.
+          If you sign back in before then, you can cancel the deletion.
         </p>
         <p>When you confirm deletion:</p>
         <ul>
@@ -279,9 +279,8 @@ export default function PrivacyPage() {
           <li>If you signed in with Apple, we revoke Pengu&apos;s access to your Apple ID.</li>
         </ul>
         <p>
-          We keep a few records after deletion. Device identifiers linked to free-trial use are
-          kept so the trial can&apos;t be claimed again on the same device. Reports that others
-          filed about content you posted stay with that nest as a moderation record. Our service
+          We keep a few records after deletion. Reports that others filed about content you
+          posted stay with that nest as a moderation record. Our service
           providers may hold residual copies in backups for a limited time before they are
           overwritten. We may also keep information where the law requires it.
         </p>
