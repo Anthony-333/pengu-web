@@ -323,9 +323,12 @@ export default function PrivacyPage() {
       <LegalSection id="website" title="13. This website and cookies">
         <p>
           pengu.family is an informational site. It doesn&apos;t require an account and
-          doesn&apos;t use advertising or analytics cookies. Our hosting provider may keep
-          standard server logs (such as IP address and browser type) to operate and secure the
-          site.
+          doesn&apos;t use advertising or analytics cookies. We use Vercel Web Analytics to
+          count page views. It sets no cookies and records the page visited, the referring
+          site, and your browser, operating system, device type and country, without
+          identifying you. We also use Vercel Speed Insights, which measures how quickly pages
+          load, without cookies. Our hosting provider may keep standard server logs (such as IP
+          address and browser type) to operate and secure the site.
         </p>
       </LegalSection>
 
