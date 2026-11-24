@@ -12,6 +12,10 @@ const nextConfig: NextConfig = {
   /* config options here */
   cacheComponents: true,
   partialPrefetching: true,
+  experimental: {
+    // dev/build remind about Next.js security advisories (`next upgrade --agent`).
+    agentUpgrade: "security",
+  },
   turbopack: {
     rules: {
       "*.css": {
