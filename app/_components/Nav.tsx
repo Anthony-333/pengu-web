@@ -6,6 +6,8 @@ const links = [
   { label: "Features", href: "/#features" },
   { label: "How it works", href: "/#how-it-works" },
   { label: "FAQ", href: "/#faq" },
+  { label: "Privacy", href: "/privacy" },
+  { label: "Terms", href: "/terms" },
 ];
 
 /**
@@ -38,7 +40,7 @@ export function Nav() {
           href="/#download"
           className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-accent-deep hover:shadow-[0_8px_24px_-6px_var(--color-accent)]"
         >
-          Start free
+          Download Now
         </Link>
       </nav>
     </HideOnScroll>
