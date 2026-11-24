@@ -30,7 +30,7 @@ const TOGGLES = [
 // Limited members: roles from convex/family.ts, access text from accessSummary().
 const MEMBERS = [
   { initials: "D", name: "Dave", meta: "Step-parent · Calendar, Handoff notes", tone: "bg-sky" },
-  { initials: "R", name: "Nana Ruth", meta: "View-only · Calendar, Memories · view-only", tone: "bg-lily" },
+  { initials: "R", name: "Grandpa Ray", meta: "View-only · Calendar, Memories · view-only", tone: "bg-lily" },
 ];
 
 /** Account › Privacy & sharing (pengu/src/screens/Privacy.tsx). */

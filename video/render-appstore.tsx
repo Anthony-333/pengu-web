@@ -352,7 +352,7 @@ const SHOTS: Shot[] = [
     highlight: "#FFB8C6",
     size: 130,
     screen: () => <PrivacyScreen />,
-    photo: { src: "vitaly-gariev-kNzJZSAMaxc-unsplash.jpg", x: 110, y: 860, w: 1070, h: 1300, tilt: 3, focus: "40% 50%" },
+    photo: { src: "grandfather-granddaughter.jpg", x: 170, y: 820, w: 950, h: 1420, tilt: 3, focus: "50% 30%" },
     callouts: [{ target: ".members", k: 2.7, at: [645, 2300], tilt: -3 }],
     decor: (
       <>
