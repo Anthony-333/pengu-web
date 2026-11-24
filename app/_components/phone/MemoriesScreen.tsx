@@ -1,16 +1,15 @@
 import Image, { type StaticImageData } from "next/image";
-import { AltArrowLeftIcon } from "@solar-icons/react/line-duotone/alt-arrow-left";
-import { ArrowUpToLineIcon } from "@solar-icons/react/line-duotone/arrow-up-to-line";
-import { CameraIcon } from "@solar-icons/react/line-duotone/camera";
-import { GalleryIcon } from "@solar-icons/react/line-duotone/gallery";
-import { HeartIcon } from "@solar-icons/react/line-duotone/heart";
-import { PlayIcon } from "@solar-icons/react/line-duotone/play";
+import { AltArrowLeftIcon } from "@solar-icons/react/linear/alt-arrow-left";
+import { CameraIcon } from "@solar-icons/react/linear/camera";
+import { GalleryIcon } from "@solar-icons/react/linear/gallery";
+import { HeartIcon } from "@solar-icons/react/linear/heart";
+import { PlayIcon } from "@solar-icons/react/linear/play";
 import park from "@/public/images/nathan-dumlao-Wr3comVZJxU-unsplash.jpg";
 import drawing from "@/public/images/vitaly-gariev-inrYL3ffAsQ-unsplash.jpg";
 import shoulders from "@/public/images/morgan-lane-YZHBeFlEhrg-unsplash.jpg";
 import crafts from "@/public/images/alan-rodriguez-N17Nkbsc-zY-unsplash.jpg";
 import { TabBar, type ScreenProps } from "./Phone";
-import { Chip, RoundButton, SubScreenHeader } from "./ui";
+import { Chip, SubScreenHeader } from "./ui";
 
 type Memory = {
   src: StaticImageData;
@@ -76,10 +75,20 @@ export function MemoriesScreen({ tabBar = true }: ScreenProps) {
     <div className="absolute inset-0 bg-canvas">
       <SubScreenHeader
         title="Memories"
-        subtitle="Shared with Sarah & James"
         back={AltArrowLeftIcon}
-        right={<RoundButton icon={ArrowUpToLineIcon} accent />}
       />
+      {/* Camera + Upload head the list (the app moved them off the bottom,
+          where the floating tab bar could cover them). */}
+      <div className="capture-bar flex gap-2.5 px-4 pb-4 pt-1">
+        <span className="flex h-[54px] flex-1 items-center justify-center gap-2 rounded-full bg-accent text-[15px] text-white shadow-[0_6px_8px_rgb(142_134_240/0.25)]">
+          <CameraIcon size={20} color="#FFFFFF" />
+          Camera
+        </span>
+        <span className="flex h-[54px] flex-1 items-center justify-center gap-2 rounded-full bg-paper text-[15px] text-ink shadow-[0_6px_8px_rgb(0_0_0/0.08)]">
+          <GalleryIcon size={20} color="#0E0E12" />
+          Upload
+        </span>
+      </div>
       <div className="flex gap-2 overflow-hidden px-4 pb-3">
         <Chip selected>All</Chip>
         <Chip>
@@ -106,17 +115,6 @@ export function MemoriesScreen({ tabBar = true }: ScreenProps) {
             <MemoryCard key={m.caption} m={m} />
           ))}
         </div>
-      </div>
-      {/* Camera + Upload bar, sitting above the floating tab bar */}
-      <div className="absolute inset-x-0 bottom-[96px] z-10 flex gap-2.5 bg-gradient-to-t from-canvas via-canvas to-transparent px-4 pb-2 pt-6">
-        <span className="flex h-[54px] flex-1 items-center justify-center gap-2 rounded-full bg-accent text-[15px] text-white shadow-[0_6px_8px_rgb(142_134_240/0.25)]">
-          <CameraIcon size={20} color="#FFFFFF" />
-          Camera
-        </span>
-        <span className="flex h-[54px] flex-1 items-center justify-center gap-2 rounded-full bg-paper text-[15px] text-ink shadow-[0_6px_8px_rgb(0_0_0/0.08)]">
-          <GalleryIcon size={20} color="#0E0E12" />
-          Upload
-        </span>
       </div>
       {tabBar ? <TabBar active={2} /> : null}
     </div>

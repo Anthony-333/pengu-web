@@ -1,9 +1,12 @@
-import { AltArrowLeftIcon } from "@solar-icons/react/line-duotone/alt-arrow-left";
-import { MagnifierIcon } from "@solar-icons/react/line-duotone/magnifier";
-import { MicrophoneIcon } from "@solar-icons/react/line-duotone/microphone";
-import { PlayIcon } from "@solar-icons/react/line-duotone/play";
+import { AddCircleIcon } from "@solar-icons/react/linear/add-circle";
+import { AltArrowLeftIcon } from "@solar-icons/react/linear/alt-arrow-left";
+import { CameraIcon } from "@solar-icons/react/linear/camera";
+import { GalleryIcon } from "@solar-icons/react/linear/gallery";
+import { MagnifierIcon } from "@solar-icons/react/linear/magnifier";
+import { MicrophoneIcon } from "@solar-icons/react/linear/microphone";
+import { PlayIcon } from "@solar-icons/react/linear/play";
 import type { ReactNode } from "react";
-import { InitialsAvatar } from "./ui";
+import { InfoTip, InitialsAvatar } from "./ui";
 
 function HeaderButton({ children }: { children: ReactNode }) {
   return <div className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-iceberg">{children}</div>;
@@ -37,12 +40,10 @@ export function ChatScreen() {
           <HeaderButton>
             <AltArrowLeftIcon size={18} color="#0E0E12" />
           </HeaderButton>
-          <div className="min-w-0">
+          {/* "About Emma · with James" now lives in the ⓘ popover. */}
+          <div className="flex min-w-0 items-center gap-1.5">
             <p className="text-[20px] tracking-[-0.5px] text-ink">Chat</p>
-            <p className="mt-px flex items-center gap-1.5 text-[12px] text-ink-3">
-              <span className="h-[7px] w-[7px] rounded-full bg-maria" />
-              About Emma · with James
-            </p>
+            <InfoTip />
           </div>
         </div>
         <HeaderButton>
@@ -81,10 +82,28 @@ export function ChatScreen() {
         </Bubble>
       </div>
 
-      <div className="flex items-center gap-2.5 border-t-[0.5px] border-hairline bg-paper px-4 pb-[34px] pt-2.5">
-        <div className="flex h-[42px] flex-1 items-center rounded-[21px] bg-iceberg px-3.5 text-[15px] text-muted">Message…</div>
-        <span className="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-accent">
-          <MicrophoneIcon size={18} color="#FFFFFF" />
+      <div className="flex items-end gap-2 border-t-[0.5px] border-hairline bg-paper px-3 pb-[42px] pt-2.5">
+        {/* Mention a record, camera, photo or video, voice note. */}
+        <div className="flex items-center gap-0.5 pb-0.5">
+          <span className="flex h-[42px] w-[34px] items-center justify-center">
+            <AddCircleIcon size={24} color="#8E86F0" />
+          </span>
+          <span className="flex h-[42px] w-[34px] items-center justify-center">
+            <CameraIcon size={21} color="#6B6B76" />
+          </span>
+          <span className="flex h-[42px] w-[34px] items-center justify-center">
+            <GalleryIcon size={21} color="#6B6B76" />
+          </span>
+          <span className="flex h-[42px] w-[34px] items-center justify-center">
+            <MicrophoneIcon size={21} color="#6B6B76" />
+          </span>
+        </div>
+        <div className="flex h-[42px] min-w-0 flex-1 items-center rounded-[21px] bg-iceberg px-3.5 text-[15px] text-muted">Message…</div>
+        {/* Send: frost until there is something to send. */}
+        <span className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-frost pl-0.5">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#6B6B76" aria-hidden="true">
+            <path d="M3.4 20.4 21 12 3.4 3.6 3.39 10.2 15 12 3.39 13.8z" />
+          </svg>
         </span>
       </div>
     </div>

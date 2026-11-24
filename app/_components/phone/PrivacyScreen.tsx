@@ -1,9 +1,10 @@
-import { AltArrowLeftIcon } from "@solar-icons/react/line-duotone/alt-arrow-left";
-import { AltArrowRightIcon } from "@solar-icons/react/line-duotone/alt-arrow-right";
-import { LetterIcon } from "@solar-icons/react/line-duotone/letter";
-import { LockIcon } from "@solar-icons/react/line-duotone/lock";
-import { MagnifierIcon } from "@solar-icons/react/line-duotone/magnifier";
-import { UsersGroupRoundedIcon } from "@solar-icons/react/line-duotone/users-group-rounded";
+import { AltArrowLeftIcon } from "@solar-icons/react/linear/alt-arrow-left";
+import { AltArrowRightIcon } from "@solar-icons/react/linear/alt-arrow-right";
+import { LetterIcon } from "@solar-icons/react/linear/letter";
+import { LetterUnreadIcon } from "@solar-icons/react/linear/letter-unread";
+import { LockIcon } from "@solar-icons/react/linear/lock";
+import { MagnifierIcon } from "@solar-icons/react/linear/magnifier";
+import { UsersGroupRoundedIcon } from "@solar-icons/react/linear/users-group-rounded";
 import { TabBar, type ScreenProps } from "./Phone";
 import { Card, IconTile, SectionHeader, SubScreenHeader } from "./ui";
 
@@ -23,6 +24,7 @@ const TOGGLES = [
   { icon: LetterIcon, title: "Show my email to co-parents", sub: "Shown on your row in Co-parents & family", on: false },
   { icon: MagnifierIcon, title: "Let people find me by email", sub: "Invites still arrive when this is off", on: true },
   { icon: LockIcon, title: "Hide content in notifications", sub: "Keep message text off your lock screen", on: true },
+  { icon: LetterUnreadIcon, title: "Tips and updates by email", sub: "Recaps, reminders and news. Account emails always arrive.", on: false },
 ];
 
 // Limited members: roles from convex/family.ts, access text from accessSummary().
@@ -35,7 +37,7 @@ const MEMBERS = [
 export function PrivacyScreen({ tabBar = true }: ScreenProps) {
   return (
     <div className="absolute inset-0 bg-canvas">
-      <SubScreenHeader title="Privacy & sharing" subtitle="Control what crosses between homes" back={AltArrowLeftIcon} />
+      <SubScreenHeader title="Privacy & sharing" back={AltArrowLeftIcon} />
       <SectionHeader title="About you" />
       <Card padding={0} className="privacy-toggles mx-4 overflow-hidden px-4">
         {TOGGLES.map((t, i) => (
@@ -55,7 +57,7 @@ export function PrivacyScreen({ tabBar = true }: ScreenProps) {
           <IconTile icon={UsersGroupRoundedIcon} tint="#0E0E12" bg="#EDEDF1" size={38} />
           <div className="flex-1">
             <p className="text-[15px] tracking-[-0.2px] text-ink">2 co-parents · full access</p>
-            <p className="mt-1 text-[13px] leading-[19px] text-ink-3">Sarah and James can see everything in Emma&apos;s nest.</p>
+            <p className="mt-1 text-[13px] leading-[19px] text-ink-3">You and James can see everything in Emma&apos;s nest.</p>
           </div>
         </div>
       </Card>

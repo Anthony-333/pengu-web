@@ -1,16 +1,19 @@
 /**
  * App Store screenshots: ten 1290×2796 shots, the 6.9" iPhone size App Store
  * Connect also scales down for smaller iPhones. Phone shots put the site's
- * phone screens (app/_components/phone) in tilted iPhone frames; photo shots
- * use the site's Unsplash photos (public/images). Real cards are lifted out
+ * phone screens (app/_components/phone) in tilted iPhone frames — shots 7 and
+ * 8 are the iOS home screen widgets and the Lock Screen with the handoff Live
+ * Activity (WidgetScreens.tsx); photo shots use the site's Unsplash photos
+ * (public/images). Real cards are lifted out
  * of the screens as enlarged callouts. All ten sit on one flat canvas so a
  * dashed trail runs through them, then the canvas is sliced.
  *
  *   cd video && npm run appstore    # → renders/appstore/<nn>-<name>.png
  *
  * Bundled with esbuild like render-screens.tsx. Tailwind is compiled locally
- * from the classes the page uses (no CDN), Elms Sans and Gochi Hand load
- * from Google Fonts, then Playwright screenshots each slice.
+ * from the classes the page uses (no CDN), Elms Sans, Gochi Hand and Inter
+ * (the widgets' stand-in for SF Pro) load from Google Fonts, then Playwright
+ * screenshots each slice.
  *
  * Copy comes from the site's Features section and the app's own wording.
  * Keep it free of claims (ratings, awards, user counts).
@@ -21,17 +24,12 @@ import { resolve } from "node:path";
 import type { ReactNode } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { compile } from "@tailwindcss/node";
-import { CalendarIcon } from "@solar-icons/react/line-duotone/calendar";
-import { CardIcon } from "@solar-icons/react/line-duotone/card";
-import { ChatRoundIcon } from "@solar-icons/react/line-duotone/chat-round";
-import { ClipboardIcon } from "@solar-icons/react/line-duotone/clipboard";
-import { DocumentTextIcon } from "@solar-icons/react/line-duotone/document-text";
-import { GalleryWideIcon } from "@solar-icons/react/line-duotone/gallery-wide";
 import { HomeIndicator, SCREEN_H, SCREEN_W, StatusBar } from "../app/_components/phone/Phone";
 import { ExpensesScreen, HomeScreen, NotesScreen, ScheduleScreen } from "../app/_components/phone/screens";
 import { MemoriesScreen } from "../app/_components/phone/MemoriesScreen";
 import { ChatScreen } from "../app/_components/phone/ChatScreen";
 import { PrivacyScreen } from "../app/_components/phone/PrivacyScreen";
+import { LockScreen, WidgetHomeScreen } from "../app/_components/phone/WidgetScreens";
 import { PenguLogo } from "../app/_components/PenguLogo";
 
 const W = 1290;
@@ -68,6 +66,8 @@ type Shot = {
   size: number;
   /** The screen callouts are cut from, and the phone shows. */
   screen: () => ReactNode;
+  /** White status bar and home indicator, over a wallpaper; and the time. */
+  statusBar?: { light?: boolean; time?: string };
   /** Phone centre in slide pixels, and its tilt. */
   phone?: { x: number; y: number; tilt: number };
   /** A photo from public/images in a white-bordered card. */
@@ -82,7 +82,7 @@ const BAND = 3.5;
 const BEZEL = 10;
 const TITANIUM = "#B9B3A9";
 
-function IPhone({ children }: { children: ReactNode }) {
+function IPhone({ children, light, time }: { children: ReactNode; light?: boolean; time?: string }) {
   const pt = (n: number) => `${n * S}px`;
   const button = (side: "left" | "right", top: number, height: number) => (
     <div
@@ -100,8 +100,8 @@ function IPhone({ children }: { children: ReactNode }) {
         <div className="relative overflow-hidden bg-canvas" style={{ borderRadius: pt(54), width: pt(SCREEN_W), height: pt(SCREEN_H) }}>
           <div data-phone-screen className="relative isolate overflow-hidden text-left font-semibold text-ink" style={{ width: SCREEN_W, height: SCREEN_H, zoom: S }}>
             {children}
-            <StatusBar />
-            <HomeIndicator />
+            <StatusBar light={light} time={time} />
+            <HomeIndicator light={light} />
           </div>
         </div>
       </div>
@@ -177,35 +177,6 @@ function Burst({ x, y, size, fill, ink, tilt, lines }: { x: number; y: number; s
   );
 }
 
-// The app's nest modules (pengu/src/lib/nestAccess.ts MODULE_META).
-const MODULES = [
-  { label: "Calendar", icon: CalendarIcon, tint: "#0D7A52", bg: "#E3F5EE" },
-  { label: "Expenses", icon: CardIcon, tint: "#A15C07", bg: "#FEF3DF" },
-  { label: "Handoff notes", icon: DocumentTextIcon, tint: "#5236D9", bg: "#EEEAFF" },
-  { label: "Memories", icon: GalleryWideIcon, tint: "#5A4FD4", bg: "#ECEAFC" },
-  { label: "Chat", icon: ChatRoundIcon, tint: "#1A5BCC", bg: "#E5EFFF" },
-  { label: "Activity log", icon: ClipboardIcon, tint: "#2A2A31", bg: "#EDEDF1" },
-];
-
-function ModuleChips({ y }: { y: number }) {
-  return (
-    <div className="absolute inset-x-[70px] flex flex-wrap justify-center gap-[26px]" style={{ top: y }}>
-      {MODULES.map((m, i) => (
-        <span
-          key={m.label}
-          className="flex items-center gap-[18px] rounded-full bg-paper py-[18px] pl-[18px] pr-[38px] text-[46px] tracking-[-0.02em] shadow-[0_20px_30px_-8px_rgb(14_14_18/0.18)]"
-          style={{ transform: `rotate(${i % 2 ? 2 : -2}deg)` }}
-        >
-          <span className="flex h-[84px] w-[84px] items-center justify-center rounded-full" style={{ background: m.bg }}>
-            <m.icon size={44} color={m.tint} />
-          </span>
-          {m.label}
-        </span>
-      ))}
-    </div>
-  );
-}
-
 const SHOTS: Shot[] = [
   {
     name: "calendar",
@@ -216,8 +187,8 @@ const SHOTS: Shot[] = [
     screen: () => <ScheduleScreen />,
     phone: { x: 650, y: 1900, tilt: -7 },
     callouts: [
-      { target: ".cal-day.bg-accent", k: 5.4, dx: 330, dy: -150, tilt: 8 },
-      { target: ".day-detail > :last-child", k: 2.9, dx: -20, dy: -40, tilt: 3 },
+      { target: ".cal-day.bg-ink", k: 5.4, dx: 330, dy: -150, tilt: 8 },
+      { target: ".handoff-row", k: 2.9, dx: -10, dy: -30, tilt: 3 },
     ],
     decor: (
       <>
@@ -268,7 +239,7 @@ const SHOTS: Shot[] = [
   {
     name: "notes",
     lines: ["Nothing gets", "lost at the"],
-    script: "handover.",
+    script: "handoff.",
     highlight: "#A9D5FF",
     size: 150,
     screen: () => <NotesScreen />,
@@ -313,27 +284,45 @@ const SHOTS: Shot[] = [
     ],
     decor: (
       <>
-        <Burst x={1080} y={2620} size={320} fill="#1FAA77" ink="#FFFFFF" tilt={-10} lines={["Handover", "reminders"]} />
+        <Burst x={1080} y={2620} size={320} fill="#1FAA77" ink="#FFFFFF" tilt={-10} lines={["Handoff", "reminders"]} />
         <Sparkle x={150} y={830} size={80} />
       </>
     ),
   },
   {
-    name: "together",
-    lines: ["Less back-and-forth,"],
-    script: "more time together.",
+    name: "widgets",
+    lines: ["The answer,", "right on your"],
+    script: "home screen.",
     highlight: "#8EE6C0",
-    size: 112,
-    screen: () => <HomeScreen />,
-    photo: { src: "humphrey-m-Cc-CQTUkbH0-unsplash.jpg", x: 120, y: 760, w: 1050, h: 1560, tilt: -3, focus: "50% 60%" },
+    size: 150,
+    screen: () => <WidgetHomeScreen />,
+    statusBar: { light: true },
+    phone: { x: 645, y: 1900, tilt: -6 },
     callouts: [
-      { target: ".exchange-card", k: 2.6, at: [520, 2210], tilt: -4 },
-      { target: ".ex-row + .ex-row", k: 2.7, at: [780, 2520], tilt: 3, radius: 24, screen: () => <ExpensesScreen /> },
+      { target: ".w-today", k: 2.8, dx: 10, dy: -40, tilt: -3 },
+      { target: ".w-quickadd", k: 3.3, dx: -70, dy: 60, tilt: 5 },
     ],
     decor: (
       <>
-        <Sparkle x={1170} y={760} size={90} />
-        <Sparkle x={110} y={1500} size={60} color={ACCENT} />
+        <Burst x={1090} y={2560} size={320} fill={AMBER} ink={INK} tilt={10} lines={["Add in", "one tap"]} />
+        <Sparkle x={150} y={830} size={80} />
+      </>
+    ),
+  },
+  {
+    name: "lock-screen",
+    lines: ["Handoff day,", "right on your"],
+    script: "Lock Screen.",
+    highlight: "#A9D5FF",
+    size: 150,
+    screen: () => <LockScreen wallpaper="assets/nathan-dumlao-Wr3comVZJxU-unsplash.jpg" />,
+    statusBar: { light: true, time: "" },
+    phone: { x: 645, y: 1900, tilt: 6 },
+    callouts: [{ target: ".w-live", k: 2.8, dx: -20, dy: 20, tilt: -3 }],
+    decor: (
+      <>
+        <Burst x={1110} y={2660} size={300} fill="#1FAA77" ink="#FFFFFF" tilt={10} lines={["Live", "countdown"]} />
+        <Sparkle x={1150} y={830} size={80} color={ACCENT} />
       </>
     ),
   },
@@ -369,22 +358,6 @@ const SHOTS: Shot[] = [
       <>
         <Burst x={1060} y={2640} size={320} fill="#7B61FF" ink="#FFFFFF" tilt={-10} lines={["Limited", "access"]} />
         <Sparkle x={150} y={2600} size={80} color={ACCENT} />
-      </>
-    ),
-  },
-  {
-    name: "one-nest",
-    lines: ["Two homes."],
-    script: "One nest.",
-    highlight: "#FFB8C6",
-    size: 150,
-    screen: () => <HomeScreen />,
-    photo: { src: "arifur-rahman-yikKOtj3H94-unsplash.jpg", x: 150, y: 860, w: 990, h: 1180, tilt: -3, focus: "50% 45%" },
-    callouts: [],
-    decor: (
-      <>
-        <ModuleChips y={2150} />
-        <Sparkle x={1170} y={1000} size={90} />
       </>
     ),
   },
@@ -474,7 +447,9 @@ async function page() {
               className="absolute drop-shadow-[0_60px_70px_rgb(14_14_18/0.3)]"
               style={{ left: s.phone.x, top: s.phone.y, transform: `translate(-50%, -50%) rotate(${s.phone.tilt}deg)` }}
             >
-              <IPhone>{s.screen()}</IPhone>
+              <IPhone light={s.statusBar?.light} time={s.statusBar?.time}>
+                {s.screen()}
+              </IPhone>
             </div>
           ) : null}
           {s.callouts.map((c) => (
@@ -503,7 +478,7 @@ async function page() {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:wght@400..800&family=Gochi+Hand&display=block" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:wght@400..800&family=Gochi+Hand&family=Inter:wght@400;500;600;700&display=block" rel="stylesheet" />
     <style>${await tailwind(body)}</style>
     <style>
       html, body { width: ${W * N}px; height: ${H}px; margin: 0; overflow: hidden; }

@@ -1,12 +1,12 @@
 import type { ReactNode } from "react";
-import { HomeIcon } from "@solar-icons/react/line-duotone/home";
-import { CalendarIcon } from "@solar-icons/react/line-duotone/calendar";
-import { FolderIcon } from "@solar-icons/react/line-duotone/folder";
-import { UserCircleIcon } from "@solar-icons/react/line-duotone/user-circle";
-import { HomeIcon as HomeBold } from "@solar-icons/react/bold-duotone/home";
-import { CalendarIcon as CalendarBold } from "@solar-icons/react/bold-duotone/calendar";
-import { FolderIcon as FolderBold } from "@solar-icons/react/bold-duotone/folder";
-import { UserCircleIcon as UserCircleBold } from "@solar-icons/react/bold-duotone/user-circle";
+import { HomeIcon } from "@solar-icons/react/linear/home";
+import { CalendarIcon } from "@solar-icons/react/linear/calendar";
+import { FolderIcon } from "@solar-icons/react/linear/folder";
+import { UserCircleIcon } from "@solar-icons/react/linear/user-circle";
+import { HomeIcon as HomeBold } from "@solar-icons/react/bold/home";
+import { CalendarIcon as CalendarBold } from "@solar-icons/react/bold/calendar";
+import { FolderIcon as FolderBold } from "@solar-icons/react/bold/folder";
+import { UserCircleIcon as UserCircleBold } from "@solar-icons/react/bold/user-circle";
 
 export type ScreenProps = {
   /** Off when a shared tab bar is drawn over several screens (the hero video). */
@@ -56,12 +56,13 @@ export function Phone({
   );
 }
 
-export function StatusBar() {
+/** `light`: white glyphs, for a wallpaper (the widget home and Lock Screens). */
+export function StatusBar({ light = false, time = "9:41" }: { light?: boolean; time?: string }) {
   return (
     <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-[54px]">
       <div className="absolute left-1/2 top-[11px] h-[37px] w-[125px] -translate-x-1/2 rounded-full bg-black" />
-      <span className="absolute left-[52px] top-[18px] text-[17px] tracking-[-0.4px] text-ink">9:41</span>
-      <div className="absolute right-[34px] top-[22px] flex items-center gap-[6px] text-ink">
+      <span className={`absolute left-[52px] top-[18px] text-[17px] tracking-[-0.4px] ${light ? "text-white" : "text-ink"}`}>{time}</span>
+      <div className={`absolute right-[34px] top-[22px] flex items-center gap-[6px] ${light ? "text-white" : "text-ink"}`}>
         <svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor" aria-hidden="true">
           <rect x="0" y="8" width="3" height="4" rx="1" />
           <rect x="5" y="5.5" width="3" height="6.5" rx="1" />
@@ -71,18 +72,18 @@ export function StatusBar() {
         <svg width="16" height="12" viewBox="0 0 16 12" fill="currentColor" aria-hidden="true">
           <path d="M8 2.6c2.2 0 4.2.85 5.7 2.25l1.1-1.13A9.6 9.6 0 0 0 8 1C5.4 1 3 2 1.2 3.72l1.1 1.13A8 8 0 0 1 8 2.6Zm0 3.2c1.3 0 2.5.5 3.4 1.33l1.1-1.13A6.4 6.4 0 0 0 8 4.2c-1.75 0-3.33.68-4.5 1.8l1.1 1.13A4.8 4.8 0 0 1 8 5.8Zm0 3.2c.45 0 .87.17 1.18.45L8 10.66 6.82 9.45C7.13 9.17 7.55 9 8 9Z" />
         </svg>
-        <div className="relative flex h-[13px] w-[27px] items-center rounded-[4px] border border-ink/40 p-[1.5px]">
-          <div className="h-full w-[78%] rounded-[2px] bg-ink" />
-          <div className="absolute -right-[3px] top-1/2 h-[4px] w-[1.5px] -translate-y-1/2 rounded-r bg-ink/40" />
+        <div className={`relative flex h-[13px] w-[27px] items-center rounded-[4px] border p-[1.5px] ${light ? "border-white/50" : "border-ink/40"}`}>
+          <div className={`h-full w-[78%] rounded-[2px] ${light ? "bg-white" : "bg-ink"}`} />
+          <div className={`absolute -right-[3px] top-1/2 h-[4px] w-[1.5px] -translate-y-1/2 rounded-r ${light ? "bg-white/50" : "bg-ink/40"}`} />
         </div>
       </div>
     </div>
   );
 }
 
-export function HomeIndicator() {
+export function HomeIndicator({ light = false }: { light?: boolean }) {
   return (
-    <div className="pointer-events-none absolute bottom-2 left-1/2 z-30 h-[5px] w-[134px] -translate-x-1/2 rounded-full bg-ink" />
+    <div className={`pointer-events-none absolute bottom-2 left-1/2 z-30 h-[5px] w-[134px] -translate-x-1/2 rounded-full ${light ? "bg-white" : "bg-ink"}`} />
   );
 }
 
@@ -95,7 +96,8 @@ const TABS = [
 
 /**
  * iOS 26 native tab bar (NativeTabs): a floating Liquid Glass capsule with
- * Solar icons — line-duotone at rest, bold-duotone and lavender when selected.
+ * Solar icons — linear at rest, bold (solid) when selected — tinted the deep
+ * lavender (`accentDeep`), with ink-3 labels at rest (app `(tabs)/_layout.tsx`).
  */
 export function TabBar({ active }: { active: number }) {
   return (
@@ -109,8 +111,8 @@ export function TabBar({ active }: { active: number }) {
             data-tab={i}
             className={`tab flex h-[54px] flex-1 flex-col items-center justify-center gap-[3px] rounded-full ${on ? "bg-ink/[0.06]" : ""}`}
           >
-            <Icon size={26} color={on ? "#8E86F0" : "#8E8E99"} />
-            <span className={`text-[10px] tracking-[0.1px] ${on ? "text-accent" : "text-[#8E8E99]"}`}>{t.label}</span>
+            <Icon size={26} color={on ? "#5A4FD4" : "#6B6B76"} />
+            <span className={`text-[10px] tracking-[0.1px] ${on ? "text-accent-deep" : "text-ink-3"}`}>{t.label}</span>
           </div>
         );
       })}

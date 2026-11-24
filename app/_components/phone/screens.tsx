@@ -1,27 +1,27 @@
-import { AddIcon } from "@solar-icons/react/line-duotone/add";
-import { AltArrowLeftIcon } from "@solar-icons/react/line-duotone/alt-arrow-left";
-import { AltArrowRightIcon } from "@solar-icons/react/line-duotone/alt-arrow-right";
-import { BackpackIcon } from "@solar-icons/react/line-duotone/backpack";
-import { BellIcon } from "@solar-icons/react/line-duotone/bell";
-import { CalendarIcon } from "@solar-icons/react/line-duotone/calendar";
-import { CardIcon } from "@solar-icons/react/line-duotone/card";
-import { ChatRoundIcon } from "@solar-icons/react/line-duotone/chat-round";
-import { CheckIcon } from "@solar-icons/react/line-duotone/check";
-import { CheckCircleIcon } from "@solar-icons/react/line-duotone/check-circle";
-import { ClipboardIcon } from "@solar-icons/react/line-duotone/clipboard";
-import { ClockCircleIcon } from "@solar-icons/react/line-duotone/clock-circle";
-import { DocumentTextIcon } from "@solar-icons/react/line-duotone/document-text";
-import { FootballIcon } from "@solar-icons/react/line-duotone/football";
-import { GalleryWideIcon } from "@solar-icons/react/line-duotone/gallery-wide";
-import { HeartIcon } from "@solar-icons/react/line-duotone/heart";
-import { MapPointIcon } from "@solar-icons/react/line-duotone/map-point";
-import { MedalRibbonIcon } from "@solar-icons/react/line-duotone/medal-ribbon";
-import { MedicalKitIcon } from "@solar-icons/react/line-duotone/medical-kit";
-import { MenuDotsCircleIcon } from "@solar-icons/react/line-duotone/menu-dots-circle";
-import { SendSquareIcon } from "@solar-icons/react/line-duotone/send-square";
-import { SettingsIcon } from "@solar-icons/react/line-duotone/settings";
-import { SquareAcademicCapIcon } from "@solar-icons/react/line-duotone/square-academic-cap";
-import { TransferHorizontalIcon } from "@solar-icons/react/line-duotone/transfer-horizontal";
+import { AddIcon } from "@solar-icons/react/linear/add";
+import { AltArrowLeftIcon } from "@solar-icons/react/linear/alt-arrow-left";
+import { AltArrowRightIcon } from "@solar-icons/react/linear/alt-arrow-right";
+import { BackpackIcon } from "@solar-icons/react/linear/backpack";
+import { BellIcon } from "@solar-icons/react/linear/bell";
+import { CalendarIcon } from "@solar-icons/react/linear/calendar";
+import { CardIcon } from "@solar-icons/react/linear/card";
+import { ChatRoundIcon } from "@solar-icons/react/linear/chat-round";
+import { CheckIcon } from "@solar-icons/react/linear/check";
+import { CheckCircleIcon } from "@solar-icons/react/linear/check-circle";
+import { ClipboardIcon } from "@solar-icons/react/linear/clipboard";
+import { ClockCircleIcon } from "@solar-icons/react/linear/clock-circle";
+import { DocumentTextIcon } from "@solar-icons/react/linear/document-text";
+import { FootballIcon } from "@solar-icons/react/linear/football";
+import { GalleryWideIcon } from "@solar-icons/react/linear/gallery-wide";
+import { HeartIcon } from "@solar-icons/react/linear/heart";
+import { MapPointIcon } from "@solar-icons/react/linear/map-point";
+import { MedalRibbonIcon } from "@solar-icons/react/linear/medal-ribbon";
+import { MedicalKitIcon } from "@solar-icons/react/linear/medical-kit";
+import { MenuDotsIcon } from "@solar-icons/react/bold/menu-dots";
+import { SendSquareIcon } from "@solar-icons/react/linear/send-square";
+import { SettingsIcon } from "@solar-icons/react/linear/settings";
+import { SquareAcademicCapIcon } from "@solar-icons/react/linear/square-academic-cap";
+import { TransferHorizontalIcon } from "@solar-icons/react/linear/transfer-horizontal";
 import { TabBar, type ScreenProps } from "./Phone";
 import {
   BigNumber,
@@ -35,14 +35,16 @@ import {
   SectionHeader,
   SegmentBar,
   StatusPill,
+  InfoTip,
   SubScreenHeader,
 } from "./ui";
 
 /*
  * Demo nest: Sarah (you, "m" — emerald) and James ("j" — violet) share Emma,
  * 7, on the app's Monday-first 2-2-3 template. "Today" is Wed 21 Oct 2026,
- * so every screen agrees: Emma is with Mom since 6 PM, and the next exchange
- * is Friday, in 2 days.
+ * so every screen agrees: Emma came to Sarah at today's 6 PM handoff (both
+ * parents confirmed it), and the next exchange is Friday, in 2 days, at the
+ * school front gate.
  */
 const TEMPLATE = "AABBAAABBAABBB"; // pengu/src/constants/custodyPresets.ts
 const ANCHOR_OFFSET = 2; // Mon 28 Sep 2026 is day 0
@@ -131,8 +133,9 @@ function CustodyHero() {
         <div className="mt-[18px] flex items-center gap-3.5">
           <div className="min-w-0 flex-1 space-y-1">
             <Eyebrow className="text-white/62">Today</Eyebrow>
-            <p className="text-[40px] leading-[52px] tracking-[-1.6px] text-white">With Mom</p>
-            <p className="text-[13px] text-white/62">Since Oct 21, 6:00 PM</p>
+            <p className="text-[40px] leading-[52px] tracking-[-1.6px] text-white">With You</p>
+            {/* One line, shrunk to fit like the app (`adjustsFontSizeToFit`). */}
+            <p className="whitespace-nowrap text-[11.5px] text-white/62">Confirmed · Since Oct 21, 6:00 PM</p>
           </div>
           <InitialsAvatar initials="E" size={84} className="bg-lily-soft text-lily-deep" ring="3px solid rgb(255 255 255 / 0.12)" />
         </div>
@@ -164,21 +167,21 @@ function ExchangeCard() {
     <Card className="exchange-card mx-4 mt-3">
       <div className="flex items-center justify-between gap-3">
         <p className="text-[14px] tracking-[-0.2px] text-accent">Next exchange</p>
-        <StatusPill label="In 2 Days" className="bg-maria-soft text-maria-deep" />
+        <StatusPill label="In 2 days" className="bg-maria-soft text-maria-deep" />
       </div>
       <div className="mt-2.5 flex items-baseline gap-2">
         <p className="text-[30px] leading-[40px] tracking-[-1px] text-ink">Friday</p>
         <p className="text-[15px] text-muted">6:00 PM</p>
       </div>
-      <div className="mt-2 flex gap-4 text-[12px] leading-4 text-ink-3">
-        <span className="flex items-center gap-1.5">
+      <div className="mt-2 space-y-1 text-[12px] leading-4 text-ink-3">
+        <p className="flex items-center gap-1.5">
           <CalendarIcon size={13} color="#A0A0AA" />
-          October 23
-        </span>
-        <span className="flex items-center gap-1.5">
+          October 23 · You → James
+        </p>
+        <p className="flex items-center gap-1.5">
           <MapPointIcon size={13} color="#A0A0AA" />
-          At School
-        </span>
+          {HANDOFF_PLACE}
+        </p>
       </div>
     </Card>
   );
@@ -189,7 +192,7 @@ type EventRow = { title: string; when: string; where: string; icon: typeof Heart
 const UPCOMING: EventRow[] = [
   { title: "Swim lesson", when: "Wed, Oct 21 · 4:30 PM", where: "At Riverside Pool", icon: FootballIcon, tint: "#F5A623", bg: "#FEF3DF" },
   { title: "Dentist check-up", when: "Thu, Oct 22 · 10:00 AM", where: "At Bright Smiles Dental", icon: HeartIcon, tint: "#1FAA77", bg: "#E3F5EE" },
-  { title: "Handover to James", when: "Fri, Oct 23 · 6:00 PM", where: "At School", icon: TransferHorizontalIcon, tint: "#2A2A31", bg: "#EDEDF1" },
+  { title: "Handoff to James", when: "Fri, Oct 23 · 6:00 PM", where: "School front gate", icon: TransferHorizontalIcon, tint: "#2A2A31", bg: "#EDEDF1" },
 ];
 
 function UpcomingEvents({ rows = UPCOMING }: { rows?: EventRow[] }) {
@@ -240,9 +243,21 @@ export function HomeScreen({ tabBar = true }: ScreenProps) {
   );
 }
 
-// ── Schedule (Calendar tab) ──────────────────────────────────
+// ── Schedule tab (pengu/src/screens/Calendar.tsx) ─────────────
 
 const EVENT_DAYS = new Set([21, 22, 23, 27, 30]);
+
+/** The agreed handoff place, shown on Home, the Schedule tab and the widgets. */
+export const HANDOFF_PLACE = "School front gate";
+
+/** A changeover day: custody moves from the day before's home. */
+function handoffOn(day: number): { from: "m" | "j"; to: "m" | "j" } | null {
+  const from = custodyOn(day - 1);
+  const to = custodyOn(day);
+  return from === to ? null : { from, to };
+}
+
+const SOFT_HEX = { m: "#E3F5EE", j: "#EEEAFF" };
 
 export function ScheduleScreen({ tabBar = true }: ScreenProps) {
   // October 2026, Monday-first: Sep 28–30 lead in, Nov 1 trails.
@@ -251,19 +266,15 @@ export function ScheduleScreen({ tabBar = true }: ScreenProps) {
     ...Array.from({ length: 31 }, (_, i) => ({ d: i + 1, muted: false })),
     { d: 1, muted: true },
   ];
+  const today = handoffOn(TODAY);
   return (
     <div className="absolute inset-0 bg-canvas">
       <div className="flex items-center justify-between gap-3 px-5 pb-3 pt-[66px]">
-        <div className="min-w-0">
-          <p className="text-[30px] leading-[38px] tracking-[-0.9px] text-ink">Calendar</p>
-          <p className="mt-0.5 text-[13px] text-ink-3">
-            2-2-3 · <span className="text-accent">Edit schedule</span>
-          </p>
+        <div className="flex min-w-0 flex-1 items-center gap-2">
+          <p className="text-[30px] leading-[38px] tracking-[-0.9px] text-ink">Schedule</p>
+          <InfoTip size={16} />
         </div>
-        <div className="flex gap-2">
-          <RoundButton icon={CalendarIcon} />
-          <RoundButton icon={AddIcon} accent />
-        </div>
+        <RoundButton icon={CalendarIcon} />
       </div>
       <div className="px-3 pb-2">
         <ChildSelector />
@@ -274,11 +285,11 @@ export function ScheduleScreen({ tabBar = true }: ScreenProps) {
           <p className="text-[20px] tracking-[-0.5px] text-ink">
             October <span className="text-muted">2026</span>
           </p>
+          {/* "Today" only shows once you've moved off today. */}
           <div className="flex gap-1.5">
             <span className="flex h-[34px] w-[34px] items-center justify-center rounded-full bg-frost">
               <AltArrowLeftIcon size={13} color="#0E0E12" />
             </span>
-            <span className="flex h-[34px] items-center rounded-full bg-frost px-3 text-[12px] text-ink">Today</span>
             <span className="flex h-[34px] w-[34px] items-center justify-center rounded-full bg-frost">
               <AltArrowRightIcon size={13} color="#0E0E12" />
             </span>
@@ -295,10 +306,18 @@ export function ScheduleScreen({ tabBar = true }: ScreenProps) {
           {cells.map((c, i) => {
             const who = c.muted ? null : custodyOn(c.d);
             const selected = !c.muted && c.d === TODAY;
-            const bg = selected ? "bg-accent" : c.muted ? "" : TONE[who!].soft;
-            const fg = selected ? "text-white" : c.muted ? "text-muted" : TONE[who!].deep;
+            // Changeover days split into both homes' colours.
+            const split = !c.muted && !selected ? handoffOn(c.d) : null;
+            const bg = selected ? "bg-ink" : c.muted || split ? "" : TONE[who!].soft;
+            const fg = selected ? "text-white" : c.muted ? "text-muted" : split ? "text-ink" : TONE[who!].deep;
             return (
-              <div key={i} className={`cal-day relative flex aspect-square items-center justify-center rounded-full text-[14px] ${bg} ${fg}`}>
+              <div
+                key={i}
+                className={`cal-day relative flex aspect-square items-center justify-center overflow-hidden rounded-full text-[14px] ${bg} ${fg} ${
+                  selected ? "shadow-[inset_0_0_0_2px_#8E86F0]" : ""
+                }`}
+                style={split ? { background: `linear-gradient(90deg, ${SOFT_HEX[split.from]} 50%, ${SOFT_HEX[split.to]} 50%)` } : undefined}
+              >
                 {c.d}
                 {!c.muted && EVENT_DAYS.has(c.d) ? (
                   <span className={`absolute bottom-1 h-1 w-1 rounded-full ${selected ? "bg-white" : "bg-ink"}`} />
@@ -307,7 +326,7 @@ export function ScheduleScreen({ tabBar = true }: ScreenProps) {
             );
           })}
         </div>
-        <div className="mt-3.5 flex items-center gap-2 border-t-[0.5px] border-hairline pt-3">
+        <div className="mt-3.5 flex flex-wrap items-center gap-2 border-t-[0.5px] border-hairline pt-3">
           <span className="flex items-center gap-1.5 rounded-full bg-maria-soft px-2.5 py-[5px] text-[12px] text-maria-deep">
             <span className="h-[7px] w-[7px] rounded-full bg-maria" />
             You
@@ -316,28 +335,53 @@ export function ScheduleScreen({ tabBar = true }: ScreenProps) {
             <span className="h-[7px] w-[7px] rounded-full bg-james" />
             James
           </span>
-          <span className="ml-auto text-[11px] text-muted">Tap a day</span>
+          <span className="flex items-center gap-1.5 rounded-full bg-iceberg px-2.5 py-[5px] text-[12px] text-ink-2">
+            <span className="flex h-2 w-2 overflow-hidden rounded-full">
+              <span className="flex-1 bg-maria" />
+              <span className="flex-1 bg-james" />
+            </span>
+            Handoff
+          </span>
         </div>
       </Card>
 
       <div className="day-detail mx-4 mt-[22px]">
-        <div className="mb-3 flex items-center justify-between px-1">
-          <p className="text-[18px] tracking-[-0.4px] text-ink">Oct 21</p>
-          <StatusPill label="With You" className="bg-maria-soft text-maria-deep" />
+        <div className="mb-3 flex items-end justify-between gap-3 px-1">
+          <div className="min-w-0 flex-1">
+            <p className="text-[20px] tracking-[-0.5px] text-ink">Today, Oct 21</p>
+            <div className="mt-2 flex">
+              <StatusPill label="With You" className="bg-maria-soft text-maria-deep" />
+            </div>
+          </div>
+          <span className="flex h-9 items-center gap-1.5 rounded-full bg-accent px-3.5 text-[13px] text-white">
+            <AddIcon size={14} color="#FFFFFF" />
+            Add
+          </span>
         </div>
+        {today ? (
+          <Card className="handoff-row mb-2.5 flex items-center gap-3" padding={14}>
+            <IconTile icon={TransferHorizontalIcon} tint="#2A2A31" bg="#EDEDF1" size={40} />
+            <div className="min-w-0 flex-1">
+              <p className="text-[15px] tracking-[-0.2px] text-ink">Handoff · James → You</p>
+              <p className="mt-0.5 text-[12px] leading-[17px] text-ink-3">With James until 6:00 PM, then you</p>
+              <p className="mt-0.5 text-[12px] leading-[17px] text-ink-3">{HANDOFF_PLACE}</p>
+              <div className="mt-2 flex">
+                <StatusPill label="Confirmed" icon={CheckIcon} className="bg-frost text-ink-2" />
+              </div>
+            </div>
+          </Card>
+        ) : null}
         <Card padding={0} className="overflow-hidden">
-          <div className="flex items-start gap-3 px-4 py-3.5">
+          <div className="event-row flex items-start gap-3 px-4 py-3.5">
             <IconTile icon={FootballIcon} tint="#F5A623" bg="#FEF3DF" />
             <div className="min-w-0 flex-1">
               <p className="text-[15px] tracking-[-0.2px] text-ink">Swim lesson</p>
               <p className="mt-0.5 text-[12px] leading-[17px] text-ink-3">At Riverside Pool · bring goggles</p>
-            </div>
-            <div className="flex flex-col items-end">
-              <p className="text-[14px] tracking-[-0.2px] text-ink">4:30 PM</p>
-              <span className="mt-2 rounded-full bg-lily-soft px-[9px] py-[3px] text-[10px] uppercase tracking-[0.8px] text-warn-deep">
+              <span className="mt-2 inline-block rounded-full bg-lily-soft px-[9px] py-[3px] text-[10px] uppercase tracking-[0.8px] text-warn-deep">
                 Activity
               </span>
             </div>
+            <p className="text-[14px] tracking-[-0.2px] text-ink">4:30 PM</p>
           </div>
         </Card>
       </div>
@@ -375,7 +419,6 @@ export function ExpensesScreen({ tabBar = true }: ScreenProps) {
     <div className="absolute inset-0 bg-canvas">
       <SubScreenHeader
         title="Expenses"
-        subtitle="50 / 50 split · 6 expenses"
         back={AltArrowLeftIcon}
         right={<RoundButton icon={AddIcon} accent />}
       />
@@ -510,8 +553,7 @@ export function NotesScreen({ tabBar = true }: ScreenProps) {
   return (
     <div className="absolute inset-0 bg-canvas">
       <SubScreenHeader
-        title="Transfer Notes"
-        subtitle="Pass-the-iceberg log · 4 notes"
+        title="Notes"
         back={AltArrowLeftIcon}
         right={<RoundButton icon={AddIcon} accent />}
       />
@@ -523,7 +565,6 @@ export function NotesScreen({ tabBar = true }: ScreenProps) {
       </div>
       {NOTES.map((n) => {
         const p = PRIO[n.prio];
-        const mine = n.author.name === "Sarah";
         return (
           <Card key={n.title} className="note-card mx-4 mb-3">
             <div className="mb-3 flex items-center gap-2.5">
@@ -532,7 +573,10 @@ export function NotesScreen({ tabBar = true }: ScreenProps) {
                 <Eyebrow>{n.cat}</Eyebrow>
               </div>
               <StatusPill label={n.prio} className={p.pill} />
-              {!mine ? <MenuDotsCircleIcon size={18} color="#6B6B76" /> : null}
+              {/* Solid dots: Delete on your own notes, Report on everyone else's. */}
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center">
+                <MenuDotsIcon size={26} color="#6B6B76" />
+              </span>
             </div>
             <p className="mb-1.5 text-[17px] leading-[23px] tracking-[-0.3px] text-ink">{n.title}</p>
             <p className="text-[14px] leading-5 text-ink-3">{n.body}</p>

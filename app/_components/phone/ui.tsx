@@ -1,4 +1,5 @@
 import type { ComponentType, CSSProperties, ReactNode } from "react";
+import { InfoCircleIcon } from "@solar-icons/react/linear/info-circle";
 
 /**
  * Web ports of the app's layout primitives (pengu/src/components/ui.tsx),
@@ -204,26 +205,34 @@ export function InitialsAvatar({
   );
 }
 
-/** Back button + 30pt title — screens pushed off a tab (Expenses, Notes…). */
+/** The ⓘ after a screen title: the app's `HeaderInfoTip`, at rest. */
+export function InfoTip({ size = 14 }: { size?: number }) {
+  return <InfoCircleIcon size={size} color="#6B6B76" className="shrink-0" />;
+}
+
+/**
+ * Back button, 24pt title and ⓘ on one row — screens pushed off a tab
+ * (Expenses, Notes…). The app moved the old subtitle into the ⓘ popover.
+ */
 export function SubScreenHeader({
   title,
-  subtitle,
   back: Back,
   right,
 }: {
   title: string;
-  subtitle: string;
   back: SolarIcon;
   right?: ReactNode;
 }) {
   return (
     <div className="px-5 pb-3.5 pt-[62px]">
-      <div className="flex min-h-[42px] items-center justify-between">
+      <div className="flex min-h-[42px] items-center gap-3">
         <RoundButton icon={Back} />
+        <div className="flex min-w-0 flex-1 items-center gap-2">
+          <p className="truncate text-[24px] leading-[32px] tracking-[-0.7px] text-ink">{title}</p>
+          <InfoTip />
+        </div>
         {right}
       </div>
-      <p className="mt-3.5 text-[30px] leading-[38px] tracking-[-0.9px] text-ink">{title}</p>
-      <p className="mt-0.5 text-[13px] text-ink-3">{subtitle}</p>
     </div>
   );
 }
