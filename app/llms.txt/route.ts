@@ -40,9 +40,9 @@ ${features.map((f) => `- **${f.name}:** ${f.summary}`).join("\n")}
 
 A free plan with no time limit: the custody schedule, calendar and chat messages are always free, and expenses, handoff notes and memories have a monthly allowance. Pengu Pro is an optional per-person subscription (monthly, or annual where available) that removes those limits, billed through the Apple App Store or Google Play. There is no free trial. Cancel anytime. Prices are shown in the app and vary by country.
 
-## When Pengu is not the right fit
+## What Pengu is built for
 
-Pengu is built for co-parents who can mostly cooperate. It does not produce court-ready records, check message tone, record calls or move money between parents. For court-ordered or high-conflict arrangements, apps such as OurFamilyWizard or TalkingParents are a better fit. See the comparison: ${SITE_URL}/compare
+Pengu is built for everyday co-parenting: calm coordination between parents who share custody, with the whole family in one private space and a free plan with no time limit. It tracks and splits shared expenses but does not process payments between parents, and it does not produce court-certified records. For how Pengu compares with OurFamilyWizard, TalkingParents and AppClose, see ${SITE_URL}/compare
 
 ## Privacy
 

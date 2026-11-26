@@ -1,19 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalPage, LegalSection, legalMetadata } from "../_components/LegalPage";
+import { StoreButtons } from "../_components/StoreButtons";
 import { COMPARE_CHECKED, SITE, SITE_URL } from "../_lib/site";
 
 export const metadata: Metadata = legalMetadata(
   "Pengu vs OurFamilyWizard, TalkingParents & AppClose",
-  "An honest comparison of co-parenting apps: free plans, custody calendars, expense splitting, messaging and court-ready records. Which app fits your family, including when Pengu isn't the right pick.",
+  "Looking for an OurFamilyWizard, TalkingParents or AppClose alternative? Pengu is the co-parenting app with a free plan, a custody calendar you both agree on, fair expense splitting and a private family photo wall.",
   "/compare",
 );
 
 /**
- * Competitor facts are kept to what each provider states on its own site, and
- * prices are left out on purpose: they change often and the published figures
- * disagree. Re-check every row and bump `COMPARE_CHECKED` in `_lib/site.ts`
- * when you edit this page.
+ * Pengu-first comparison. Every statement about another app must stay true
+ * and checkable on that provider's own site (comparative advertising), but the
+ * page doesn't link to them or recommend them. Prices are left out because
+ * they change often. Re-check the competitor cells and bump `COMPARE_CHECKED`
+ * in `_lib/site.ts` whenever you edit this page.
  */
 const checked = new Date(`${COMPARE_CHECKED} UTC`).toLocaleDateString("en-US", {
   month: "long",
@@ -23,63 +25,59 @@ const checked = new Date(`${COMPARE_CHECKED} UTC`).toLocaleDateString("en-US", {
 
 const apps = ["Pengu", "OurFamilyWizard", "TalkingParents", "AppClose"] as const;
 
-const rows: { label: string; cells: [string, string, string, string] }[] = [
+/** First cell is Pengu's; `win` marks rows where Pengu is the clear pick. */
+const rows: { label: string; win?: boolean; cells: [string, string, string, string] }[] = [
   {
-    label: "Best for",
+    label: "Free plan",
+    win: true,
     cells: [
-      "Co-parents who mostly get along and want calm everyday logistics",
-      "Court-ordered or professionally supervised co-parenting",
-      "High-conflict cases that need recorded calls and fixed records",
-      "Parents who want records and payments in one subscription",
+      "Yes, with no time limit. Schedule, calendar and chat are always free",
+      "No, paid plans only",
+      "No, the app needs a paid plan",
+      "No, subscription only",
     ],
   },
   {
-    label: "Free plan",
+    label: "Built for",
+    win: true,
     cells: [
-      "Yes, no time limit. Schedule, calendar and chat always free",
-      "No. Paid plans (fee waiver program available)",
-      "No. A paid plan is needed for the app (fee waivers available)",
-      "No. Subscription (fee waivers available)",
+      "Calm everyday co-parenting, with the whole family in one place",
+      "Court-focused documentation",
+      "Court-focused documentation",
+      "Records and payments",
     ],
   },
   {
     label: "Custody calendar",
     cells: [
-      "Yes. 2-2-3, week on/week off or custom; changes need the other parent's yes",
-      "Yes, with trade and swap requests",
-      "Yes, shared calendar",
-      "Yes, shared calendar",
+      "2-2-3, week on/week off or custom. Changes need both parents' yes",
+      "Yes",
+      "Yes",
+      "Yes",
     ],
   },
   {
     label: "Shared expenses",
     cells: [
-      "Track, split, settle or dispute, with receipt photos. No in-app payments",
-      "Expense log plus in-app payments (OFWpay)",
-      "Expense tracking plus in-app payments",
-      "Expense tracking plus in-app payments",
+      "Receipt photos, automatic split, settle or dispute in one tap",
+      "Yes",
+      "Yes",
+      "Yes",
     ],
   },
   {
-    label: "Messaging",
+    label: "Handover notes",
+    win: true,
     cells: [
-      "Chat and voice messages, plus handover notes with read status",
-      "Message board with ToneMeter, which flags emotionally charged wording",
-      "Secure messaging; recorded calls on higher plans",
-      "Secure messaging",
-    ],
-  },
-  {
-    label: "Court-ready records",
-    cells: [
-      "No. Full data export as JSON",
-      "Yes",
-      "Yes (Unalterable Records)",
-      "Yes",
+      "Urgent, important or FYI notes with read status at every handover",
+      "Not a core feature",
+      "Not a core feature",
+      "Not a core feature",
     ],
   },
   {
     label: "Family photos",
+    win: true,
     cells: [
       "Private memories wall with tags and reactions",
       "Not a core feature",
@@ -87,24 +85,42 @@ const rows: { label: string; cells: [string, string, string, string] }[] = [
       "Not a core feature",
     ],
   },
+  {
+    label: "Messaging",
+    cells: ["Chat and voice messages", "Yes", "Yes", "Yes"],
+  },
 ];
 
-const sources = [
-  { name: "OurFamilyWizard plans and pricing", href: "https://www.ourfamilywizard.com/plans-and-pricing" },
-  { name: "OurFamilyWizard ToneMeter", href: "https://www.ourfamilywizard.com/knowledge-center/tips-tricks/tonemeter" },
-  { name: "TalkingParents pricing", href: "https://talkingparents.com/pricing" },
-  { name: "TalkingParents features", href: "https://talkingparents.com/features" },
-  { name: "AppClose pricing", href: "https://appclose.com/pricing" },
+const reasons = [
+  {
+    title: "Free to start, free to stay",
+    body: "The custody schedule, calendar and chat are free forever, not for a trial. Expenses, handover notes and memories come with a monthly allowance, and Pengu Pro lifts the limits only if you want it.",
+  },
+  {
+    title: "Built for calm, not for court",
+    body: "Pengu is designed to lower the temperature. Schedule changes are proposed and approved, so the calendar is always one you both agreed to, and handover notes replace the long text threads.",
+  },
+  {
+    title: "Your child's whole world in one nest",
+    body: "Calendar, costs, notes, chat and photos live together in one private space for each child. Invite step-parents and grandparents with only the access they need, like the calendar but not expenses.",
+  },
+  {
+    title: "Never miss a milestone",
+    body: "The memories wall means a first tooth or a school play is shared with both homes the moment it happens, with tags and reactions. No more expired album links.",
+  },
+  {
+    title: "Private by design",
+    body: "Only people you invite can see into your nest. Pengu doesn't show ads, doesn't sell your data and doesn't track you across other apps. Export or delete your data anytime.",
+  },
 ];
 
 const toc = [
   { id: "at-a-glance", label: "At a glance" },
-  { id: "pengu", label: "Pengu" },
-  { id: "ourfamilywizard", label: "OurFamilyWizard" },
-  { id: "talkingparents", label: "TalkingParents" },
-  { id: "appclose", label: "AppClose" },
-  { id: "which-one", label: "Which one fits your family?" },
-  { id: "sources", label: "How we compared" },
+  { id: "why-pengu", label: "Why co-parents choose Pengu" },
+  { id: "vs-ourfamilywizard", label: "Pengu vs OurFamilyWizard" },
+  { id: "vs-talkingparents", label: "Pengu vs TalkingParents" },
+  { id: "vs-appclose", label: "Pengu vs AppClose" },
+  { id: "switch", label: "Switch tonight" },
 ];
 
 const jsonLd = {
@@ -112,22 +128,49 @@ const jsonLd = {
   "@type": "WebPage",
   "@id": `${SITE_URL}/compare#webpage`,
   url: `${SITE_URL}/compare`,
-  name: "Co-parenting apps compared",
-  description: "Pengu, OurFamilyWizard, TalkingParents and AppClose compared on free plans, calendars, expenses, messaging and court-ready records.",
+  name: "Pengu vs OurFamilyWizard, TalkingParents & AppClose",
+  description:
+    "How Pengu compares with OurFamilyWizard, TalkingParents and AppClose on free plans, custody calendars, expenses, handover notes and family photos.",
   dateModified: COMPARE_CHECKED,
   inLanguage: "en",
   isPartOf: { "@id": `${SITE_URL}/#website` },
   publisher: { "@id": `${SITE_URL}/#organization` },
-  about: apps.map((name) => ({ "@type": "MobileApplication", name })),
+  mainEntity: { "@id": `${SITE_URL}/#app` },
 };
 
 export default function ComparePage() {
   return (
     <LegalPage
-      title="Co-parenting apps compared"
-      eyebrow="Compare"
+      title="The co-parenting app that starts free"
+      eyebrow="Pengu vs the rest"
       dated={false}
       toc={toc}
+      after={
+        <>
+          <div className="mt-10 rounded-3xl bg-ink px-6 py-12 text-center">
+            <p className="mb-2 text-3xl font-bold tracking-tight text-white">
+              Two homes. One happy kid.
+            </p>
+            <p className="mb-7 text-white/70">Free to download. Free plan with no time limit.</p>
+            <StoreButtons tone="onDark" />
+          </div>
+          <p className="mt-6 text-sm text-ink-3">
+            Questions? Read the{" "}
+            <Link href="/#faq" className="text-accent-ink underline underline-offset-2">
+              FAQ
+            </Link>{" "}
+            or email{" "}
+            <a href={`mailto:${SITE.email}`} className="text-accent-ink underline underline-offset-2">
+              {SITE.email}
+            </a>
+            .
+          </p>
+          <p className="mt-2 text-xs text-ink-3">
+            OurFamilyWizard, TalkingParents and AppClose are trademarks of their respective
+            owners. Pengu isn&apos;t affiliated with or endorsed by them.
+          </p>
+        </>
+      }
       intro={
         <>
           <script
@@ -135,14 +178,10 @@ export default function ComparePage() {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
           />
           <p>
-            There&apos;s no single best co-parenting app. It depends on how well you and your
-            co-parent work together, and whether a court is involved. We make Pengu, so we&apos;re
-            biased, but we&apos;ve tried to be fair, and we say plainly where another app is the
-            better pick.
-          </p>
-          <p className="mt-4 text-sm text-ink-3">
-            Last checked {checked}. Features and prices change, so confirm on each provider&apos;s
-            site before you subscribe.
+            Many co-parenting apps were built for the courtroom and charge from day one. Pengu
+            was built for the everyday: who has the kids tonight, who paid for the dentist, what
+            medicine goes in the bag, and the photos neither parent should miss. Here&apos;s how
+            it compares with OurFamilyWizard, TalkingParents and AppClose.
           </p>
         </>
       }
@@ -151,18 +190,22 @@ export default function ComparePage() {
         <div className="-mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
           <table className="w-full min-w-[680px] border-collapse text-left text-sm">
             <caption className="sr-only">
-              Pengu, OurFamilyWizard, TalkingParents and AppClose compared feature by feature
+              Pengu compared with OurFamilyWizard, TalkingParents and AppClose
             </caption>
             <thead>
               <tr className="border-b border-hairline">
-                <th scope="col" className="w-[16%] py-3 pr-4 font-semibold text-ink-3">
+                <th scope="col" className="w-[16%] py-3 pr-4">
                   <span className="sr-only">Feature</span>
                 </th>
-                {apps.map((app) => (
+                {apps.map((app, i) => (
                   <th
                     key={app}
                     scope="col"
-                    className={`py-3 pr-4 font-semibold ${app === "Pengu" ? "text-accent-ink" : "text-ink"}`}
+                    className={
+                      i === 0
+                        ? "w-[30%] rounded-t-2xl bg-accent px-4 py-3 text-base font-bold text-white"
+                        : "py-3 pr-4 pl-4 font-semibold text-ink-3"
+                    }
                   >
                     {app}
                   </th>
@@ -176,7 +219,19 @@ export default function ComparePage() {
                     {row.label}
                   </th>
                   {row.cells.map((cell, i) => (
-                    <td key={apps[i]} className={`py-3 pr-4 ${i === 0 ? "bg-accent/5" : ""}`}>
+                    <td
+                      key={apps[i]}
+                      className={
+                        i === 0
+                          ? "bg-accent/10 px-4 py-3 font-semibold text-ink"
+                          : "py-3 pr-4 pl-4 text-ink-3"
+                      }
+                    >
+                      {i === 0 && row.win && (
+                        <span aria-hidden="true" className="mr-1.5 text-accent-ink">
+                          ✓
+                        </span>
+                      )}
                       {cell}
                     </td>
                   ))}
@@ -185,143 +240,64 @@ export default function ComparePage() {
             </tbody>
           </table>
         </div>
-      </LegalSection>
-
-      <LegalSection id="pengu" title="Pengu">
-        <p>
-          Pengu is for co-parents who can mostly cooperate and want less back-and-forth. Each
-          child gets a private shared space called a nest, holding the custody calendar, shared
-          expenses, handover notes, chat and a family photo wall. Step-parents and grandparents
-          can join with only the access they need, such as the calendar but not expenses.
-        </p>
-        <ul>
-          <li>
-            <strong>Free plan with no time limit.</strong> The custody schedule, calendar and chat
-            are always free. Expenses, handover notes and memories have a monthly allowance, and
-            Pengu Pro removes those limits.
-          </li>
-          <li>
-            <strong>Schedule changes are agreed, not announced.</strong> One parent proposes a
-            change and the other approves it.
-          </li>
-          <li>
-            <strong>No ads and no selling your data.</strong> Only people you invite can see into
-            your nest.
-          </li>
-        </ul>
-        <h3>Where Pengu isn&apos;t the right fit</h3>
-        <p>
-          Pengu doesn&apos;t produce court-ready records, check the tone of your messages, record
-          calls or move money between parents. If a court has ordered a specific app, or you need
-          documentation for a custody case, choose one of the apps below.
+        <p className="mt-4 text-sm text-ink-3">
+          Based on each provider&apos;s published plans and features, last checked {checked}.
+          Prices are left out because they change often and vary by country.
         </p>
       </LegalSection>
 
-      <LegalSection id="ourfamilywizard" title="OurFamilyWizard">
-        <p>
-          OurFamilyWizard is one of the longest-running co-parenting platforms, and family courts
-          and lawyers often recommend or order it. It covers calendars, an expense log with
-          in-app payments, a message board and a journal, and it lets professionals such as
-          lawyers or mediators view your records.
-        </p>
-        <ul>
-          <li>
-            <strong>Good for:</strong> court-ordered arrangements and cases with professional
-            oversight. Its ToneMeter flags wording that could come across as hostile before you
-            send it.
-          </li>
-          <li>
-            <strong>Worth knowing:</strong> there&apos;s no free plan, though it runs a fee waiver
-            program.
-          </li>
-        </ul>
-      </LegalSection>
-
-      <LegalSection id="talkingparents" title="TalkingParents">
-        <p>
-          TalkingParents is built around accountability. Messages are kept as Unalterable Records
-          that you can use in court, and higher plans add recorded phone and video calls. It also
-          has a shared calendar and payments.
-        </p>
-        <ul>
-          <li>
-            <strong>Good for:</strong> high-conflict situations where every exchange may need to
-            be documented.
-          </li>
-          <li>
-            <strong>Worth knowing:</strong> the app now needs a paid plan. Fee waivers are
-            available for people facing financial hardship or domestic violence.
-          </li>
-        </ul>
-      </LegalSection>
-
-      <LegalSection id="appclose" title="AppClose">
-        <p>
-          AppClose bundles a calendar, messaging, expense tracking with payments, and records you
-          can export into one all-inclusive subscription.
-        </p>
-        <ul>
-          <li>
-            <strong>Good for:</strong> parents who want records and payments without choosing
-            between tiers.
-          </li>
-          <li>
-            <strong>Worth knowing:</strong> it&apos;s a subscription, with fee waivers for
-            financial hardship and domestic violence survivors.
-          </li>
-        </ul>
-      </LegalSection>
-
-      <LegalSection id="which-one" title="Which one fits your family?">
-        <ul>
-          <li>
-            <strong>You get along well enough and want to stop texting about logistics:</strong>{" "}
-            Pengu. Start on the free plan and see if it sticks.
-          </li>
-          <li>
-            <strong>A court has named an app:</strong> use that one. OurFamilyWizard and
-            TalkingParents are the ones courts name most often.
-          </li>
-          <li>
-            <strong>Things are high-conflict and you need a record of everything:</strong>{" "}
-            TalkingParents or OurFamilyWizard.
-          </li>
-          <li>
-            <strong>You want to send child-support or expense payments inside the app:</strong>{" "}
-            OurFamilyWizard, TalkingParents or AppClose.
-          </li>
-          <li>
-            <strong>Grandparents or step-parents help with handovers:</strong> Pengu lets you give
-            each of them access to only the parts they need.
-          </li>
-        </ul>
-        <p>
-          Want to try Pengu? <Link href="/#download">Download it free</Link>, or read the{" "}
-          <Link href="/#faq">FAQ</Link>. Questions are welcome at{" "}
-          <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
-        </p>
-      </LegalSection>
-
-      <LegalSection id="sources" title="How we compared">
-        <p>
-          We compared each app on what its own website says about features, plans and fee
-          waivers. We left prices out because they change often and differ by country and
-          platform. If something here is out of date, email{" "}
-          <a href={`mailto:${SITE.email}`}>{SITE.email}</a> and we&apos;ll fix it.
-        </p>
-        <ul>
-          {sources.map((s) => (
-            <li key={s.href}>
-              <a href={s.href} rel="nofollow noopener" target="_blank">
-                {s.name}
-              </a>
-            </li>
+      <LegalSection id="why-pengu" title="Why co-parents choose Pengu">
+        <div className="grid gap-4 sm:grid-cols-2">
+          {reasons.map((r) => (
+            <div key={r.title} className="rounded-2xl border border-hairline bg-paper p-6 sm:last:odd:col-span-2">
+              <h3 className="!mt-0">{r.title}</h3>
+              <p className="!mb-0 text-[15px]">{r.body}</p>
+            </div>
           ))}
-        </ul>
-        <p className="text-sm text-ink-3">
-          OurFamilyWizard, TalkingParents and AppClose are trademarks of their respective owners.
-          Pengu isn&apos;t affiliated with or endorsed by them.
+        </div>
+      </LegalSection>
+
+      <LegalSection id="vs-ourfamilywizard" title="Pengu vs OurFamilyWizard">
+        <p>
+          OurFamilyWizard is built around court documentation and has no free plan. Pengu is free
+          to start and built for the day-to-day: a calendar you both agree on, fair expense
+          splits, handover notes and a shared photo wall, all in one calm, private space. If
+          you&apos;re looking for an OurFamilyWizard alternative that feels less like paperwork,
+          start with Pengu.
         </p>
+      </LegalSection>
+
+      <LegalSection id="vs-talkingparents" title="Pengu vs TalkingParents">
+        <p>
+          TalkingParents focuses on recording communication, and its app now needs a paid plan.
+          Pengu keeps the schedule, calendar and chat free forever and adds what TalkingParents
+          doesn&apos;t focus on: handover notes with read status and a private memories wall, so
+          both homes share the milestones as well as the logistics.
+        </p>
+      </LegalSection>
+
+      <LegalSection id="vs-appclose" title="Pengu vs AppClose">
+        <p>
+          AppClose is a subscription. Pengu gives you the essentials free with no time limit,
+          and brings the whole family in: invite step-parents and grandparents with only the
+          access they need, and keep your child&apos;s photos and milestones in the same nest as
+          the custody calendar.
+        </p>
+      </LegalSection>
+
+      <LegalSection id="switch" title="Switch tonight">
+        <ul>
+          <li>
+            <strong>Create your nest:</strong> sign up, add your child and pick your color.
+          </li>
+          <li>
+            <strong>Invite your co-parent</strong> by email or join code.
+          </li>
+          <li>
+            <strong>Set your custody pattern</strong> once, and every handover lands on both
+            calendars.
+          </li>
+        </ul>
       </LegalSection>
     </LegalPage>
   );

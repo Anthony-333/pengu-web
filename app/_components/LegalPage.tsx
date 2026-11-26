@@ -48,6 +48,7 @@ export function LegalPage({
   intro,
   toc,
   children,
+  after,
 }: {
   title: string;
   /** Small label above the title. */
@@ -57,6 +58,8 @@ export function LegalPage({
   intro: ReactNode;
   toc: TocItem[];
   children: ReactNode;
+  /** Rendered below the article, outside its prose styles (e.g. a CTA with buttons). */
+  after?: ReactNode;
 }) {
   return (
     <>
@@ -95,6 +98,7 @@ export function LegalPage({
           <article className="space-y-12 text-ink-2 leading-relaxed [&_p]:mb-4 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_ul]:mb-4 [&_strong]:text-ink [&_strong]:font-semibold [&_a]:text-accent-ink [&_a]:underline [&_a]:underline-offset-2 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:text-ink [&_h3]:mt-6 [&_h3]:mb-3">
             {children}
           </article>
+          {after}
         </div>
       </main>
       <Footer />
