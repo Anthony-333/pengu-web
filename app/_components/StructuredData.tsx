@@ -1,12 +1,14 @@
 import { SITE, SITE_URL, faqs, features } from "../_lib/site";
 
 const abs = (path: string) => `${SITE_URL}${path}`;
+const storeUrls = [SITE.appStoreUrl, SITE.playStoreUrl].filter((u): u is string => Boolean(u));
 
 /**
  * schema.org JSON-LD for the landing page. Reviews and ratings are left out on
- * purpose: Google penalises self-served review markup. Add `offers` (with a
- * price) and the store links once the listings are live, which is what
- * unlocks the software-app rich result.
+ * purpose: Google penalises self-served review markup. `offers` describes the
+ * free plan (Pro is an in-app purchase), and the app's `sameAs` ties it to the
+ * store listings so search engines and AI assistants treat them as one entity.
+ * Add the company's social profiles to the Organization's `sameAs` once they exist.
  */
 const graph = {
   "@context": "https://schema.org",
@@ -54,9 +56,14 @@ const graph = {
       audience: { "@type": "PeopleAudience", audienceType: "Separated, divorced and co-parenting families" },
       featureList: features.map((f) => `${f.name}: ${f.summary}`),
       publisher: { "@id": abs("/#organization") },
-      ...(SITE.appStoreUrl || SITE.playStoreUrl
-        ? { installUrl: [SITE.appStoreUrl, SITE.playStoreUrl].filter(Boolean) }
-        : {}),
+      isAccessibleForFree: true,
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+        description: "Free plan with no time limit. Pengu Pro is an optional in-app subscription.",
+      },
+      ...(storeUrls.length ? { installUrl: storeUrls, downloadUrl: storeUrls, sameAs: storeUrls } : {}),
     },
     {
       "@type": "FAQPage",

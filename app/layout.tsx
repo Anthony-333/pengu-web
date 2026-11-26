@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Elms_Sans, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { SITE, SITE_URL } from "./_lib/site";
+import { APP_STORE_ID, SITE, SITE_URL } from "./_lib/site";
 import "./globals.css";
 
 // Elms Sans is the app's own typeface, so the site reads as the same product.
@@ -47,6 +47,8 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
   },
   formatDetection: { telephone: false },
+  // Safari on iPhone shows an "Open / Get" banner for the app.
+  ...(APP_STORE_ID ? { itunes: { appId: APP_STORE_ID } } : {}),
 };
 
 export const viewport: Viewport = {

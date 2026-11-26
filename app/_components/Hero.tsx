@@ -58,6 +58,8 @@ export function Hero() {
             className="rise max-w-4xl text-[44px] font-bold leading-[1.02] tracking-[-0.035em] text-white sm:text-7xl lg:text-[64px] xl:text-[76px]"
             style={delay(120)}
           >
+            {/* Names the product for search engines and screen readers; the visible line stays the tagline. */}
+            <span className="sr-only">Pengu, the co-parenting app: </span>
             Two homes.
             <br />
             <span className="text-white/70">One happy kid.</span>

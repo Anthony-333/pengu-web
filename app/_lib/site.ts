@@ -34,9 +34,12 @@ export const SITE = {
     "family calendar",
   ],
   /** Fill these in when the store listings go live; they feed JSON-LD and llms.txt. */
-  appStoreUrl: null as string | null,
+  appStoreUrl: "https://apps.apple.com/ph/app/pengu-co-parenting-custody/id6821282467" as string | null,
   playStoreUrl: null as string | null,
 } as const;
+
+/** Numeric App Store id, parsed from `appStoreUrl`; feeds the iOS Smart App Banner. */
+export const APP_STORE_ID = SITE.appStoreUrl?.match(/\/id(\d+)/)?.[1];
 
 export const features = [
   {
