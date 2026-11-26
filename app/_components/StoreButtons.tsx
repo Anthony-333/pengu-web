@@ -34,7 +34,7 @@ export function StoreButtons({ tone = "onDark" }: { tone?: "onDark" | "onLight" 
   return (
     <div className="flex flex-wrap items-center justify-center gap-3">
       <Link
-        href={SITE.appStoreUrl ?? "/coming-soon"}
+        href={SITE.appStoreUrl ?? "/#download"}
         className={`group flex items-center gap-2.5 rounded-full py-3 pl-5 pr-6 transition-all duration-300 hover:-translate-y-0.5 ${primary}`}
       >
         <AppleIcon size={20} />

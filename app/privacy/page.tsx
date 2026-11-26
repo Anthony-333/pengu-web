@@ -71,9 +71,18 @@ export default function PrivacyPage() {
           </li>
           <li>
             <strong>Nest content:</strong> calendar events and handovers, custody schedule
-            proposals, transfer notes, shared expenses (amounts, categories, status and receipt
-            photos), memories (photos, videos, captions, tags and reactions), activity log
-            entries, and chat messages, including any images and voice messages you attach.
+            proposals (including the agreed handoff time, place and time zone), each
+            parent&apos;s confirmation that a handoff happened, transfer notes, shared expenses
+            (amounts, categories, status, comments and receipt photos), memories (photos,
+            videos, captions, tags and reactions), activity log entries and their photos, and
+            chat messages, including any photos, videos and voice messages you attach.
+          </li>
+          <li>
+            <strong>Getting-started answers:</strong> when you first open Pengu, we ask a few
+            optional questions, such as how you heard about Pengu, your family situation, what
+            you find hardest about co-parenting and which custody pattern you use. We use your
+            answers to set up the app for you and, as usage analytics, to understand who Pengu
+            helps. Each question can be skipped.
           </li>
           <li>
             <strong>Invitations:</strong> when you invite someone, their name and email
@@ -99,8 +108,20 @@ export default function PrivacyPage() {
             Before anything leaves your device, all text on screen and everything you type, all
             images and videos, and the system photo and camera pickers are masked, so replays
             don&apos;t contain your children&apos;s photos or videos, your messages, your notes or
-            your receipts. You can turn analytics off at any time (see{" "}
+            your receipts. Once you sign in, analytics are linked to your account (your user
+            ID, name and email address) so we can fix problems you report and understand how
+            Pengu is used. They are never used for advertising or shared with data brokers.
+            You can turn analytics off at any time (see{" "}
             <Link href="#your-choices">Your choices</Link>).
+          </li>
+          <li>
+            <strong>App activity:</strong> the last time the app signed you in, and your
+            device&apos;s time zone when you propose a custody schedule (so handoff reminders
+            arrive at the right local time).
+          </li>
+          <li>
+            <strong>Email records:</strong> which emails we have sent you, so you never get the
+            same one twice, and your email preferences.
           </li>
           <li>
             <strong>Push notification token:</strong> lets us send notifications to your
@@ -130,22 +151,47 @@ export default function PrivacyPage() {
             recording one.
           </li>
           <li>
-            <strong>Calendar:</strong> to add your child&apos;s handovers and events to your
-            device calendar and keep them updated. Pengu may also read your device calendar
-            so it can show your other events next to the nest calendar. That reading happens
-            on your device. We don&apos;t upload the events in your device calendar to our
-            servers.
+            <strong>Calendar:</strong> to add your child&apos;s handovers and events to a
+            &ldquo;Pengu&rdquo; calendar on your device and keep them updated when plans change.
+            Pengu only looks at events in its own Pengu calendar, to find and update the ones it
+            added. It doesn&apos;t read, change or upload your other calendar events, and it
+            never reads your reminders.
           </li>
           <li>
             <strong>Notifications:</strong> to tell you about new messages, notes, expenses,
-            events, memories and invitations.
+            events, memories, handoffs and invitations, and to show an unread count on the
+            app icon.
           </li>
         </ul>
+        <p>
+          You can see and change each permission in the app under{" "}
+          <strong>Account → Permissions</strong>.
+        </p>
+        <h3>Home Screen widgets and Live Activities (iOS)</h3>
+        <p>
+          If you add a Pengu widget or turn on the handoff Live Activity, the app saves a
+          summary of your nest (such as who has your child, upcoming handoffs and events, items
+          waiting for you and, on the Home Screen only, the expense balance) in storage on your
+          iPhone that only Pengu and its widgets can read. This summary stays on your device and
+          is not sent to us. Lock Screen widgets and the Live Activity show first names and
+          times only: no places, amounts, or message or note text. Signing out, or leaving a
+          nest, removes that nest from your widgets.
+        </p>
       </LegalSection>
 
       <LegalSection id="how-we-use" title="4. How we use information">
         <ul>
-          <li>To provide the Service: create your account and nests, sync shared content between co-parents, and send notifications and emails you need (such as verification, password reset, invitations and account-deletion confirmation).</li>
+          <li>To provide the Service: create your account and nests, sync shared content between co-parents, and send notifications and the emails you need (such as verification, password reset, password-changed alerts, invitations and invitation reminders, invitation-accepted notices, Pengu Pro started or ended, and account-deletion confirmation).</li>
+          <li>
+            To send <strong>tips and updates by email</strong>: a welcome email, reminders to
+            finish setting up or to invite your co-parent, a notice when you have used a free
+            allowance or most of your storage, a monthly recap of your nest (counts only, never
+            amounts, note text or message text), a reminder if you haven&apos;t opened Pengu in
+            30 days, and occasional news about Pengu and Pengu Pro. You can turn these off with
+            the unsubscribe link in any of them, or under{" "}
+            <strong>Account → Privacy &amp; sharing → Tips and updates by email</strong>.
+            Account and security emails are still sent.
+          </li>
           <li>To manage subscriptions.</li>
           <li>To keep Pengu safe: authenticate requests, enforce nest permissions, prevent abuse and fraud, and review content reported to us.</li>
           <li>To understand how Pengu is used, fix bugs and improve features.</li>
@@ -155,7 +201,8 @@ export default function PrivacyPage() {
         <p>
           Where laws such as the GDPR apply, we rely on: <strong>performance of a contract</strong>{" "}
           (providing the Service you signed up for), <strong>legitimate interests</strong>{" "}
-          (security, abuse prevention and product improvement), <strong>consent</strong>{" "}
+          (security, abuse prevention, product improvement and telling you about Pengu by
+          email), <strong>consent</strong>{" "}
           (analytics and device permissions, which you can withdraw), and{" "}
           <strong>legal obligation</strong> where it applies.
         </p>
@@ -186,6 +233,15 @@ export default function PrivacyPage() {
             <strong>Push notifications</strong> may show message and note text on your lock
             screen. You can turn on &ldquo;Hide content in notifications&rdquo; to keep that text off it.
           </li>
+          <li>
+            <strong>Widgets and Live Activities</strong> show nest information to anyone who can
+            see your screen. Lock Screen versions are limited to first names and times.
+          </li>
+          <li>
+            <strong>Content reports</strong> you file, including a copy of the reported content,
+            are seen by the Pengu team that reviews them. The person you report isn&apos;t told
+            who reported them.
+          </li>
         </ul>
         <p>
           Please think carefully about who you invite to a nest. Anything shared there can be
@@ -200,10 +256,10 @@ export default function PrivacyPage() {
         </p>
         <ul>
           <li><strong>Convex</strong>: application database and backend.</li>
-          <li><strong>Cloudflare (R2)</strong>: storage for photos, videos, voice messages and receipts.</li>
-          <li><strong>Resend</strong>: delivery of account and invitation emails.</li>
+          <li><strong>Cloudflare (R2)</strong>: storage for photos, videos, voice messages, receipts and profile pictures.</li>
+          <li><strong>Resend</strong>: delivery of account, invitation, reminder and update emails, and of content reports to our moderation inbox.</li>
           <li><strong>Expo, Apple Push Notification service and Firebase Cloud Messaging</strong>: delivery of push notifications.</li>
-          <li><strong>PostHog</strong>: product analytics, diagnostics and session replay.</li>
+          <li><strong>PostHog</strong>: product analytics (including getting-started answers), diagnostics and session replay.</li>
           <li><strong>RevenueCat</strong>: subscription management and entitlement status.</li>
           <li><strong>Apple and Google</strong>: sign-in (if you choose it), app distribution and payment processing.</li>
         </ul>
@@ -241,6 +297,7 @@ export default function PrivacyPage() {
         <ul>
           <li>Choose whether co-parents can see your email address and whether people can find you by email.</li>
           <li>Hide message and note content from push notifications.</li>
+          <li>Turn &ldquo;Tips and updates by email&rdquo; off or back on.</li>
           <li>Turn &ldquo;Share usage analytics&rdquo; (including session replay) off or back on.</li>
           <li>
             <strong>Export your data</strong> as a JSON file. The export contains what your
@@ -253,8 +310,10 @@ export default function PrivacyPage() {
           <strong>Account → Delete account</strong> (see below).
         </p>
         <p>
-          You can also change device permissions in your phone&apos;s settings, and manage or
-          cancel your subscription through the App Store or Google Play.
+          You can review device permissions under <strong>Account → Permissions</strong> or in
+          your phone&apos;s settings, remove Pengu widgets from your Home Screen or Lock Screen
+          at any time, and manage or cancel your subscription through the App Store or Google
+          Play.
         </p>
       </LegalSection>
 
@@ -264,11 +323,12 @@ export default function PrivacyPage() {
           account from <strong>Account → Delete account</strong>. To protect shared family
           records from someone holding an unlocked phone, we email you a confirmation link
           that expires after one hour. Your account is deleted only once you open that link.
-          If you sign back in before then, you can cancel the deletion.
+          If you sign back in before then, you can cancel the deletion. While a deletion is
+          pending, we send you no other emails.
         </p>
         <p>When you confirm deletion:</p>
         <ul>
-          <li>Your account, sign-in sessions, profile, push tokens, notifications, sent invitations, blocks and the reports you filed are deleted.</li>
+          <li>Your account, sign-in sessions, profile and profile photo, push tokens, notifications, sent invitations, email preferences and email records, blocks and the reports you filed are deleted. We send one last email confirming the deletion.</li>
           <li>For any nest where you are the <strong>only remaining member</strong>, the whole nest is deleted, along with its calendar, notes, expenses, memories, activity, messages and stored media.</li>
           <li>
             For nests that <strong>still have other members</strong>, your membership is

@@ -15,7 +15,7 @@ const toc = [
   { id: "subscriptions", label: "Subscriptions" },
   { id: "your-content", label: "Your content" },
   { id: "acceptable-use", label: "Acceptable use" },
-  { id: "safety", label: "Reporting and blocking" },
+  { id: "safety", label: "Reporting, blocking and moderation" },
   { id: "not-advice", label: "Not legal or financial advice" },
   { id: "our-rights", label: "Pengu's rights" },
   { id: "termination", label: "Ending your use" },
@@ -63,6 +63,12 @@ export default function TermsPage() {
             under your account. If you think someone else has accessed it, tell us right away.
           </li>
           <li>One person per account. Don&apos;t share your account or create accounts to get around a suspension or the free plan&apos;s limits.</li>
+          <li>
+            We will email you about your account and your nests (for example, verification,
+            invitations, subscription changes and account deletion). We may also send tips and
+            updates, which you can turn off at any time with the unsubscribe link or under{" "}
+            <strong>Account → Privacy &amp; sharing</strong>.
+          </li>
         </ul>
       </LegalSection>
 
@@ -89,6 +95,17 @@ export default function TermsPage() {
             co-parents keep. They are not court orders. If a court order or a legal agreement
             conflicts with what is in Pengu, the order or agreement wins.
           </li>
+          <li>
+            A custody schedule, and its terms such as the handoff time, place and who must
+            confirm a handoff, takes effect only once both parents accept it, and changes only
+            through a new proposal that both accept. A handoff shown as confirmed records what
+            the parents tapped in the app. It is not proof that a handoff did or didn&apos;t
+            happen.
+          </li>
+          <li>
+            Notifications, Home Screen widgets and Live Activities can show nest information on
+            your device&apos;s screen. You are responsible for who can see or use your device.
+          </li>
         </ul>
       </LegalSection>
 
@@ -104,8 +121,8 @@ export default function TermsPage() {
           <li>
             <strong>Free plan:</strong> each person gets these allowances in each nest they
             belong to: 10 expenses a month, 10 handoff notes a month, activity log entries on 7
-            days a month, 30 photo memories in total, 5 videos and chat attachments (photos
-            and voice notes) a month combined, and up to 2 adults in the nest. Each person
+            days a month, 30 photo memories in total, 5 videos and chat attachments (photos,
+            videos and voice notes) a month combined, and up to 2 adults in the nest. Each person
             also gets 500 MB of upload storage in total. Monthly allowances reset on the 1st
             of each month (UTC).
           </li>
@@ -194,13 +211,23 @@ export default function TermsPage() {
         </p>
       </LegalSection>
 
-      <LegalSection id="safety" title="7. Reporting and blocking">
+      <LegalSection id="safety" title="7. Reporting, blocking and moderation">
         <p>
-          You can report a message, memory or note that breaks these terms, and you can block
-          another member. Blocking mutes their notifications and hides their chat messages
-          wherever you share a nest. Shared records in the nest stay in place. We review
-          reports and may remove content or suspend accounts that break these terms. If
-          someone is in immediate danger, contact local emergency services first.
+          Pengu has <strong>zero tolerance</strong> for objectionable content and abusive
+          users. Messages, notes, comments, captions and invitations are checked automatically,
+          and text containing slurs or threats is refused before it is posted.
+        </p>
+        <p>
+          You can report a message, memory or note that breaks these terms (press and hold it,
+          then tap <strong>Report</strong>), and you can block another member from the
+          Family screen or the message menu. Blocking mutes their notifications and hides their
+          chat messages wherever you share a nest. Shared records in the nest stay in place.
+        </p>
+        <p>
+          We review every report within 24 hours. When content breaks these terms we remove it,
+          and we may suspend or permanently close the account of the person who posted it. You
+          can also email <a href={mail}>{LEGAL.contactEmail}</a> about abuse. If someone is in
+          immediate danger, contact local emergency services first.
         </p>
       </LegalSection>
 
@@ -283,15 +310,64 @@ export default function TermsPage() {
 
       <LegalSection id="app-stores" title="15. App store terms">
         <p>
-          If you downloaded Pengu from the Apple App Store, you acknowledge that these terms
-          are between you and Pengu, not Apple. Apple is not responsible for the app or its
-          content, and it has no obligation to provide maintenance or support. Apple and its
-          subsidiaries are third-party beneficiaries of these terms and may enforce them
-          against you. Your use of the app must also comply with Apple&apos;s Licensed
-          Application End User License Agreement and the App Store&apos;s usage rules. If you
-          downloaded Pengu from Google Play, Google Play&apos;s terms also apply. If those
-          terms conflict with these, the store&apos;s terms win for matters the store
-          controls.
+          If you downloaded Pengu from the Apple App Store, the following also applies:
+        </p>
+        <ul>
+          <li>
+            These terms are between you and Pengu, not Apple. Pengu, not Apple, is solely
+            responsible for the app and its content.
+          </li>
+          <li>
+            Your license to use the app is limited to Apple-branded devices that you own or
+            control, as allowed by the App Store&apos;s Usage Rules, and the app may also be used
+            by other accounts associated with you through Family Sharing where it is offered.
+          </li>
+          <li>
+            Pengu is solely responsible for maintenance and support. Apple has no obligation to
+            provide any maintenance or support for the app.
+          </li>
+          <li>
+            If the app fails to conform to any applicable warranty, you may notify Apple, and
+            Apple will refund the purchase price (if any) for the app. To the maximum extent the
+            law allows, Apple has no other warranty obligation for the app. Any other claims,
+            losses, liabilities, damages or costs from a failure to conform to a warranty are
+            Pengu&apos;s responsibility, to the extent these terms don&apos;t disclaim them.
+          </li>
+          <li>
+            Pengu, not Apple, is responsible for addressing any claims by you or a third party
+            relating to the app or your use of it, including product liability claims, claims
+            that the app fails to meet a legal or regulatory requirement, and claims under
+            consumer protection, privacy or similar laws.
+          </li>
+          <li>
+            If a third party claims that the app or your use of it infringes their intellectual
+            property rights, Pengu, not Apple, is solely responsible for investigating,
+            defending, settling and discharging that claim.
+          </li>
+          <li>
+            You confirm that you are not located in a country subject to a U.S. Government
+            embargo or designated as a &ldquo;terrorist supporting&rdquo; country, and that you
+            are not on any U.S. Government list of prohibited or restricted parties.
+          </li>
+          <li>
+            You must comply with any applicable third-party terms when you use the app, such as
+            your mobile carrier&apos;s or internet provider&apos;s terms.
+          </li>
+          <li>
+            Questions, complaints or claims about the app go to Pengu at the contact details in{" "}
+            <Link href="#contact">Contact us</Link>.
+          </li>
+          <li>
+            Apple and its subsidiaries are third-party beneficiaries of these terms. Once you
+            accept them, Apple has the right (and is deemed to have accepted the right) to
+            enforce them against you as a third-party beneficiary.
+          </li>
+        </ul>
+        <p>
+          Your use of the app must also comply with Apple&apos;s Licensed Application End User
+          License Agreement and the App Store&apos;s Usage Rules. If you downloaded Pengu from
+          Google Play, Google Play&apos;s terms also apply. If store terms conflict with these,
+          the store&apos;s terms win for matters the store controls.
         </p>
       </LegalSection>
 

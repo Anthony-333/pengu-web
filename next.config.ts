@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { SITE } from "./app/_lib/site";
 
 // api.pengu.family is a transparent proxy in front of the app's Convex HTTP
 // actions (Better Auth, /invite, webhooks). Google's consent screen and the
@@ -23,6 +24,16 @@ const nextConfig: NextConfig = {
         as: "*.css",
       },
     },
+  },
+  async redirects() {
+    // /coming-soon was the App Store placeholder before launch; keep old links working.
+    return [
+      {
+        source: "/coming-soon",
+        destination: SITE.appStoreUrl ?? "/#download",
+        permanent: true,
+      },
+    ];
   },
   async rewrites() {
     if (!convexSiteUrl) return [];
