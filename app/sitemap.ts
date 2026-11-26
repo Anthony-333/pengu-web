@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { LEGAL } from "./_components/LegalPage";
-import { SITE_URL } from "./_lib/site";
+import { COMPARE_CHECKED, SITE_URL } from "./_lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Parse as UTC so the build machine's timezone can't shift the day.
@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: SITE_URL, changeFrequency: "weekly", priority: 1 },
     { url: `${SITE_URL}/privacy`, lastModified: legalUpdated, changeFrequency: "yearly", priority: 0.3 },
     { url: `${SITE_URL}/terms`, lastModified: legalUpdated, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${SITE_URL}/compare`, lastModified: new Date(`${COMPARE_CHECKED} UTC`), changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_URL}/support`, changeFrequency: "monthly", priority: 0.4 },
   ];
 }

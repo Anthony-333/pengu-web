@@ -39,6 +39,9 @@ export const SITE = {
 } as const;
 
 /** Numeric App Store id, parsed from `appStoreUrl`; feeds the iOS Smart App Banner. */
+/** When the /compare page's competitor facts were last checked (YYYY-MM-DD). */
+export const COMPARE_CHECKED = "2026-11-26";
+
 export const APP_STORE_ID = SITE.appStoreUrl?.match(/\/id(\d+)/)?.[1];
 
 export const features = [
